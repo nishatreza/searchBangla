@@ -1,0 +1,42 @@
+<ng-template #content let-c="close">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">Add photos</h4>
+            <button type="button" class="close" aria-label="Close" (click)="c()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body clearfix" *ngIf="user">
+            <div class="media">
+                <img class="align-self-center mr-3" [lazyLoad]="user.photoURL" offset="offset" alt="Generic placeholder image">
+                <div class="media-body">
+                    <h5 class="mt-0">{{user.displayName}}</h5>
+                </div>
+            </div>
+            <div class="container img-to-upload" *ngIf="imgPath.length > 0">
+                <div class="row">
+                    <div class="col-md-4" *ngFor="let imgPath of imgPath">
+                        <img [src]="imgPath" alt="image">
+                    </div>
+                </div>
+            </div>
+            <div class="alert alert-danger" *ngIf="imgPath.length == 0">
+                <strong>No images!</strong> click the "choose image" button to select images.
+            </div>
+            <div class="upload-btn-wrapper">
+                <button class="btn m-auto">Choose Image</button>
+                <input id="file-btn" type="file" class="form-control-file" (change)="fileToUpload($event)" accept=".png,.jpg" />
+            </div>
+            <button type="button" class="btn btn-outline-dark float-right" *ngIf="imgPath.length > 0" (click)="upload();">Save</button>
+        </div>
+        <div *ngIf="user == null">
+            <div class="alert alert-danger">
+                <strong>Naaah!</strong> You must be loged in first.
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<a type="button" class="btn btn-secondary rightadd-btn" (click)="open(content)">
+    <i class="fas fa-camera"></i> Add photo
+</a>

@@ -1,0 +1,89 @@
+*:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.search-bar-holder {
+    position: fixed;
+    margin-top: -58px;
+    z-index: 9999;
+    width: 100%;
+    height: 84px;
+    padding: 22px 15px;
+    background: #323b44;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.logo a img {
+    width: 132px;
+    margin-top: -9px;
+}
+
+.btn {
+    background: transparent;
+    color: #f6f6f6;
+    font-size: 22px !important;
+    padding: 1.77px .75rem;
+}
+
+form {
+    display: inline-block;
+}
+
+input {
+    padding: 4px 35px 8px 15px;
+    border-radius: 20px;
+    background: #434f5c;
+    border: 1px solid #555;
+    color: #f6f6f6;
+}
+
+input::placeholder {
+    color: #f6f6f6;
+}
+
+.submit-btn {
+    margin-left: -40px;
+    font-size: 14px !important;
+    margin-bottom: 5px;
+    padding: 6px 10px !important;
+}
+
+@media screen and (max-width: 445px) {
+    .search-bar-holder {
+        width: 100%;
+        margin-top: -105px;
+        height: 129px;
+        position: unset;
+    }
+    .search-bar-holder .float-right {
+        float: unset !important;
+        display: unset !important;
+    }
+    .search-bar-holder form {
+        display: unset !important;
+    }
+    input {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 446px) and (max-width: 767px) {
+    input {
+        max-width: 228px;
+    }
+    .search-bar-holder {
+        width: 100%;
+        margin-top: -58px;
+        height: 84px;
+        position: unset;
+    }
+}
+
+
+/* @media screen and (min-width: 576px) and (max-width: 768px) {
+    .search-bar-holder {
+        width: 100%;
+    }
+} */

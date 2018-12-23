@@ -1,0 +1,109 @@
+<section class="container">
+    <div class="row" *ngIf="businessData">
+        <div class="col-12 col-sm-8 col-md-8">
+            <app-review-details [ratingsInfo]="ratingsDB"></app-review-details>
+            <div class="advertisement" *ngFor="let  businessAdvertisement of businessAdvertisementData">
+                <div class="business-img">
+                    <a href="{{businessAdvertisement.advertisementLink}}">
+                        <img [defaultImage]="defaultImage" [lazyLoad]="businessAdvertisement.advertisementImage" offset="offset" class="img-responsive">
+                    </a>
+                </div>
+                <div class="ad-details">
+                    <div>
+                        <span class="ad-logo"></span>
+                        <a class="ad-header" href="">{{businessAdvertisement.advertisementTitle}}</a>
+                        <span class="info"><i class="fas fa-info-circle" data-toggle="tooltip" data-placement="top" title="A business owner paid for this ad."></i></span>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star box"></i>
+                        <i class="fas fa-star box"></i>
+                        <i class="fas fa-star box"></i>
+                        <i class="fas fa-star-half-alt box"></i>
+                        <i class="fas fa-star box box-gray"></i>
+                        <span>{{businessAdvertisement.advertisementSecondTitle}}</span>
+                        <span class="near-business"><i class="fas fa-map-marker-alt"></i><b> {{businessAdvertisement.adBusinessDistance[0]}}</b> away from {{businessAdvertisement.adBusinessDistance[1]}}</span>
+                    </div>
+                    <div class="review-para">
+                        <span class="reviewer">{{ businessAdvertisement.advertisementReviewer}}</span> {{ businessAdvertisement.advertisementParagraph}}
+                        <a href="">{{businessAdvertisement.advertisementReadMore}}</a>
+                    </div>
+                    <p class="food-culture"> {{ businessAdvertisement.advertisementSecondParagraph}} </p>
+                </div>
+            </div>
+            <app-review></app-review>
+        </div>
+        <div class="col-12 col-sm-4 col-md-4">
+            <ul class="business-at-glance" *ngIf="businessAtGlanceData">
+                <li id="time-today">
+                    <span>Today <b>{{businessAtGlanceData.timeToday}}</b></span>
+                </li>
+                <li id="menu">
+                    <span><a [routerLink]="['/view-restaurant-menu/',businessData.firestoreId]">Full menu <i class="fas fa-external-link-alt"></i></a></span> &nbsp;
+                    <span><a [routerLink]="['/add-restaurant-menu',businessData.firestoreId]">Add menu <i class="fas fa-plus-square"></i></a></span>
+                </li>
+                <li id="price">
+                    <div class="dollar">$$$$</div>
+                    <span>Price range <b>{{businessAtGlanceData.priceRange}}</b></span>
+                </li>
+            </ul>
+            <div class="business-hours">
+                <h3>Hours</h3>
+                <table *ngIf="businessHoursData">
+                    <tr>
+                        <td>{{businessHoursData.sundayTime[0]}}</td>
+                        <td>{{businessHoursData.sundayTime[1]}}</td>
+                        <td><em>{{businessHoursData.sundayTime[2]}}</em></td>
+                    </tr>
+                    <tr>
+                        <td>{{businessHoursData.mondayTime[0]}}</td>
+                        <td>{{businessHoursData.mondayTime[1]}}</td>
+                        <td><em>{{businessHoursData.mondayTime[2]}}</em></td>
+                    </tr>
+                    <tr>
+                        <td>{{businessHoursData.tuesdayTime[0]}}</td>
+                        <td>{{businessHoursData.tuesdayTime[1]}}</td>
+                        <td><em>{{businessHoursData.tuesdayTime[2]}}</em></td>
+                    </tr>
+                    <tr>
+                        <td>{{businessHoursData.wednesdayTime[0]}}</td>
+                        <td>{{businessHoursData.wednesdayTime[1]}}</td>
+                        <td><em>{{businessHoursData.wednesdayTime[2]}}</em></td>
+                    </tr>
+                    <tr>
+                        <td>{{businessHoursData.thursdayTime[0]}}</td>
+                        <td>{{businessHoursData.thursdayTime[1]}}</td>
+                        <td><em>{{businessHoursData.thursdayTime[2]}}</em></td>
+                    </tr>
+                    <tr>
+                        <td>{{businessHoursData.fridayTime[0]}}</td>
+                        <td>{{businessHoursData.fridayTime[1]}}</td>
+                        <td><em>{{businessHoursData.fridayTime[2]}}</em></td>
+                    </tr>
+                    <tr>
+                        <td>{{businessHoursData.saturdayTime[0]}}</td>
+                        <td>{{businessHoursData.saturdayTime[1]}}</td>
+                        <td><em>{{businessHoursData.saturdayTime[2]}}</em></td>
+                    </tr>
+                </table>
+                <a href="{{businessHoursData.editInfo}}"><i class="fas fa-pencil-alt"></i>Edit business info</a>
+            </div>
+            <div class="more-info">
+                <h3>More business info</h3>
+                <ul *ngIf='moreInfoData'>
+                    <li>{{moreInfoData.reservations[0]}} <b>{{moreInfoData.reservations[1]}}</b></li>
+                    <li>{{moreInfoData.delivery[0]}} <b>{{moreInfoData.delivery[1]}}</b></li>
+                    <li>{{moreInfoData.takeOut[0]}} <b>{{moreInfoData.takeOut[1]}}</b></li>
+                    <li>{{moreInfoData.creditCards[0]}} <b>{{moreInfoData.creditCards[1]}}</b></li>
+                    <li>{{moreInfoData.bikeParking[0]}} <b>{{moreInfoData.bikeParking[1]}}</b></li>
+                    <li>{{moreInfoData.wheelchairAccess[0]}} <b>{{moreInfoData.wheelchairAccess[1]}}</b></li>
+                    <li>{{moreInfoData.goodForKids[0]}} <b>{{moreInfoData.goodForKids[1]}}</b></li>
+                    <li>{{moreInfoData.goodForGroups[0]}} <b>{{moreInfoData.goodForGroups[1]}}</b></li>
+                    <li>{{moreInfoData.attire[0]}} <b>{{moreInfoData.attire[1]}}</b></li>
+                    <li>{{moreInfoData.alcohol[0]}} <b>{{moreInfoData.alcohol[1]}}</b></li>
+                    <li>{{moreInfoData.wiFi[0]}} <b>{{moreInfoData.wiFi[1]}}</b></li>
+                </ul>
+            </div>
+            <app-people-review></app-people-review>
+        </div>
+    </div>
+</section>

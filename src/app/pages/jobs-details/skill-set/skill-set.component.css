@@ -1,0 +1,128 @@
+.skill-set-div {
+    background: #fff;
+    border: 1px solid #a6a6a6a6;
+    border-top: 4px solid #da8c18;
+    border-radius: 4px;
+    padding: 25px;
+    color: rgba(0, 0, 0, .9);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.skill-set-div h4 {
+    font-size: 11px;
+    letter-spacing: 2px;
+    line-height: 0;
+    font-weight: 900;
+    text-transform: uppercase;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.skill-set-div h3 {
+    margin-top: 15px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+p.skill-set {
+    font-size: 14px;
+    color: rgba(0, 0, 0, .6);
+}
+
+p.skill-set span:not(:nth-child(1))::before {
+    content: '\00b7';
+    padding: 0 5px;
+}
+
+.skill-bar .btn {
+    margin-top: -30px;
+    background: #da8c18;
+    color: #fff;
+    font-weight: 600;
+}
+
+.skill-bar .single-bar-filled {
+    width: 50px;
+    height: 8px;
+    background: #11a0ff;
+    margin-right: 8px;
+    border-radius: 3px;
+}
+
+.skill-bar .single-bar {
+    width: 50px;
+    height: 8px;
+    background: #dfdfdf;
+    margin-right: 8px;
+    border-radius: 3px;
+}
+
+@media screen and (min-width:300px) and (max-width:430px) {
+    .skill-bar .single-bar {
+        width: 16px;
+        height: 4px;
+        margin-right: 5px;
+        margin-bottom: 15px;
+    }
+    .skill-bar .single-bar-filled {
+        width: 16px;
+        height: 4px;
+        margin-right: 5px;
+        margin-bottom: 15px;
+    }
+    .skill-bar .btn {
+        float: unset !important;
+        display: block;
+    }
+}
+
+@media screen and (min-width:431px) and (max-width:478px) {
+    .skill-bar .single-bar {
+        width: 20px;
+        margin-bottom: 15px;
+    }
+    .skill-bar .single-bar-filled {
+        width: 20px;
+        margin-bottom: 15px;
+    }
+    .skill-bar .btn {
+        float: unset !important;
+        display: block;
+    }
+}
+
+@media screen and (min-width:479px) and (max-width:767px) {
+    .skill-bar .single-bar {
+        width: 30px;
+        margin-bottom: 15px;
+    }
+    .skill-bar .single-bar-filled {
+        width: 30px;
+        margin-bottom: 15px;
+    }
+    .skill-bar .btn {
+        float: unset !important;
+        display: block;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+    .skill-bar .single-bar {
+        width: 50px;
+        margin-bottom: 15px;
+    }
+    .skill-bar .single-bar-filled {
+        width: 50px;
+        margin-bottom: 15px;
+    }
+    .skill-bar .btn {
+        float: unset !important;
+        display: block;
+    }
+}

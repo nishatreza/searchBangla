@@ -1,0 +1,77 @@
+<form class="row" [formGroup]="projectForm" (ngSubmit)="onSubmit(projectForm.value)">
+  <div class="form-group col-md-12">
+      <label>Project in progress //</label>
+      <div class="row">
+          <div class="m-bottom-1 col-md-6 col-lg-3">
+              <label>Project title</label>
+              <input type="text" class="form-control" formControlName="projectTitle">
+              <div *ngIf="projectTitle.invalid && (projectTitle.dirty || projectTitle.touched)" class="errorMessage">
+                  <div *ngIf="projectTitle.errors.required">
+                      project title is required.
+                  </div>
+              </div>
+          </div>
+          <div class="m-bottom-1 col-md-6 col-lg-3">
+              <label>Project brief</label>
+              <input type="text" class="form-control" formControlName="projectBrief">
+              <div *ngIf="projectBrief.invalid && (projectBrief.dirty || projectBrief.touched)" class="errorMessage">
+                  <div *ngIf="projectBrief.errors.required">
+                      project brief is required.
+                  </div>
+              </div>
+          </div>
+          <div class="m-bottom-1 col-md-6 col-lg-3">
+              <label>Project Status</label>
+              <input type="text" class="form-control" formControlName="projectStatus">
+              <div *ngIf="projectStatus.invalid && (projectStatus.dirty || projectStatus.touched)" class="errorMessage">
+                  <div *ngIf="projectStatus.errors.required">
+                        Project Status is required.
+                  </div>
+              </div>
+          </div>
+          <div class="m-bottom-1 col-md-6 col-lg-3">
+                <label>Project Stage topic</label>
+                <input type="text" class="form-control" formControlName="projectStageTopic">
+                <div *ngIf="projectStageTopic.invalid && (projectStageTopic.dirty || projectStageTopic.touched)" class="errorMessage">
+                    <div *ngIf="projectStageTopic.errors.required">
+                        Project Stage topic is required.
+                    </div>
+                </div>
+            </div>
+ 
+          <div class="m-bottom-1 col-md-6 col-lg-3">
+                <label>Project Date</label>
+                <input type="date" class="form-control" formControlName="projectDate">
+                <div *ngIf="projectDate.invalid && (projectDate.dirty || projectDate.touched)" class="errorMessage">
+                    <div *ngIf="projectDate.errors.required">
+                        Project Date is required.
+                    </div>
+                </div>
+              
+            </div>
+            <div class="m-bottom-1 col-md-6 col-lg-3">
+                    <label>Project time</label>
+                    <input type="time" class="form-control" formControlName="projectTime">
+                    <div *ngIf="projectTime.invalid && (projectTime.dirty || projectTime.touched)" class="errorMessage">
+                        <div *ngIf="projectTime.errors.required">
+                              Project time is required.
+                        </div>
+                    </div>
+                </div>
+          <div class="m-bottom-1 col-md-6 col-lg-3">
+                <label>Project percentage</label>
+                <input type="text" class="form-control" formControlName="projectPercentage">
+                <div *ngIf="projectPercentage.invalid && (projectPercentage.dirty || projectPercentage.touched)" class="errorMessage">
+                    <div *ngIf="projectPercentage.errors.required">
+                        project percentage is required.
+                    </div>
+                </div>
+            </div>
+      </div>
+      <!-- <button class="more-project-btn btn"><i class="fas fa-plus-circle"></i> add more project</button> -->
+  </div>
+  <div class="form-group col-md-12">
+      <button *ngIf="!editMode" [disabled]="!projectForm.valid" type="submit" class="btn btn-primary submit">SAVE</button>
+  </div>
+</form>
+<hr>

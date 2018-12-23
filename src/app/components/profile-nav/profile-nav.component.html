@@ -1,0 +1,21 @@
+<div  *ngIf="authService.user | async as user">
+    <div class="nav-item dropdown another-dropdown">
+        
+          <a class="nav-link dropdown-toggle" id="navbarDropdownsecond" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <img src="{{user.photoURL}}" alt="user" class="img-thumbnail profile-pic"></a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownsecond">
+              <ul class="dropdown-user list-unstyled" id="profile-dropdown">
+            
+              
+                  <li [routerLink]="['/profile']">
+                    Profile<i class="fa fa-cog pull-right" style="color:yellowgreen"></i> 
+                  </li>
+               
+                  
+                  <li (click)="signout()">
+                      <i class="fas fa-sign-out-alt pull-right" style="color:darkred"></i> Log out
+                    <!-- <a href="#"> Logout <i class="fas fa-sign-out-alt pull-right"></i> </a> -->
+                  </li>
+              </ul>
+          </div>
+        </div></div>

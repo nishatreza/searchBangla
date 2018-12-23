@@ -1,0 +1,19 @@
+<h3 class="peopleviewtext">People also viewed</h3>
+<div class="row imgRow" *ngFor="let  PeopleViewJobs of  PeopleViewJobsData">
+  <div class="col-md-4">
+    <a href="{{PeopleViewJobs.reviewLink}}"></a>
+ 
+      <img class="srcimage shrink-image"  [defaultImage]="defaultImage" [lazyLoad]="PeopleViewJobs.viewImage" offset="offset" class="img-responsive">
+  </div>
+  <div class="col-md-8">
+    <span class="title"> {{PeopleViewJobs.viewTitle}} </span><br>
+    <span class="company"> {{PeopleViewJobs.viewName}}</span><br>
+    <span class="countryborder"> {{PeopleViewJobs.viewLocation}} </span><br>
+    <!-- <span class="weekborder"> 1 week ago . Easy Apply </span> -->
+
+    <span class="publish-date">
+      <hr> {{PeopleViewJobs.viewDate}}
+    </span>
+    <hr class="bottomhr">
+  </div>
+</div>

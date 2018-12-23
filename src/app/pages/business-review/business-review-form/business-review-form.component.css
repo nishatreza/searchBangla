@@ -1,0 +1,114 @@
+.heading-underline {
+    width: 50px;
+    border-bottom: 2px solid lightgreen;
+    margin-bottom: 25px;
+}
+
+label {
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background: lightgreen;
+    color: #333;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+small {
+    color: lightsalmon !important;
+}
+
+.jumbotron {
+    margin: 0;
+}
+
+.jumbotron h4 {
+    padding-left: 15px;
+}
+
+.jumbotron p {
+    padding-left: 15px;
+}
+
+.form-row {
+    margin: 0 15px;
+}
+
+.form-array .form-row {
+    margin: 0;
+}
+
+.btn-info {
+    margin-bottom: 15px;
+}
+
+.ad-btn {
+    background: transparent;
+    color: rgb(43, 213, 255);
+}
+
+.form-array {
+    width: 100%;
+}
+
+hr {
+    border-color: #333;
+}
+
+.btn-info {
+    margin: 15px 0;
+    text-transform: capitalize;
+}
+
+.btn-warning {
+    font-weight: 700;
+}
+
+.menu-dropdown-div {
+    margin: 25px 0;
+}
+
+
+/* M O D A L */
+
+.menu-list-header {
+    color: rgb(253, 79, 87);
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.submenu-title {
+    color: #0b2135;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.submenu-description,
+.submenu-price {
+    color: #bcafaf;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* new */
+
+.errorMessage {
+    font-size: 12px;
+    color: #f44336;
+    text-align: left;
+    padding-top: 0;
+    padding-left: 10px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    /* background-color: aliceblue; */
+}

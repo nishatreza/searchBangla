@@ -1,0 +1,50 @@
+<div class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" [routerLink]="['/']"><img src="../../../assets/images/searchBangla350x70.png" alt="" height="80" width="100%"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto top-right">
+          <!-- <li class="nav-item p-2"><a class="nav-link" href="#"> Forums</a></li>
+          <li class="nav-item p-2"><a class="nav-link" href="#"> Start Selling</a></li>
+          <li class="nav-item p-2"><a class="nav-link" href="#"><i class="fas fa-th"></i> Our Production </a></li>
+          <li class="nav-item p-2"><a class="nav-link" title="Cart" href="#"> <i class="fas fa-shopping-cart"></i></a></li> -->
+          <li class="nav-item p-2"><a class="nav-link" href="#"> Sign In</a></li>
+      </ul>
+  </div>
+</div>
+<div class="navbar navbar-expand-md bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#subnavbar" aria-controls="subnavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="subnavbar">
+      <ul class="navbar-nav middle-nav">
+            <li [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['active']">
+                    <a class="nav-link " [routerLink]="['/jobs']">Jobs</a>
+                  </li>
+                  <li [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['active']">
+                        <a class="nav-link " [routerLink]="['/business']">Business</a>
+                      </li>
+                      <li [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['active']">
+                            <a class="nav-link " [routerLink]="['/news']">News</a>
+                          </li>
+        
+      </ul>
+          
+  </div>
+</div>
+<div class="navbar navbar-expand-md navbar-light bg-light">
+  <nav>            
+      <ul class="navbar-nav" *ngIf="menuItems">
+        
+          <li class="dropdown light-menu" *ngFor="let items of menuItems">
+            <a class="nav-link " href="{{items.itemLink}}"> 
+              {{items.item}}
+            </a>
+        
+          </li>
+      
+         
+      </ul>
+  </nav>
+</div>

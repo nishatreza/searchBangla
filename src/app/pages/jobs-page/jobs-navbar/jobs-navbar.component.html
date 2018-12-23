@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+
+<div class="navbar navbar-expand-md navbar-light bg-light">
+    <nav>
+        <ul class="navbar-nav">
+            <li *ngIf="loggedInUser" class="dropdown light-menu" [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['active']">
+                <a class="nav-link btn btn-lg" [routerLink]="['/add-jobs']">Add jobs</a>
+            </li>
+            <li *ngIf="!loggedInUser" class="dropdown light-menu" [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['active']">
+                <a class="nav-link btn btn-lg" (click)="jobsign()">Add jobs</a>
+            </li>
+        </ul>
+    </nav>
+</div>

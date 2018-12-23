@@ -1,0 +1,93 @@
+.job-description-div {
+    background: #fff;
+    border: 1px solid #a6a6a6a6;
+    border-radius: 4px;
+    padding: 25px;
+    color: rgba(0, 0, 0, .9);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 25px;
+}
+
+.employer-logo {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.employer-logo img {
+    width: 100%;
+}
+
+.employer-details {
+    display: inline-block;
+    width: calc(100% - 115px);
+}
+
+.company-location {
+    margin-bottom: 0;
+}
+
+.company-location a {
+    color: rgba(0, 0, 0, .9);
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.company-location span::before,
+.type-and-followers span::before {
+    content: '\00b7';
+    padding: 0 5px;
+}
+
+.type-and-followers {
+    font-size: 13px;
+    color: rgba(0, 0, 0, .6);
+    margin-bottom: 5px;
+}
+
+.job-description-div h4 {
+    font-weight: 400;
+}
+
+.job-description-div p {
+    letter-spacing: 0.25px;
+    font-size: 14px;
+}
+
+.srcimage {
+    border-radius: 4px;
+    width: 100%;
+    background-color: rgb(0, 145, 202);
+}
+
+.about {
+    padding-top: 20px;
+}
+
+.follow-button {
+    padding: 10px 10px;
+    background-color: rgb(232, 248, 253);
+    border: 1px solid #11a0ff;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #11a0ff
+}
+
+.follow-button:hover {
+    color: #0082d8;
+    border: 1px solid #0082d8;
+}
+
+@media screen and (min-width:300px) and (max-width:400px) {
+    .employer-details {
+        display: block;
+        width: 100%;
+    }
+}

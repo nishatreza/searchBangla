@@ -1,0 +1,12 @@
+<section class="review-details-padding">
+    <div class="single-review" *ngFor="let  ratings of ratingsInfo">
+        <div class="business-img">
+            <!-- <a href="{{ReviewDetails.reviewDetailsLink}}"> -->
+            <img [defaultImage]="defaultImage" [lazyLoad]="ratings.userPhotoUrl" offset="offset" class="img-responsive">
+            <!-- </a> -->
+        </div>
+        <div class=" ad-details review-para">
+            <p> {{ ratings.reviewMessage}} </p>
+        </div>
+    </div>
+</section>

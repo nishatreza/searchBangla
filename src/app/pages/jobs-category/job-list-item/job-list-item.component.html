@@ -1,0 +1,58 @@
+<section class="container" *ngIf="jobsDataList">
+    <div class="row">
+        <div class="col-md-3">
+            <app-jobs-left-side-bar></app-jobs-left-side-bar>
+        </div>
+        <div class="col-md-9">
+            <div class="featured-top clearfix" *ngIf="jobsCount">
+                <h4>Found {{jobsCount}} jobs</h4>
+                <!-- <div class="dropdown pull-right">
+                    <div class="dropdown category-dropdown">
+                        <h5>Sort by:</h5>
+                        <a data-toggle="dropdown" href="#"><span class="change-text">Most Relevant</span><i class="fa fa-caret-square-o-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Most Relevant</a></li>
+                            <li><a href="#">Most Popular</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+            </div>
+            <!-- new -->
+            <!-- <div class="media" > -->
+            <div class="media" *ngFor="let jobs of jobsDataList |paginate:{ itemsPerPage: 10, currentPage: p }">
+
+                    
+                <div class="media-img-holder mr-3">
+                    <!-- <img src="https://demo.themeregion.com/jobs-updated/images/job/11.png" alt="Generic placeholder image"> -->
+                    <img [defaultImage]="defaultImage" [lazyLoad]="jobs.thumbnail" offset="offset" class="img-responsive">
+                </div>
+                <div class="media-body">
+                    <span><a [routerLink]="['/jobs-details',jobs.firestoreId]" class="title">{{jobs.category | replaceDash | titlecase}}</a> @ {{jobs.comName}}</span>
+                    <div class="ad-meta">
+                        <ul>
+                            <li><i class="fa fa-map-marker" aria-hidden="true"></i>{{jobs.ComLocation}}</li>
+                            <li><i class="fa fa-clock-o" aria-hidden="true"></i>{{jobs.employType}}</li>
+                            <li><i class="fa fa-money" aria-hidden="true"></i>{{jobs.salaryRange}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- pagination -->
+            <pagination-controls (pageChange)="p=$event"></pagination-controls>
+
+            <!-- <div class="text-center">
+                <ul class="pagination ">
+                    <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a>...</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                </ul>
+            </div> -->
+        </div>
+
+    </div>
+</section>

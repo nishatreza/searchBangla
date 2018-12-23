@@ -1,0 +1,138 @@
+*:focus {
+    box-shadow: none;
+}
+
+.sidebar-holder {
+    width: 100%;
+    height: 100%;
+    background: #f6f6f6;
+    padding: 40px 15px;
+    display: inline-block;
+}
+
+.media img {
+    border-radius: 50%;
+    width: 40px;
+}
+
+.media-body a {
+    color: #999;
+    font-size: 14px;
+}
+
+.media-body a:hover {
+    cursor: pointer;
+}
+
+.media-body a span {
+    font-weight: 600;
+    color: #333;
+    font-size: 18px;
+}
+
+.dropdown-menu {
+    transform: translate3d(-57px, 49px, 0px) !important;
+}
+
+.dropdown-menu a {
+    color: #333;
+    font-size: 16px;
+}
+
+.dropdown-menu a i {
+    margin-right: 10px;
+}
+
+.dropdown-item {
+    padding: 1rem 1.5rem;
+}
+
+.create-btn {
+    margin: 25px 0;
+    background: #07CB79;
+    width: 100%;
+    color: #fff;
+    text-align: left;
+}
+
+.sub-menu {
+    margin-bottom: 25px;
+}
+
+.sub-menu:last-child {
+    margin-bottom: 0;
+}
+
+.sub-menu-item .btn {
+    position: relative;
+    background: transparent;
+    width: 100%;
+    color: #333;
+    text-align: left;
+    padding: 0;
+    margin: 5px 0 15px;
+    transition: 0.3s;
+}
+
+.sub-menu-item .btn i {
+    margin-right: 10px;
+    color: #333;
+}
+
+.fa-angle-up {
+    position: absolute;
+    margin-right: 0 !important;
+    right: 0;
+    top: 50%;
+    margin-top: -8px;
+    color: #333;
+    transition: 0.3s;
+}
+
+button.collapsed .fa-angle-up {
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
+
+.list-group {
+    margin: -15px 0 18px;
+}
+
+.list-group-item {
+    border: none;
+    padding: .75rem 0;
+    /* background: #f6f6f6; */
+
+    /* color: darkgray; */
+/* 
+    color: black;
+cursor: pointer; */
+}
+
+
+.list-group-item a {
+    text-decoration: none;
+    /* color: inherit; */
+    color: black;
+    /* background: #07CB79; */
+
+    /* width: 100%; */
+}
+
+.list-group-item i {
+    margin: 0 10px 0 5px;
+}
+
+.fa-ellipsis-h {
+    margin-right: 10px;
+}
+
+.list-link {
+    /* color: darkgray; */
+    display: block;
+}
+
+/* .list-link:hover {
+    color: white;
+    text-decoration: none;
+} */

@@ -1,0 +1,121 @@
+<section class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="jumbotron jumbotron-fluid">
+                <form [formGroup]="addMenuForm" (ngSubmit)="onSubmit()">
+                    <div class="form-row">
+                        <div class="form-group col-12 col-md-12 clearfix">
+                            <label for="menuCategory"><b>section</b></label>
+                            <input type="text" id="menuCategory" class="form-control" formControlName="menuCategory" #section>
+                            <small>add sections; (E.g. breakfast, dinner etc.)</small>
+                            <div *ngIf="menuCategory.invalid && (menuCategory.dirty || menuCategory.touched)" class="errorMessage">
+                                <div *ngIf="menuCategory.errors.required">
+                                    menu Category is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-12">
+                            <button class="btn btn-info float-right" type="button" (click)="addSection(section.value); section.value=''">add section</button>
+                        </div>
+                        <div style="width: 100%" class="form-row clearfix" *ngFor="let sec of sections let i=index">
+                            <div style="width: 100%" class="menu-dropdown-div form-row" *ngIf="i==0">
+                                <div class="form-group col-12 col-md-12">
+                                    <label for="menuCategory"><b>Menu section</b></label>
+                                    <select class="form-control" (change)="selectCategory($event.target.value);">
+                                        <option *ngFor="let category of sections" value="{{category.name}}">{{category.name}}</option>
+                                    </select>
+                                    <small>select a menu section from the above option to add item.</small>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12" *ngIf="i==0">
+                                <div class="form-row">
+                                    <div class="form-group col-12 col-md-9">
+                                        <label for="menuItem"><b>Name</b></label>
+                                        <input type="text" id="menuItem" class="form-control" formControlName="itemTitle">
+                                        <div *ngIf="itemTitle.invalid && (itemTitle.dirty || itemTitle.touched)" class="errorMessage">
+                                            <div *ngIf="itemTitle.errors.required">
+                                                name is required.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-12 col-md-3">
+                                        <label for="price"><b>price</b></label>
+                                        <input type="text" id="price" class="form-control" formControlName="price">
+                                        <div *ngIf="price.invalid && (price.dirty || price.touched)" class="errorMessage">
+                                            <div *ngIf="price.errors.required">
+                                                price is required.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-12 col-md-12">
+                                        <label for="itemDescription"><b>Description</b></label>
+                                        <textarea rows="4" class="form-control" id="itemDescription" formControlName="itemDescription"></textarea>
+                                        <div *ngIf="itemDescription.invalid && (itemDescription.dirty || itemDescription.touched)" class="errorMessage">
+                                            <div *ngIf="itemDescription.errors.required">
+                                                description is required.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-12 col-md-12">
+                                        <button class="btn btn-info float-right" type="button" (click)="addItem();">add item</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-12">
+                            <button class="btn btn-warning" type="button" data-toggle="modal" data-target=".bd-example-modal-lg">PREVIEW</button>
+                            <button type="submit" class="btn btn-primary" [disabled]="!addMenuForm.valid">Save</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- M O D A L -->
+<div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">restaurant name</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div *ngFor="let sections of sections let i=index">
+                    <h1 class="menu-list-header">{{sections.name}}
+                        <img src="../../../../assets/images/pointing-down.png" alt="">
+                    </h1>
+                    <div class="row">
+                        <div class="menu-card-holder col-12 col-md-6 col-lg-6" *ngFor="let food of sections.foodItems">
+                            <div class="menu-card clearfix">
+                                <div class="submenu-title">
+                                    {{food.name}}
+                                </div>
+                                <p class="submenu-description">
+                                    {{food.description}}
+                                </p>
+                                <div class="submenu-price float-right">
+                                    <span>&#2547; </span> {{food.price}} /-
+                                </div>
+                                <button type="button" class="btn btn-danger" (click)="itemDelete(sections.name, food.name);">
+                                    <i class="far fa-trash-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis distinctio ut repellendus perferendis deserunt cupiditate inventore dolorum laborum, saepe eos ad. Quae quam quia laborum! -->
+                </div>
+                <div *ngIf="(sections | json) == '[]'" class="alert alert-warning">
+                    You didn't add any item yet!!!
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

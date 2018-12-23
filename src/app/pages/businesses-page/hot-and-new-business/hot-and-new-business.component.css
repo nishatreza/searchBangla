@@ -1,0 +1,127 @@
+.hot-new-business {
+    padding-top: 5%;
+    padding-bottom: 4%;
+}
+
+* {
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.heading {
+    text-align: center;
+    color: #343a40;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.card {
+    margin-top: 18px;
+}
+
+.card-title a {
+    font-size: 1rem;
+}
+
+.box {
+    padding: 4px;
+    margin-right: 4px;
+    border-radius: 15%;
+    font-size: 13px;
+    color: white;
+    background: rgb(24, 10, 182)
+}
+
+.box-gray {
+    background: #CCCCCC;
+    color: white;
+}
+
+.review {
+    color: #666666;
+}
+
+.oppened {
+    color: #F15C00;
+}
+
+.fire {
+    font-size: 20px;
+}
+
+.card a img {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.card {
+    height: 400px;
+    width: 300px;
+    transition: 0.2s;
+}
+
+.card-img {
+    height: 180px;
+    width: 100%;
+    padding: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.card:hover {
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .1);
+}
+
+@media (max-width: 995px) {
+    .card {
+        height: 500px;
+        width: 100%;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+    .card-img {
+        height: 200px;
+        width: 100%;
+        padding: 0;
+    }
+    .card p {
+        font-size: 10px;
+    }
+    .box {
+        font-size: 10px;
+        padding: 2px;
+        margin: 2px;
+    }
+}
+
+@media (max-width: 760px) {
+    .card {
+        height: 420px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+    .card-img {
+        height: 220px;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .card p {
+        font-size: 12px;
+    }
+    .box {
+        font-size: 12px;
+        padding: 2px;
+        margin: 2px;
+    }
+}

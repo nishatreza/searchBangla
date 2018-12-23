@@ -1,0 +1,29 @@
+
+.section-padding {
+    padding: 90px 0
+}
+.join-section{
+    background: #fff;
+}
+h3.section-titile{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.single-item {
+    padding: 20px 0;
+    text-align: center;
+    margin: 15px 32px;
+}
+
+.single-item a{
+    text-decoration: none;
+
+}
+.join-desc h5{
+    color: #000;
+    font-weight: 200;
+    font-size: 22px;
+    margin-top: 20px;
+}

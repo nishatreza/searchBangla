@@ -1,0 +1,129 @@
+<div class="category-section section-padding">
+    <div class="container">
+        <h3>Browse jobs by Category</h3>
+        <div class="row">
+            <div class="col-lg-3" *ngFor="let category of jobsCategory">
+                <div class="single-item">
+                    <a [routerLink]="['/jobs/category',category.categoryLink]">
+                        <div class="category-desc">
+                            <img [defaultImage]="defaultImage" [lazyLoad]="category.categoryImage || 'https://ssl.gstatic.com/images/branding/product/1x/avatar_circle_blue_512dp.png'"
+                                offset="offset" class="img-responsive">
+                            <h5>{{category.categoryTitle}}</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3">
+
+
+                <div class="single-item">
+                    <a (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+
+                        <div class="category-desc">
+                            <img src="../../../assets/images/see-more-categories.png" class="img-responsive">
+                            <h5> More Categories </h5>
+                        </div>
+
+
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div id="collapseExample" [ngbCollapse]="isCollapsed">
+                    <div class="card cardbody">
+                        <div class="card-body">
+                            <div class="row" *ngIf=" jobsMoreCategories">
+                                <div class="col-md-3">
+                                    <img src="../../../assets/images/digital-marketing (1).png" alt=""> &nbsp;
+                                    <a [routerLink]="['/jobs/category', jobsMoreCategories.categoryLink[0]]">Digital
+                                        Marketing</a>
+                                </div>
+                                <div class="col-md-3">
+                                    <img src="../../../assets/images/manager-avatar.png" alt="">&nbsp;
+                                    <a [routerLink]="['/jobs/category', jobsMoreCategories.categoryLink[1]]">Assistant
+                                        Manager</a>
+                                </div>
+                                <div class="col-md-3">
+                                    <img src="../../../assets/images/solution.png" alt="">&nbsp;
+                                    <a [routerLink]="['/jobs/category', jobsMoreCategories.categoryLink[2]]">Integration
+                                        Engineer</a>
+                                </div>
+                                <div class="col-md-3">
+                                    <img src="../../../assets/images/train.png" alt="">&nbsp;
+                                    <a [routerLink]="['/jobs/category', jobsMoreCategories.categoryLink[3]]">Railway
+                                        Engineer</a>
+                                </div>
+                                <div class="col-md-3">
+                                    <img src="../../../assets/images/production.png" alt=""> &nbsp;
+                                    <a [routerLink]="['/jobs/category', jobsMoreCategories.categoryLink[4]]">Production
+                                        Officer</a>
+                                </div>
+                                <div class="col-md-3">
+                                    <img src="../../../assets/images/businessman-and-strategy.png" alt=""> &nbsp;
+                                    <a [routerLink]="['/jobs/category', jobsMoreCategories.categoryLink[5]]">Business
+                                        Planning Officer</a>
+                                </div>
+                                <div class="col-md-3">
+                                    <img src="../../../assets/images/analysis.png" alt=""> &nbsp;
+                                    <a [routerLink]="['/jobs/category', jobsMoreCategories.categoryLink[6]]">Business
+                                        Analyst</a>
+                                </div>
+                                <div class="col-md-3">
+                                    <img src="../../../assets/images/engineer (1).png" alt=""> &nbsp;
+                                    <a [routerLink]="['/jobs/category', jobsMoreCategories.categoryLink[7]]">
+                                        Construction Engineer</a>
+                                </div>
+                                <div class="col-md-3">
+                                    <img src="../../../assets/images/social-media.png" alt=""> &nbsp;
+                                    <a [routerLink]="['/jobs/category', jobsMoreCategories.categoryLink[8]]">
+                                        Social Media Marketing</a>
+                                </div>
+                                <div class="col-md-3">
+                                    <img src="../../../assets/images/headset.png" alt=""> &nbsp;
+                                    <a [routerLink]="['/jobs/category', jobsMoreCategories.categoryLink[9]]">
+                                        Finance Assistant</a>
+                                </div>
+                                <div class="col-md-3">
+                                    <img src="../../../assets/images/advertising-agency-account-executive.png" alt=""> &nbsp;
+                                    <a [routerLink]="['/jobs/category', jobsMoreCategories.categoryLink[10]]">
+                                        Executive Counsellor</a>
+                                </div>
+                                <div class="col-md-3">
+                                    <img src="../../../assets/images/man-in-office-desk-with-computer(1).png" alt=""> &nbsp;
+                                    <a [routerLink]="['/jobs/category', jobsMoreCategories.categoryLink[11]]">
+                                       HR Officer</a>
+                                </div>
+                                <div class="col-md-3">
+                                    <img src="../../../assets/images/desk.png" alt=""> &nbsp;
+                                    <a [routerLink]="['/jobs/category', jobsMoreCategories.categoryLink[12]]">
+                                        Receptionist</a>
+                                </div>
+                                <div class="col-md-3">
+                                    <img src="../../../assets/images/development.png" alt=""> &nbsp;
+                                    <a [routerLink]="['/jobs/category', jobsMoreCategories.categoryLink[13]]">
+                                        Business Development Specialist</a>
+                                </div>
+                                <div class="col-md-3">
+                                    <img src="../../../assets/images/office-utensils-inside-a-cup.png" alt=""> &nbsp;
+                                    <a [routerLink]="['/jobs/category', jobsMoreCategories.categoryLink[14]]">
+                                        Production Officer</a>
+                                </div>
+                                <div class="col-md-3">
+                                    <img src="../../../assets/images/id.png" alt=""> &nbsp;
+                                    <a [routerLink]="['/jobs/category', jobsMoreCategories.categoryLink[15]]">
+                                       Reporter</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

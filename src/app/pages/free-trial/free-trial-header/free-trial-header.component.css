@@ -1,0 +1,80 @@
+#aq-header {
+    background: #0073b1 url(https://static.licdn.com/sc/h/9qlslgagcajvj4gdx809qphd0) left center/cover;
+    margin: 0 auto 48px;
+    position: relative;
+}
+
+.premium-text {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 600;
+    padding-left: 20px;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 2px;
+    left: 25px;
+    top: 15px;
+}
+
+.premium-text:before {
+    content: '';
+    /* background: url(../../../../assets/images/grid-level.svg); */
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 4px;
+    left: 0;
+    background-size: 100%;
+}
+
+.header-content {
+    float: none;
+    margin: 0 auto;
+    padding: 48px 8px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.member-photo {
+    width: 88px;
+    height: 88px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-clip: content-box;
+    border: 1px solid transparent;
+    border-radius: 49.9%;
+    display: inline-block;
+    background-color: #cdcfd2;
+    vertical-align: middle;
+    margin-right: 24px;
+}
+
+.headline {
+    display: inline-block;
+    padding: 0 16px;
+    text-align: left;
+    vertical-align: middle;
+    white-space: normal;
+    max-width: 75%;
+}
+
+.headline h1 {
+    line-height: 32px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 26px;
+}
+
+#aq-header .headline .greeting {
+    display: block;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width:300px) and (max-width:400px) {
+    .member-photo {
+        margin-right: 0;
+    }
+    .headline h1 {
+        font-size: 18px;
+    }
+}

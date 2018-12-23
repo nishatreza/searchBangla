@@ -1,0 +1,41 @@
+.find-people-holder {
+    background: url('https://media.newjobs.com/mockups/cms/WWWUSNEW/img/employers-section-bg-3.jpg');
+    background-size: cover;
+    padding: 50px 0;
+}
+
+.find-people-div {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: 300;
+    margin: 35px 0;
+    color: #11689b;
+}
+
+p {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 200;
+}
+
+.btn {
+    background: #11689b;
+    border-radius: 0;
+    padding: 16px 20px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #fff;
+    margin: 25px 0;
+}
+
+.btn:hover {
+    background: #1683c2;
+}

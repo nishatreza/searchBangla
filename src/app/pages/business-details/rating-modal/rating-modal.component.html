@@ -1,0 +1,49 @@
+<ng-template #content let-c="close">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">Add a review</h4>
+            <button type="button" class="close" aria-label="Close" (click)="c()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body clearfix" *ngIf="user">
+            <div class="media">
+                <img class="align-self-center mr-3" [lazyLoad]="user.photoURL" offset="offset" alt="Generic placeholder image">
+                <div class="media-body">
+                    <h5 class="mt-0">{{user.displayName}}</h5>
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="rating float-left">
+                    <input type="radio" name="test" value="5" [checked]="rating===5" />
+                    <label class="float-right" title="Rocks!" (click)='onClick(5)'>5 stars</label>
+
+                    <input type="radio" name="test" value="4" [checked]="rating===4" />
+                    <label class="float-right" title="Pretty good" (click)='onClick(4)'>4 stars</label>
+
+                    <input type="radio" name="test" value="3" [checked]="rating===3" />
+                    <label class="float-right" title="Meh" (click)='onClick(3)'>3 stars</label>
+
+                    <input type="radio" name="test" value="2" [checked]="rating===2" />
+                    <label class="float-right" title="Kinda bad" (click)='onClick(2)'>2 stars</label>
+
+                    <input type="radio" name="test" value="1" [checked]="rating===1" />
+                    <label class="float-right" title="Sucks big time" (click)='onClick(1)'>1 star</label>
+                </div>
+            </div>
+            <p *ngIf="ratingRequired == true" class="rating-error">please give a rating.</p>
+            <textarea class="form-control" name="review" rows="5" placeholder="Write your review..." #review></textarea>
+            <p *ngIf="ratingRequired == true" class="rating-error">please give a review.</p>
+            <button type="button" class="btn btn-outline-dark float-right" (click)="saveReview(review);">Save</button>
+        </div>
+        <div *ngIf="user == null">
+            <div class="alert alert-danger">
+                <strong>Naaah!</strong> You must be loged in first.
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<a type="button" class="btn btn-secondary review-btn" (click)="open(content)">
+    <i class="fas fa-star"></i> Write a Review
+</a>&nbsp;

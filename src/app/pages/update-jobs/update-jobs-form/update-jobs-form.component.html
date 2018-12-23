@@ -1,0 +1,154 @@
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-sm-0 col-md-1 col-lg-1"></div>
+        <div class=" col-sm-12 col-md-10 col-lg-10 mr-auto">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h4>Account Information</h4><br>
+                    <p>Tell us about you.</p>
+                    <form [formGroup]="updateJobsForm" (ngSubmit)="onSubmit(updateJobsForm.value)">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-7 col-lg-7">
+                                <label for="companyName"><b>Your Company Name</b></label>
+                                <input type="text" name="companyName" id="companyName" class="form-control" formControlName="companyName">
+                                <div *ngIf="companyName.invalid && (companyName.dirty || companyName.touched)" class="errorMessage">
+                                    <div *ngIf="companyName.errors.required">
+                                        company name is required.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-5 col-lg-5"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-7 col-lg-7">
+                                <label for="companySize"><b>Company Size</b></label>
+                                <select name="companySize" id="companySize" class="form-control" formControlName="companySize">
+                                  <option value="">How many employee ?</option>
+                                  <option value="">1 - 49</option>
+                                  <option value="">50 - 149</option>
+                                  <option value="">150 - 249</option>
+                                  <option value="">250 - 449</option>
+                                  <option value="">500 - 749</option>
+                                  <option value="">750 - 999</option>
+                                  <option value=""> 1000 +</option>
+                                </select>
+                                <div *ngIf="companySize.invalid && (companySize.dirty || companySize.touched)" class="errorMessage">
+                                    <div *ngIf="companySize.errors.required">
+                                        company size is required.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-5 col-lg-5"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-7 col-lg-7">
+                                <label for="name"><b>Your Name</b></label>
+                                <input type="text" name="name" id="name" class="form-control" formControlName="name">
+                                <div *ngIf="name.invalid && (name.dirty || name.touched)" class="errorMessage">
+                                    <div *ngIf="name.errors.required">
+                                        company size is required.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-5 col-lg-5"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-7 col-lg-7">
+                                <label for="phone"><b>Phone Number</b></label>
+                                <input type="text" name="phone" id="phone" class="form-control" formControlName="phone">
+                                <div *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="errorMessage">
+                                    <div *ngIf="phone.errors.required">
+                                        phone number is required.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-5 col-lg-5"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-7 col-lg-7">
+                                <label for="role"><b>What's your current role? </b></label>
+                                <select name="role" id="role" class="form-control" formControlName="role">
+                                  <option value="">Choose a role</option>
+                                  <option value="">Software Engineering</option>
+                                  <option value="">Engineering Management</option>
+                                  <option value="">Design</option>
+                                  <option value="">Data Analytics</option>
+                                  <option value="">Developer Operations</option>
+                                  <option value="">Quality Assurance</option>
+                                  <option value="">Information Technology</option>
+                                  <option value="">Project Management</option>
+                                  <option value="">Product Management</option>
+                                </select>
+                                <div *ngIf="role.invalid && (role.dirty || role.touched)" class="errorMessage">
+                                    <div *ngIf="role.errors.required">
+                                        your role is required.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-5 col-lg-5"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-7 col-lg-7">
+                                <label for="location"><b>Where do you live? </b></label>
+                                <select name="location" id="location" class="form-control" formControlName="location">
+                                  <option value="">Choose a location</option>
+                                  <option value="">Austin</option>
+                                  <option value="">Boston</option>
+                                  <option value="">Bangladesh</option>
+                                  <option value="">Chicago</option>
+                                  <option value="">India</option>
+                                  <option value="">Los Angeles</option>
+                                  <option value="">New York</option>
+                                  <option value="">San Diego</option>
+                                  <option value="">SF Bay Area</option>
+                                  <option value="">Toronto</option>
+                                  <option value="">Washington D.C.</option>
+                                </select>
+                                <div *ngIf="location.invalid && (location.dirty || location.touched)" class="errorMessage">
+                                    <div *ngIf="location.errors.required">
+                                        your location is required.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-5 col-lg-5"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-7 col-lg-7">
+                                <label for="hearFrom"><b>How did you hear about us?</b></label>
+                                <select name="hearFrom" id="hearFrom" class="form-control" formControlName="hearFrom">
+                                  <option value=""></option>
+                                  <option value="">Social Media</option>
+                                  <option value="">TV</option>
+                                  <option value="">Billboard</option>
+                                  <option value="">Online Video</option>
+                                  <option value="">Radio (AM/FM/XM)</option>
+                                  <option value="">Search Engine (ex. Google, Bing, Yahoo)</option>
+                                  <option value="">Streaming Audio (Spotify, Pandora, etc.)</option>
+                                  <option value="">Word of Mouth</option>
+                                  <option value="">Podcast</option>
+                                  <option value="">Newspaper</option>
+                                  <option value="">In the Mail</option>
+                                  <option value="">Other</option>
+                                </select>
+                                <div *ngIf="hearFrom.invalid && (hearFrom.dirty || hearFrom.touched)" class="errorMessage">
+                                    <div *ngIf="hearFrom.errors.required">
+                                        it is required.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-5 col-lg-5"></div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-0 col-md-9 col-lg-9"></div>
+                            <div class="col-sm-12 col-md-3 col-lg-3">
+                                <button *ngIf="!editMode" [routerLink]="['/update-jobs']" type="submit" name="submit" class="form-control btn bnt-sm btn-primary" [disabled]="!updateJobsForm.valid"><b>Continue</b></button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

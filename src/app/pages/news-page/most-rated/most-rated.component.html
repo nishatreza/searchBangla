@@ -1,0 +1,16 @@
+<section class="container">
+    <div class="most-rated-holder">
+        <h2>Most Rated<span> </span></h2>
+        
+        <ol class="clearfix">
+            <span *ngFor="let mostRated of mostRatedData">
+                <span>
+                    <li class="float-left">
+                        <!-- <a>{{mostRated.newsTitle}}</a> -->
+                          <a [routerLink]="['/hot-news',mostRated.firestoreId]">{{mostRated.newsTitle}}</a>
+                    </li>
+                </span>
+            </span>
+        </ol>
+    </div>
+</section>

@@ -1,0 +1,48 @@
+<section class="container">
+    <div class="job-description-div" *ngIf="jobData">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-8">
+                <h4>Job description</h4>
+                <p>
+                        {{jobData.description}}
+                </p>
+                <h4 *ngIf="jobData.requirements">Job requirements</h4>
+                <!-- <p>
+                    {{jobData.jobRequirements}}
+            </p> -->
+                <!-- <ul *ngIf="!jobData.requirements">
+                    <li> No requirements for this job</li>
+                  
+               </ul> -->
+                <!-- <h6>What you’ll be doing</h6> -->
+                <ul>
+                    <li *ngFor="let req of jobData.requirements">{{req}}</li>
+                </ul>
+                    <!-- <li>Designing and implementing secure, low-latency, high-availability, scalable and performant applications</li>
+                    <li>Integrating user- facing elements developed by front -end developers with server side logic</li>
+                    <li>Implementing data protection and integration of data storage solutions</li> -->
+        
+                <!-- <h6>What we are looking for</h6>
+                <ul>
+                    <li>Writing reusable, testable and efficient Python backend code for large, integrated systems</li>
+                    <li>Designing and implementing secure, low-latency, high-availability, scalable and performant applications</li>
+                    <li>Integrating user- facing elements developed by front -end developers with server side logic</li>
+                    <li>Implementing data protection and integration of data storage solutions</li>
+                </ul> -->
+            </div>
+            <div class="short-details col-12 col-sm-12 col-md-4">
+                <h6>Seniority Level</h6>
+                <p>{{jobData.seniority}}</p>
+                <h6>Industry</h6>
+                <p>
+                    <a href="#">{{jobData.comIndustry}}</a><br>
+                    <!-- <a href="#">Online Media</a> -->
+                </p>
+                <h6>Employment Type</h6>
+                <p>{{jobData.employType}}</p>
+                <h6>Job Functions</h6>
+                <p><a href="#">{{jobData.jobFun}}</a></p>
+            </div>
+        </div>
+    </div>
+</section>

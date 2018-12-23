@@ -1,0 +1,11 @@
+<app-navbar></app-navbar>
+
+<div class="navbar navbar-expand-md navbar-light bg-light">
+    <nav>
+        <ul class="navbar-nav">
+            <li class="dropdown light-menu" [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['active']">
+                <a class="nav-link " [routerLink]="['/add-news']">Add news</a>
+            </li>
+        </ul>
+    </nav>
+</div>

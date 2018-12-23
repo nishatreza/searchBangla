@@ -1,0 +1,66 @@
+<section class="container">
+  <div class="row">
+      <div class="col-12">
+          <div class="jumbotron jumbotron-fluid">
+              <h4>Write a Review </h4><br>
+              <!-- <p>Tell us about you.</p> -->
+              <form [formGroup]="addReviewForm" (ngSubmit)="onSubmit(addReviewForm.value)">
+                  <div class="form-row">
+                      <div class="form-group col-12 col-md-6 col-lg-6">
+                          <label for="reviewername"><b>Name</b></label>
+                          <input type="text" id="reviewername" class="form-control" formControlName="reviewername">
+                          <!-- validation -->
+                          <div *ngIf="reviewername.invalid && (reviewername.dirty || reviewername.touched)" class="errorMessage">
+                              <div *ngIf="reviewername.errors.required">
+                               name is required.
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group col-12 col-md-6 col-lg-6">
+                          <label for="email"><b>Email </b></label>
+                          <input type="text" id="email" class="form-control" formControlName="email">
+                          <!-- validation -->
+                          <div *ngIf="email.invalid && (email.dirty || email.touched)" class="errorMessage">
+                              <div *ngIf="email.errors.required">
+                                email is required.
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group col-12 col-md-6 col-lg-8">
+                        <label for="comment"> <b>Comment here</b></label>
+                        <textarea class="form-control" id="comment" formControlName="comment"></textarea>
+                        <div *ngIf="comment.invalid && (comment.dirty || comment.touched)" class="errorMessage">
+                            <div *ngIf="comment.errors.required">
+                                Comment is required.
+                            </div>
+                        </div>
+                    </div>
+                      <div id="imgDiv" class="form-group col-12 col-md-12 col-lg-4">
+                          <label for="foodimage"><b>Food Image</b></label>
+                          <input type="text" class="form-control" id="foodimage" placeholder="Enter your business image" formControlName="foodimage">
+                          <div *ngIf="foodimage.invalid && (foodimage.dirty || foodimage.touched)" class="errorMessage">
+                              <div *ngIf="foodimage.errors.required">
+                               Food image is required.
+                              </div>
+                          </div>
+                      </div>
+           
+                       
+           
+                      <!-- <div class="col-12 col-md-12 col-lg-12">
+                          <button type="button" class="btn btn-info" (click)="addInputField()">+ add more image</button>
+                      </div> -->
+                      <!-- job category -->
+
+            <br>
+          
+                      <br>
+                      <div class="col-12 col-md-3 col-lg-3 review-submit">
+                          <button type="submit" class="form-control btn bnt btn-primary" [disabled]="!addReviewForm.valid"><b>Submit</b></button>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>

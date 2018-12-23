@@ -1,0 +1,18 @@
+<section  *ngIf="userData">
+    <div class="container" *ngIf="userData.interest as interest">
+
+    <h2 class="text-center">My Interest</h2>
+    <div class="" *ngFor="let interestList of interest">
+  
+        <ul class="list-inline">
+            <li class="list-inline-item" >
+                    <p>{{interestList.interestDescription}}</p>
+                    <img width="200px" height="200px" class="img-fluid img-thumbnail" [defaultImage]="defaultImage" [lazyLoad]="interestList.interestImage || 'https://ssl.gstatic.com/images/branding/product/1x/avatar_circle_blue_512dp.png'" offset="offset">
+                
+</li>
+            <!-- It may seems funny :) :) :) for populating the list of interest :) -->
+        </ul>
+    </div>
+</div>
+
+</section>

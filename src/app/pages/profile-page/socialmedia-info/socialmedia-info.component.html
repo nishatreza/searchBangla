@@ -1,0 +1,62 @@
+<div class="row" *ngIf="userData">
+  <div class="col-sm-12 col-md-12" *ngIf="userData.socialInfo as socialInfo">
+    <div class="social-link">
+
+      <!-- facebook -->
+      <div *ngIf="socialInfo.facebookLink; then faceBlock else elseFaceBlock"></div>
+      <ng-template #facebookContent><b>{{socialInfo.facebookLink}}</b></ng-template>
+      <ng-template #faceBlock> <a [href]="socialInfo.facebookLink" placement="top" [ngbTooltip] ="facebookContent"><i class="fab fa-facebook-f"></i> </a> </ng-template>
+      <ng-template #elseFaceBlock></ng-template>
+   <!-- twitter -->
+      <div *ngIf="socialInfo.twitterLink; then twitter else twitterBlock"></div>
+      <ng-template #twitterContent><b>{{socialInfo.twitterLink}}</b></ng-template>
+      <ng-template #twitter> <a [href]="socialInfo.twitterLink" placement="top" [ngbTooltip] ="twitterContent"><i class="fab fa-twitter"></i> </a> </ng-template>
+      <ng-template #twitterBlock></ng-template>
+      <!-- googleplus -->
+      <div *ngIf="socialInfo.googlePlusLink; then googleplus else googleplusBlock"></div>
+      <ng-template #googlePlusContent><b>{{socialInfo.googlePlusLink}}</b></ng-template>
+      <ng-template #googleplus> <a [href]="socialInfo.googlePlusLink" placement="top" [ngbTooltip] ="googlePlusContent"><i class="fab fa-google-plus-g"></i> </a> </ng-template>
+      <ng-template #googleplusBlock></ng-template>
+      <!-- pinterest -->
+      <div *ngIf="socialInfo.pinterestLink; then pinterest else pinterestBlock"></div>
+      <ng-template #pinterestContent><b>{{socialInfo.pinterestLink}}</b></ng-template>
+      <ng-template #pinterest> <a [href]="socialInfo.pinterestLink" placement="top" [ngbTooltip] ="pinterestContent"><i class="fab fa-pinterest-p"></i> </a> </ng-template>
+      <ng-template #pinterestBlock></ng-template>
+      <!-- instagram -->
+      <div *ngIf="socialInfo.instagramLink; then instagram else instagramBlock"></div>
+      <ng-template #instagramContent><b>{{socialInfo.instagramLink}}</b></ng-template>
+      <ng-template #instagram> <a [href]="socialInfo.instagramLink" placement="top" [ngbTooltip] ="instagramContent"><i class="fab fa-instagram"></i> </a> </ng-template>
+      <ng-template #instagramBlock></ng-template>
+      <!-- youtube -->
+      <div *ngIf="socialInfo.youtubeLink; then youtube else youtubeBlock"></div>
+      <ng-template #youtubeContent><b>{{socialInfo.youtubeLink}}</b></ng-template>
+      <ng-template #youtube> <a [href]="socialInfo.youtubeLink" placement="top" [ngbTooltip] ="youtubeContent"><i class="fab fa-youtube"></i> </a> </ng-template>
+      <ng-template #youtubeBlock></ng-template>
+<!-- linkedin -->
+      <div *ngIf="socialInfo.linkedinLink; then linkedin else linkedinBlock"></div>
+      <ng-template #linkedinContent><b>{{socialInfo.linkedinLink}}</b></ng-template>
+      <ng-template #linkedin> <a [href]="socialInfo.linkedinLink" placement="top" [ngbTooltip] ="linkedinContent"><i class="fab fa-linkedin-in"></i> </a> </ng-template>
+      <ng-template #linkedinBlock></ng-template>
+
+  <!-- dribble -->
+      <div *ngIf="socialInfo.dribbleLink; then dribble else dribbleBlock"></div>
+      <ng-template #dribbleContent><b>{{socialInfo.dribbleLink}}</b></ng-template>    
+      <ng-template #dribble> <a [href]="socialInfo.dribbleLink" placement="top" [ngbTooltip] ="dribbleContent">
+          <i class="fab fa-dribbble"></i>
+      </a> </ng-template>
+      <ng-template #dribbleBlock></ng-template>
+<!-- behance -->
+      <div *ngIf="socialInfo.behanceLink; then behance else behanceBlock"></div>
+      <ng-template #behanceContent><b>{{socialInfo.behanceLink}}</b></ng-template>
+      <ng-template #behance> <a [href]="socialInfo.behanceLink" placement="top" [ngbTooltip] ="behanceContent"><i class="fab fa-behance"></i> </a> </ng-template>
+      <ng-template #behanceBlock></ng-template>
+<!-- vimeo -->
+      <div *ngIf="socialInfo.vimeoLink; then vimeo else vimeoBlock"></div>
+      <ng-template #vimeoContent><b>{{socialInfo.vimeoLink}}</b></ng-template>
+      <ng-template #vimeo> <a [href]="socialInfo.vimeoLink" placement="top" [ngbTooltip] ="vimeoContent"><i class="fab fa-vimeo-v"></i> </a> </ng-template>
+      <ng-template #vimeoBlock></ng-template>
+
+    </div>
+ 
+  </div>
+</div>

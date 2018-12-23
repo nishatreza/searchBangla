@@ -1,0 +1,53 @@
+h2 {
+    margin-top: 45px;
+    color: #414141;
+}
+
+.interest-holder {
+    margin: 25px 0;
+    border: 1px solid #e6e6e6e6;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    padding: 25px;
+    text-align: center;
+    color: #414141;
+    letter-spacing: 0.5px;
+}
+.list-inline .list-inline-item{
+    float: left;
+    display: inline-block;
+    margin: 10px;
+    min-height: 200px !important;
+    max-height: 200px !important;
+}
+.list-inline .list-inline-item p{
+  background-color: #414141;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+.interest-holder ul li {
+    border: 1px solid #e6e6e6e6;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.interest-holder ul li img {
+    width: 40px;
+}
+
+.list-inline-item{
+    /* width: 500px;
+    height: 500px; */
+}
+@media screen and (min-width:300px) and (max-width:767px) {
+    .list-inline-item {
+        margin: 0 0.5rem;
+        margin-bottom: 10px;
+    }
+}
+
+/* .card-box{
+    min-height: 200px;
+    max-height: 200px;
+} */

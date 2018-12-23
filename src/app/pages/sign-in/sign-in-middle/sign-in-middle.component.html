@@ -1,0 +1,34 @@
+<!-- modal start -->
+<div class="container mainC">
+  <div class="row">
+
+<div class="col-md-12">
+    <h4 class="title text-center">Sign In </h4>
+
+</div>
+
+<div class="col-md-12">
+    <a class="d-flex justify-content-center navbar-brand" [routerLink]="['/']">
+      <img src="../../../assets/images/SearchBangla.png" class="navbarLogo">
+  </a>
+</div>
+  <div class="col-md-12">
+      <div class="d-flex justify-content-center  omb_socialButtons">
+          <a (click)="googleSignin()" class="btn btn-lg btn-info btn-block omb_btn-google" id="google-button">
+            <!-- <a href="#" class="btn btn-lg btn-info btn-block omb_btn-google" id="google-button"> -->
+            <i class="fab fa-google-plus-g visible-xs"></i> <span class="hidden-xs"> Google+</span>
+          </a>
+        </div>
+  </div>
+<div class="col-md-12">
+    <div class="d-flex justify-content-center">
+        <a (click)="facebookSignin()" class="btn btn-lg btn-primary btn-block" id="fb-button">
+          <i class="fab fa-facebook-square visible-xs"></i>
+          <span class="hidden-xs"> Facebook</span>
+        </a>
+      </div>
+   
+</div>
+
+  </div>
+</div>

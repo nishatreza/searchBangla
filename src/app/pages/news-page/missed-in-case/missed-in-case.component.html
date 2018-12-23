@@ -1,0 +1,26 @@
+<section class="container">
+        <h2>In Case You Missed It <span> </span></h2>
+        <div class="row" >
+            <div class="col-sm-12 col-md-4" *ngFor="let missedStories of missedStoriesData">
+                <a href="{{missedStories.newsLink}}">
+                    <div class="news-div">
+                        <img [defaultImage]="defaultImage" [lazyLoad]="missedStories.thumbnail || 'https://ssl.gstatic.com/images/branding/product/1x/avatar_circle_blue_512dp.png'" offset="offset">
+                        <p>{{missedStories.newsTitle}}</p>
+                    </div>
+                </a>
+            </div>
+           <!-- <div class="col-sm-12 col-md-4">
+                <div class="row">
+                    <div class="col-sm-6 col-md-12" *ngFor="let missedStories of missedStoriesData.missedStories let i=index">
+                        <a href="missedStories.newsLink" *ngIf="i<2">
+                            <div class="news-div">
+                                <img [defaultImage]="defaultImage" [lazyLoad]="missedStories.thumbnail || 'https://ssl.gstatic.com/images/branding/product/1x/avatar_circle_blue_512dp.png'" offset="offset" class="img-thumbnail">
+                                <p>{{missedStories.newsTitle}}</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>  -->
+        </div>
+    </section>
+

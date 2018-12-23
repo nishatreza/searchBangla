@@ -1,0 +1,62 @@
+.heading {
+    margin-top: 70px;
+    margin-bottom: 0;
+    color: #414141;
+    text-align: center;
+}
+
+.price-holder {
+    margin-top: 25px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba( 0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.price-holder:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba( 0, 0, 0, 0.7);
+    transition: 0.3s;
+}
+
+.price {
+    background: #07CB79;
+    color: #fff;
+    padding: 15px;
+    padding: 30px 0;
+    text-align: center;
+    border-radius: 4px 4px 0 0;
+}
+
+.price h2 {
+    font-size: 55px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.price h2 span {
+    font-size: 26px;
+}
+
+.price h2 span:nth-child(1) {
+    position: absolute;
+    margin-left: -15px;
+}
+
+.price .type {
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+.feature {
+    padding: 15px 0;
+    text-align: center;
+    color: #414141;
+}
+
+.feature .btn {
+    border-radius: 4px;
+    background: #07CB79;
+    color: #fff;
+}

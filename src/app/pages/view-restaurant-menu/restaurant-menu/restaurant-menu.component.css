@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+.restaurant-name {
+    font-family: 'Lobster', cursive;
+    font-size: 46px;
+    text-transform: capitalize;
+    margin-top: 15px;
+    color: var(--c);
+    position: relative;
+    /* background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='120px'><text x='0' y='15' fill='red' font-size='20'>var(--c)</text></svg>"); */
+}
+
+.restaurant-name::after {
+    --b: var(--c);
+    content: var(--b);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.menu-card-holder {
+    margin-bottom: 30px;
+}
+
+.menu-card {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    padding: 15px;
+    border-radius: 4px;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    transition: 0.3s;
+}
+
+.menu-list-header {
+    color: rgb(253, 79, 87);
+    display: inline-block;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+.submenu-title {
+    color: #000;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+    background: url(../../../../../src/assets/images/924527-200.png) repeat-x;
+    background-size: 60px;
+    background-position: bottom;
+    padding: 0 0 10px 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.submenu-description {
+    color: #666;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.submenu-price {
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #fd4f57;
+    margin: 0;
+}
+
+.submenu-price span {
+    color: #1bb05c;
+    font-size: 20px;
+}

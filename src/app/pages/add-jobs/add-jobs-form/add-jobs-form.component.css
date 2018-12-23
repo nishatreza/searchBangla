@@ -1,0 +1,74 @@
+.heading-underline {
+    width: 50px;
+    border-bottom: 2px solid lightgreen;
+    margin-bottom: 25px;
+}
+
+label {
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background: lightgreen;
+    color: #333;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+small {
+    color: lightsalmon !important;
+}
+
+.jumbotron {
+    margin: 0;
+}
+
+.jumbotron h4 {
+    padding-left: 15px;
+}
+
+.jumbotron p {
+    padding-left: 15px;
+}
+
+.form-row {
+    margin: 0 10px;
+}
+
+.btn-info {
+    margin-bottom: 15px;
+}
+
+
+/* new */
+
+.errorMessage {
+    font-size: 12px;
+    color: #f44336;
+    text-align: left;
+    padding-top: 0;
+    padding-left: 10px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    /* background-color: aliceblue; */
+}
+
+#reset-btn{
+    background-color: darkturquoise;
+    margin: 0 0 15px 5px;
+    color: white;
+    text-transform: none;
+    font-weight: normal;
+    border: none;
+    /* margin-bottom: 15px; */
+
+}
+/* #reset-btn:focus{
+    outline: none;
+    border: none;
+} */
+#reset-btn:focus, #reset-btn:active:focus, #reset-btn.active:focus{
+    outline:none;
+    box-shadow:none;
+}

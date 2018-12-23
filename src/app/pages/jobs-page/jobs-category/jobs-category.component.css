@@ -1,0 +1,94 @@
+img {
+    max-width: 100%
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+a:focus,
+a:active {
+    outline: 0
+}
+
+a:hover {
+    text-decoration: none
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    background: #F5F5F5!important;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+
+/* Remove Chrome Input Field's Unwanted Yellow Background Color */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+.section-padding {
+    padding-top: 5%;
+    padding-bottom: 4%;
+}
+
+
+/* ========================
+   02: Category Section CSS
+========================== */
+
+h3.section-titile {
+    text-align: center;
+    color: rgb(24, 10, 182);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.single-item {
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.2s;
+    padding: 20px 0;
+    text-align: center;
+    border: 1px solid #ddd;
+    margin: 15px 0;
+    cursor: pointer;
+
+}
+
+.single-item-margin {
+    margin: 15px 0;
+}
+
+.single-item:hover {
+    border-color: #0073bb;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .1);
+}
+
+.category-desc h5 {
+    color: #222;
+    font-weight: 700;
+}
+.cardbody i{
+    color: #0073bb;
+
+}
+.cardbody .col-md-3{
+    padding-top: 2%;
+}
+/*  */
+

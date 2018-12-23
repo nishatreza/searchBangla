@@ -1,0 +1,20 @@
+<section class="container">
+  <h2 class="heading">Blog</h2>
+  <div class="blog-holder">
+      <div class="clearfix single-blog" *ngFor="let blog of blog">
+          <div class="img-holder w-50 float-left">
+              <img class="" [defaultImage]="defaultImage" [lazyLoad]="blog.blogImg" offset="offset">
+              <div class="blog-info">
+                  <i class="fas fa-user"></i>{{blog.blogerName}}
+                  <i class="far fa-clock"></i>{{blog.blogTime}}
+                  <i class="fas fa-comments"></i>{{blog.blogreply}}
+              </div>
+          </div>
+          <div class="blog-description w-50 float-right">
+              <h2>{{blog.blogHeading | uppercase}}</h2>
+              <p>{{ blog.blogDetails | slice:0:150 }}{{blog.blogDetails.length > 150 ? '...' : ''}}</p>
+              <button class="btn">Read More</button>
+          </div>
+      </div>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+<section class="container">
+    <h2 class="restaurant-name" *ngIf="restaurantInfo" style="--c: restaurantInfo[0].name">{{restaurantInfo[0].name}}</h2>
+    <div class="row" *ngIf="menuData">
+        <div class="col-12 col-md-8">
+            <div *ngFor="let menu of menuData">
+                <div *ngFor="let sections of menu.sections">
+                    <h1 class="menu-list-header">{{sections.name}}
+                        <img src="../../../../assets/images/pointing-down.png" alt="">
+                    </h1>
+                    <div class="row">
+                        <div class="menu-card-holder col-12 col-md-6 col-lg-6" *ngFor="let item of sections.foodItems">
+                            <div class="menu-card clearfix" (click)="addToCart(item)">
+                                <div class="submenu-title">
+                                    {{item.name}}
+                                </div>
+                                <p class="submenu-description">{{item.description}}</p>
+                                <p class="submenu-price float-right"><span>&#2547; </span>{{item.price}} /-</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <app-restaurant-sidebar (removeItem)="remove($event)" [cart]="cart.uniqueItems" [pickUpData]="restaurantInfo"></app-restaurant-sidebar>
+            <!-- <app-cart [cart]="cart.uniqueItems"></app-cart> -->
+        </div>
+    </div>
+</section>

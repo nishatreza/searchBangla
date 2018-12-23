@@ -1,0 +1,52 @@
+<section class="container mainC">
+    <div class="employer-details-holder" *ngIf="jobData">
+        <div class="employer-logo">
+
+            <img [defaultImage]="defaultImage" [lazyLoad]="jobData.thumbnail" offset="offset" class="img-responsive">
+
+        </div>
+        <div class="employer-details">
+            <h3>{{jobData.category | replaceDash | titlecase}}</h3>
+            <div class="employer-social">
+                <div class="dropdown">
+                    <button class="btn" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <i class="fas fa-share"></i>
+                    </button>
+                    <div id="dropdown-menu-1" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <!-- <a class="dropdown-item" href="#"><i class="fab fa-facebook"></i>Facebook</a> -->
+                        <fb-like class="dropdown-item"></fb-like>
+                        
+                        <!-- <a class="dropdown-item" href="#"><i class="fab fa-linkedin"></i>Linkedin</a> -->
+                        <linkedin-share class="dropdown-item"></linkedin-share>
+                        <google-plus class="dropdown-item"></google-plus>
+                        <tweet class="dropdown-item"></tweet>
+                        <!-- <a class="dropdown-item" href="#"><i class="fab fa-google-plus-square"></i>google+</a>
+                        <a class="dropdown-item" href="#"><i class="fab fa-twitter-square"></i>Twitter</a> -->
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </button>
+                    <div id="dropdown-menu-2" class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                        <a class="dropdown-item" href="#"><i class="far fa-edit"></i>Send feedback</a>
+                        <a class="dropdown-item" href="#"><i class="far fa-flag"></i>Report this job</a>
+                    </div>
+                </div>
+            </div>
+            <p class="company-location">
+                <span> {{jobData.comName}}</span>
+                <span>{{jobData.ComLocation}}</span>
+            </p>
+            <p class="publish-date">
+                Posted 1 week ago<span>267 views</span>
+            </p>
+            <button id="save-btn" class="btn" (click)= "savedJobs()">Save this job</button>
+            <!-- Button trigger modal -->
+            <a id="apply-btn" [routerLink]="['/job/apply',jobData.firestoreId]" class="btn">Apply to this job</a>
+        </div>
+    </div>
+</section>
+

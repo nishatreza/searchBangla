@@ -1,0 +1,113 @@
+.business-images-div .row {
+    margin: 0;
+}
+
+.nomarginfour {
+    padding: 0;
+    margin: 0;
+    /* overflow: hidden; */
+    height: 210px;
+    /* position: relative; */
+}
+
+.imgHover {
+    transition: 0.2s;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.nomarginfour:hover .imgHover {
+    position: absolute;
+    transform: scale(1.16);
+    z-index: 99999;
+}
+
+.centerDiv {
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    z-index: 999999;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
+
+
+/*gallery*/
+
+.gallery {
+    position: fixed;
+    z-index: 9999999;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.gallery .img-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+}
+
+.gallery .img-div img {
+    max-width: 70%;
+}
+
+.fa-chevron-circle-left:before {
+    color: #fff;
+    font-size: 40px;
+    margin-right: 15px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.fa-chevron-circle-right:before {
+    color: #fff;
+    font-size: 40px;
+    margin-left: 15px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.fa-times-circle {
+    position: absolute;
+    color: #fff;
+    font-size: 40px;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 300px) and (max-width: 575px) {
+    .fa-chevron-circle-right:before,
+    .fa-chevron-circle-left:before,
+    .fa-times-circle {
+        font-size: 20px;
+    }
+}
+
+.no-img-msg {
+    width: 100%;
+    padding: 221px;
+    border: 1px solid #ccc;
+}
+
+.no-img-msg::before {
+    content: "no images";
+    position: absolute;
+    font-size: 40px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #ccc;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

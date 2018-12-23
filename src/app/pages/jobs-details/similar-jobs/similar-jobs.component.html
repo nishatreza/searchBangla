@@ -1,0 +1,34 @@
+<h2 class="similartext">Similar Jobs</h2>
+<div class="row">
+    <!-- <div class="col-md-4" *ngIf="jobIndustryData as industryData"> -->
+
+  <div class="col-md-4" *ngFor="let  similarJobs of  similarJobsData let i=index">
+    <!-- <a href="" class="reftag"> -->
+      <a (click)="window.location.reload(true);" [routerLink]="['/job-details',similarJobs.firestoreId]" class="reftag" *ngIf="i<6">
+
+
+      <div class="card">
+        <a>
+            <img [defaultImage]="defaultImage" [lazyLoad]="similarJobs.thumbnail" offset="offset" class="img-responsive card-img-top"  >
+        </a>
+ 
+        <div class="card-body">
+          <h5 class="card-title title">{{similarJobs.title}}</h5>
+          <span class="card-text company">{{similarJobs.comName}}</span> <br>
+          <span class="card-text countryborder">{{similarJobs.ComLocation}}</span> <br>
+
+          <span class="publish-date">
+            <hr>
+            2 weeks ago
+
+
+          </span>
+        </div>
+      </div>
+    </a>
+    
+  </div>
+
+ 
+
+</div>

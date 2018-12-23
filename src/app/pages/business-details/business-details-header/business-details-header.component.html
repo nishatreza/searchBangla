@@ -1,0 +1,116 @@
+<section class="mainDivmap">
+    <div class="container" *ngIf="businessData">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="stdiv">
+                    <span class="nameText">{{businessData.name}}</span> &nbsp;
+                    <i class="fas fa-check-circle"></i> Claimed
+                </div>
+                <div class="list clearfix">
+                    <div class="rating float-left" *ngIf="ratingsData">
+                        <input type="radio" value="5" [checked]="ratingsData.rating===5" />
+                        <label class="float-right" title="Rocks!">5 stars</label>
+
+                        <input type="radio" value="4" [checked]="ratingsData.rating===4" />
+                        <label class="float-right" title="Pretty good">4 stars</label>
+
+                        <input type="radio" value="3" [checked]="ratingsData.rating===3" />
+                        <label class="float-right" title="Meh">3 stars</label>
+
+                        <input type="radio" value="2" [checked]="ratingsData.rating===2" />
+                        <label class="float-right" title="Kinda bad">2 stars</label>
+
+                        <input type="radio" value="1" [checked]="ratingsData.rating===1" />
+                        <label class="float-right" title="Sucks big time">1 star</label>
+                    </div>
+                    <p class="reviewtotal float-left" *ngIf="ratingsData">{{ratingsData.countRating}} reviews</p>
+                </div>
+                <div class="list">
+                    <ul class="list-unlysted firstList">
+                        <li>
+                            <span class="show-cost">
+                                <i class="far fa-money-bill-alt"></i> {{businessData.cost | titlecase}} - <i class="fas fa-utensils"></i> {{businessData.businessType | titlecase}}
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-7 buttondiv">
+                <ul class="list-unlysted rightButtons">
+                    <li>
+                        <app-rating-modal></app-rating-modal>
+                        <!-- <a [routerLink]="['/add-restaurant-menu']" class="btn btn-secondary review-btn">
+                            Add a menu
+                        </a> &nbsp;&nbsp; -->
+                        <app-add-photos-modal></app-add-photos-modal>
+                        <!-- <a href="" class="btn btn-secondary rightadd-btn">
+                            <i class="fas fa-camera"></i> Add photo
+                        </a> -->
+                        <a type="button" href="" class="btn btn-secondary rightadd-btn">
+                            <i class="fas fa-external-link-alt"></i> Share
+                        </a>
+                        <a type="button" href="" class="btn btn-secondary rightadd-btn">
+                            <i class="fas fa-bookmark"></i> Save
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row secondRow">
+            <div class="col-md-4 col-sm-6">
+                <div class="card">
+                    <iframe width="100%" height="200" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;coord=37.7809756,-122.4734812&amp;q=4828%20Geary%20Blvd%20San%20Francisco%2C%20CA%2094118%20USA+(Yelp)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                  </iframe>
+                    <!-- <agm-map [latitude]="lat" [longitude]="lng">
+                        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                    </agm-map> -->
+                    <div class="card-body">
+                        <div class="card-text">
+                            <span class="textbold">
+                                <i class="fas fa-map-marker-alt"></i> 
+                                {{businessData.address}}
+                            </span><br>
+                            <span>
+                                {{businessData.city}}
+                            </span><br>
+                            <span>
+                                {{businessData.country}}
+                            </span>
+                            <br>
+                            <i class="fas fa-arrow-circle-right"></i>
+                            <a href="" class="getdirtext"> Get Directions </a>
+                            <br>
+                            <i class="fas fa-phone"></i> {{businessData.phone}}
+                            <br>
+                            <i class="fas fa-mobile-alt"></i>
+                            <a href="" class="getdirtext"> Send to your Phone</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-6">
+                <app-image-gallery [businessImages]="businessData.images"></app-image-gallery>
+                    <!-- <app-image-gallery></app-image-gallery> -->
+                <!-- <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-6 col-12 nomarginfour">
+                        <img class="imgHover img-fluid d-block mx-auto" [defaultImage]="defaultImage" [lazyLoad]="businessData.thumbnail || 'https://ssl.gstatic.com/images/branding/product/1x/avatar_circle_blue_512dp.png'" offset="offset">
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-6 col-12 nomarginfour">
+                        <img class="imgHover img-fluid" src="https://s3-media2.fl.yelpcdn.com/bphoto/twoCAOKimqMpFyaiqrFCNg/ls.jpg" alt="">
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-6 col-12 nomarginfour">
+                        <div id="imgli">
+                            <img id="centerImg" class="img-fluid" src="https://s3-media1.fl.yelpcdn.com/bphoto/0FTDxPTQXiRV8pBfMkIcfg/ls.jpg" alt="">
+                            <div class="centerDiv">
+                                <i class="fas fa-th-large fa-lg"></i>
+                                <br>
+                                <span class="seeAll">See all 710</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</section>

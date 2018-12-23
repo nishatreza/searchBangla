@@ -1,0 +1,122 @@
+.w-50 {
+    width: 50%;
+}
+
+.blog-holder {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 25px 0;
+}
+
+.heading {
+    margin-top: 70px;
+    color: #414141;
+    text-align: center;
+}
+
+.single-blog {
+    height: 315px;
+    overflow: hidden;
+}
+
+.single-blog:nth-child(even) .float-right {
+    float: left !important;
+}
+
+.single-blog:nth-child(even) .float-left {
+    float: right !important;
+}
+
+.single-blog .img-holder {
+    width: 100%;
+    height: 315px;
+    overflow: hidden;
+    position: relative;
+    background: #000;
+}
+
+.single-blog .img-holder img {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.single-blog .img-holder:hover img {
+    transform: scale(1.1);
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.blog-info {
+    position: absolute;
+    right: 15px;
+    margin-top: 0;
+    transition: 0.5s;
+    color: #fff;
+}
+
+.blog-info i {
+    margin: 0 5px 0 10px;
+}
+
+.single-blog .img-holder:hover .blog-info {
+    margin-top: -30px;
+    transition: 0.5s;
+}
+
+.blog-description {
+    padding: 50px 30px;
+    height: 100%;
+}
+
+.single-blog:nth-child(even) .blog-description {
+    text-align: right;
+}
+
+.blog-description h2 {
+    font-size: 22px;
+    font-weight: 400;
+    color: #666;
+}
+
+.blog-description p {
+    color: #414141;
+    letter-spacing: 0.5px;
+}
+
+.blog-description .btn {
+    background: transparent;
+    color: #07CB79;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0;
+}
+
+.blog-description .btn:hover {
+    color: rgb(0, 177, 103);
+}
+
+@media screen and (min-width: 300px) and (max-width: 991px) {
+    .w-50 {
+        width: 100% !important;
+    }
+    .single-blog {
+        overflow: unset;
+    }
+    .single-blog .float-right {
+        float: left !important;
+    }
+    .single-blog .float-left {
+        float: left !important;
+    }
+    .single-blog:nth-child(even) .blog-description {
+        text-align: left;
+    }
+    .blog-info {
+        margin-top: -30px;
+        font-size: 11px;
+    }
+    .single-blog .img-holder img {
+        opacity: 0.5;
+    }
+}

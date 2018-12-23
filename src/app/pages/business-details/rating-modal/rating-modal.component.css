@@ -1,0 +1,87 @@
+button:focus {
+    outline: none;
+}
+
+.review-btn {
+    border-radius: 2px;
+    padding: 10px;
+    background-color: rgb(24, 10, 182);
+    cursor: pointer;
+    user-select: none;
+    font-size: 14px;
+    line-height: 1.28571em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: none;
+    color: #fff !important;
+}
+
+.review-btn:hover {
+    background-color: rgba(240, 70, 58, 0.959);
+}
+
+.mr-3 {
+    width: 70px;
+    border-radius: 50%;
+}
+
+.mt-0 {
+    padding: 19px 0;
+    margin: 0;
+}
+
+
+/* S T A R */
+
+.rating:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+    clip: rect(0, 0, 0, 0);
+}
+
+.rating:not(:checked)>label {
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 200%;
+    line-height: 1.2;
+    color: #ddd;
+}
+
+.rating:not(:checked)>label:before {
+    content: '★ ';
+}
+
+.rating>input:checked~label {
+    color: #f70;
+}
+
+.rating:not(:checked)>label:hover,
+.rating:not(:checked)>label:hover~label {
+    color: gold;
+}
+
+.rating>input:checked~label:hover,
+.rating>input:checked~label:hover~label,
+.rating>label:hover~input:checked~label {
+    color: #ea0;
+}
+
+textarea {
+    width: 100%;
+}
+
+.btn-outline-dark {
+    margin-top: 15px;
+}
+
+.alert {
+    margin: 15px;
+}
+
+.rating-error {
+    font-size: 12px;
+    color: #f44336;
+    padding-left: 5px;
+}

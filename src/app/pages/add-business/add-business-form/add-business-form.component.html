@@ -1,0 +1,384 @@
+<section class="add-business container"> 
+    <div class="jumbotron jumbotron-fluid">
+
+   
+    <h2>Fill up your business details</h2>
+    <div class="heading-underline"></div>
+    <form [formGroup]="addBusinessForm" (ngSubmit)="onSubmit(addBusinessForm.value)">
+        <div class="form-group">
+            <label for="businessName">Business name</label>
+            <input type="text" class="form-control" id="businessName" placeholder="Enter your business name" formControlName="name">
+            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="errorMessage">
+
+                <div *ngIf="name.errors.required">
+                    Business name is required.
+                </div>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="businessType">Business type</label>
+            <input type="text" class="form-control" id="businessType" placeholder="Enter your business type" formControlName="businessType">
+            <div *ngIf="businessType.invalid && (businessType.dirty || businessType.touched)" class="errorMessage">
+
+                <div *ngIf="businessType.errors.required">
+                    Business type is required.
+                </div>
+
+            </div>
+        </div>
+   
+        <div class="form-group">
+            <label for="businessType">Business image</label>
+  
+    <input type="text" class="form-control" id="businessthumbnail" placeholder="Enter your business image"  #thumb>
+    <!-- <div *ngIf="thumbnail.invalid && (thumbnail.dirty || thumbnail.touched)" class="errorMessage">
+
+        <div *ngIf="thumbnail.errors.required">
+            Business image is required.
+        </div>
+
+    </div> -->
+</div>
+<button type="button" class="btn btn-info" (click)="addItem(thumb)" style="margin-bottom: 15px;">+ add</button>
+<ul class="form-icon">
+    <li *ngFor="let thumbnail of thumbnails">
+
+        <div class="table-responsive">
+           <table class="table table-striped table-bordered table-hover table-condensed remove-button">
+                   <tbody>
+                     <tr>
+                       <th scope="row"></th>
+                       <td>
+
+                       <img [src]="thumbnail" alt="" height="150px" width="500px" class="img-responsive">
+                       </td>
+                       <td> <button type="button" class="btn btn-danger btn-md" (click)="deleteItem(thumbnail)">Remove</button></td>
+
+                     </tr>
+
+
+                   </tbody>
+                 </table>
+
+   
+ </div>
+      
+ 
+ 
+ 
+    </li>
+ 
+ </ul>
+  <div class="form-group">
+            <label for="businessAddress">Business address</label>
+
+            <input type="text" class="form-control" id="businessAddress" placeholder="Street" formControlName="address">
+            <div *ngIf="address.invalid && (address.dirty || address.touched)" class="errorMessage">
+
+                <div *ngIf="address.errors.required">
+                    Street is required.
+                </div>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="City" formControlName="city">
+            <div *ngIf="city.invalid && (city.dirty || city.touched)" class="errorMessage">
+
+                <div *ngIf="city.errors.required">
+                    City name is required.
+                </div>
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <select class="form-control" formControlName="country">
+                <option value="" disabled selected>Select your country</option>
+              <option>AUSTRALIA</option>
+              <option>CANADA</option>
+              <option>INDIA</option>
+              <option>BNGLADESH</option>
+              <option>USA</option>
+            </select>
+            <div *ngIf="country.invalid && (country.dirty || country.touched)" class="errorMessage">
+
+                <div *ngIf="country.errors.required">
+                    Country name is required.
+                </div>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <select class="form-control" formControlName="category">
+                <option value="" disabled selected>Select your category</option>
+              <option value="restaurants">Restaurants</option>
+              <option value="shopping">Shopping</option>
+              <option value="nightlife">Nightlife</option>
+              <option value="active-life">Active Life</option>
+              <option value="beauty-spas">Beauty & Spas</option>
+              <option value="automotive">Automotive</option>
+              <option value="home-services">Home Services</option>
+              <!-- <option value="more-categories"> More Categories</option> -->
+              <option value="coffee-tea">Coffee & Tea</option>
+              <option value="food">Food</option>
+              <option value="arts-entertainment">Arts & Entertainment</option>
+              <option value="health-medical">Health & Medical</option>
+              <option value="professional-services">Professional Services</option>
+              <option value="pets">Pets</option>
+              <option value="real-estate">Real Estate</option>
+              <option value="hotels-travel">Hotels & Travel</option>
+              <option value="local-services">Local Services</option>
+              <option value="event-planning-services">Event Planning & Services</option>
+              <option value="public-services-gov">Public Services & Gover...</option>
+              <option value="financial-services">Financial Services</option>
+              <option value="education">Education</option>
+              <option value="religious-organizations">Religious Organizations</option>
+              <option value="local-flavor">Local Flavor</option>
+              <option value="mass-media">Mass Media</option>
+
+            </select>
+            <div *ngIf="category.invalid && (category.dirty || category.touched)" class="errorMessage">
+
+                <div *ngIf="category.errors.required">
+                    Category name is required.
+                </div>
+
+            </div>
+        </div>
+        <div class="form-group ">
+            <label for="businessDescription"> Business Description</label>
+            <textarea class="form-control" id="businessDescription" formControlName="description"></textarea>
+            <div *ngIf="description.invalid && (description.dirty || description.touched)" class="errorMessage">
+                <div *ngIf="description.errors.required">
+                    Description is required.
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <select class="form-control" formControlName="cost">
+                    <option value="" disabled selected>Select cost rate</option>
+
+                <option>LOW</option>
+                <option>MEDIUM</option>
+                <option>HIGH</option>
+        
+              </select>
+            <div *ngIf="cost.invalid && (cost.dirty || cost.touched)" class="errorMessage">
+
+                <div *ngIf="cost.errors.required">
+                    Country name is required.
+                </div>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="taxId">TAX registration ID (optional)</label>
+            <input type="text" class="form-control" id="taxId" placeholder="Enter your TAX ID">
+            <!-- formControlName="tax" -->
+            <!-- <div *ngIf="tax.invalid && (tax.dirty || tax.touched)" class="errorMessage">
+
+            <div *ngIf="tax.errors.required">
+                 TAX registration ID is required.
+            </div>
+
+          </div> -->
+            <!-- <small class="form-text text-muted">This is your Business TAX registration number.</small> -->
+        </div>
+        <div class="form-group">
+            <label for="phone">Business phone number</label>
+            <input type="text" class="form-control" id="phone" placeholder="(xxx) xxxx xxxx" formControlName="phone">
+            <div *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="errorMessage">
+
+                <div *ngIf="phone.errors.required">
+                    Business phone number is required.
+                </div>
+
+            </div>
+            <!-- <small class="form-text text-muted">If you are a business, your primary contact number.</small> -->
+        </div>
+        <div class="form-group">
+            <label for="email">Contact email</label>
+            <input type="text" class="form-control" id="email" placeholder="Enter business email" formControlName="email">
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="errorMessage">
+
+                <!-- <div *ngIf="email.errors.required">
+                Contact email is required.
+            </div> -->
+                <div *ngIf="email">
+                    Invalid email address!
+                </div>
+
+            </div>
+        </div>
+        <!-- <div class="form-group">
+          <label for="businessHours"></label>
+          <div class="row">
+            <div class="col-md-6">
+                <input type="text" class="form-control" id="businessDay" placeholder="Business days" formControlName="businessDays">
+                <div *ngIf="businessDays.invalid && (businessDays.dirty || businessDays.touched)" class="errorMessage">
+      
+                  <div *ngIf="businessDays.errors.required">
+                      Business days is required.
+                  </div>
+      
+                </div>
+             </div>
+             <div class="col-md-6">
+                <input type="text" class="form-control" id="businessTime" placeholder="Business time" formControlName="businessTime">
+                <div *ngIf="businessTime.invalid && (businessTime.dirty || businessTime.touched)" class="errorMessage">
+      
+                  <div *ngIf="businessTime.errors.required">
+                      Business time is required.
+                  </div>
+      
+                </div>
+             </div>
+          </div>
+    
+
+      </div> -->
+
+        <!-- work schedule start-->
+
+        <div formGroupName="businessHoursInfo">
+            <h4 class="title text-center">Business hours </h4>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label for="monday" class="col-md-2 col-form-label">Monday </label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="monday" formControlName="monday" required>
+                            <div *ngIf="monday.invalid && (monday.dirty || monday.touched)" class="errorMessage">
+
+                                <div *ngIf="monday.errors.required">
+                                    Monday is required.
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="tuesday" class="col-md-2 col-form-label">Tuesday </label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="tuesday" formControlName="tuesday" required>
+                            <div *ngIf="tuesday.invalid && (tuesday.dirty || tuesday.touched)" class="errorMessage">
+
+                                <div *ngIf="tuesday.errors.required">
+                                    Tuesday is required.
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group row">
+                        <label for="wednesday" class="col-md-2 col-form-label">Wednesday </label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="wednesday" formControlName="wednesday" required>
+                            <div *ngIf="wednesday.invalid && (wednesday.dirty || wednesday.touched)" class="errorMessage">
+
+                                <div *ngIf="wednesday.errors.required">
+                                    Wednesday is required.
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="form-group row">
+                        <label for="thursday" class="col-md-2 col-form-label">Thursday </label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="thursday" formControlName="thursday" required>
+                            <div *ngIf="thursday.invalid && (thursday.dirty || thursday.touched)" class="errorMessage">
+
+                                <div *ngIf="thursday.errors.required">
+                                    Thursday is required.
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label for="friday" class="col-md-2 col-form-label">Friday </label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="friday" formControlName="friday" required>
+                            <div *ngIf="friday.invalid && (friday.dirty || friday.touched)" class="errorMessage">
+
+                                <div *ngIf="friday.errors.required">
+                                    Friday is required.
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="form-group row">
+                        <label for="saturday" class="col-md-2 col-form-label">Saturday </label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="saturday" formControlName="saturday" required>
+                            <div *ngIf="saturday.invalid && (saturday.dirty || saturday.touched)" class="errorMessage">
+
+                                <div *ngIf="saturday.errors.required">
+                                    Saturday is required.
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="form-group row">
+                        <label for="sunday" class="col-md-2 col-form-label">Sunday </label>
+                        <div class="col-md-10">
+
+                            <input type="text" class="form-control" name="sunday" formControlName="sunday" required>
+                            <div *ngIf="sunday.invalid && (sunday.dirty || sunday.touched)" class="errorMessage">
+
+                                <div *ngIf="sunday.errors.required">
+                                    Sunday is required.
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+     
+        <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+        <!-- &nbsp; -->
+        <!-- new for crud -->
+        <button *ngIf="!editMode" type="submit" class="btn btn-primary btn-footer" [disabled]="!addBusinessForm.valid">ADD BUSINESS</button>
+
+    </form>
+    <!-- new for crud -->
+    <!-- *ngFor="let experience of user.experience" -->
+
+    <br>
+    <br>
+</div>
+</section>

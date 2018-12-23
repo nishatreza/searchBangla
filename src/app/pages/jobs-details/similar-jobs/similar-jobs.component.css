@@ -1,0 +1,91 @@
+.peopleReview{
+    padding-top: 4%;
+    padding-bottom: 4%;
+
+}
+.weekborder{
+    /* border-top: 1px solid black; */
+    /* border-top-width: 20%; */
+    
+}
+.publish-date hr {
+    margin: 10px 0 0 0;
+    width: 50px;
+}
+
+.publish-date, .countryborder{
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, .6);
+    /* position: absolute;
+    bottom: 30px; */
+}
+.srcimage{
+   margin: 0;
+   padding: 0;
+}
+.title{
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: rgba(0,0,0,.9);
+}
+.company{
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgba(0,0,0,.9);
+}
+.bottomhr{
+   margin-top: 4px;
+
+}
+/* left */
+.card-img-top{
+    margin: 5px 30px 5px 5px;
+    /* width: 40%; */
+    height: 80px;
+    width: 100px;
+}
+.jobs-image{
+    margin-top: 5% !important;
+}
+.reftag{
+    text-decoration: none;
+}
+.peopleviewtext{
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: rgba(0,0,0,.9);
+}
+.similartext{
+    line-height: 24px;
+    font-weight: 400;
+    color: rgba(0,0,0,.9);
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif;
+    font-size: 18px;
+}
+.card:hover{
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .1);
+    transition: 0.3s;
+}
+.card{
+    margin-top: 6%;
+    min-height: 300px;
+    max-height: 300px;
+    height: auto;
+}
+.imgRow{
+    margin-top: 4%;
+
+}
+@media (min-width: 768px) and (max-width: 990px) { 
+    .shrink-image{
+        width: 100%;
+    }
+    }

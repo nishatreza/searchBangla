@@ -1,0 +1,105 @@
+<!-- <section>
+  <div class="container" *ngIf="newsData">
+    <div class="row">
+       {{newsData.newsTitle}}
+
+    </div>
+  </div>
+</section> -->
+<!-- new -->
+<section class="container details-news" *ngIf="newsData">
+        <div class="news-headline clearfix">
+            <h1>{{newsData.newsTitle}}</h1>
+            <span class="publish-date"><i class="far fa-clock"></i> 18 August 2018</span>
+            <ul class="list-inline float-right">
+                <li class="list-inline-item">
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#">
+                        <i class="fab fa-facebook-messenger"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#">
+                        <i class="fas fa-at"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="news-img">
+            <!-- <img src="https://ichef.bbci.co.uk/news/660/cpsprodpb/1097/production/_103074240_westminster.jpg" alt="news-img"> -->
+            <img [defaultImage]="defaultImage" [lazyLoad]="newsData.thumbnail" offset="offset" class="img-responsive">
+            <p>{{newsData.imageTitle}}</p>
+        </div>
+        <div class="news-paras">
+            <p>
+                {{newsData.descriptionTitle}}
+            </p>
+            <p>
+                {{newsData.newsDescription}}
+    
+            </p>
+        </div>
+        <div class="bottom-social">
+            <h3>Share this story <a href="#">About sharing</a></h3>
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#">
+                        <i class="fab fa-facebook-messenger"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#">
+                        <i class="fas fa-at"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <h2>Related News</h2>
+ 
+        <div class="container">
+            <div class="row">
+                <div class="col-sm" *ngFor="let relatedNews of relatedNewsData let i=index">
+                        <a [routerLink]="['/hot-news',relatedNews.firestoreId]" class="main-card" *ngIf="i<3">
+                    <div class=" card " style="width: 18rem; ">
+                        <img class="card-img-top " [lazyLoad]="relatedNews.thumbnail " alt="Card image cap ">
+                        <div class="card-body ">
+                               
+                            <h5 class="card-title ">{{relatedNews.descriptionTitle}}</h5>
+                            {{relatedNews.newsDescription | slice:0:100}}
+                            {{relatedNews.newsDescription.length > 100 ? "...": ""}}
+                        </div>
+                    </div></a>
+                </div>
+            </div>
+        </div>
+    </section>

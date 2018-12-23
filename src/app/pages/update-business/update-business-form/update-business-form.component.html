@@ -1,0 +1,117 @@
+<section class="add-business container">
+    <h2>Fill up your business details</h2>
+    <div class="heading-underline"></div>
+    <form [formGroup]="updateBusinessForm" (ngSubmit)="onSubmit(updateBusinessForm.value)">
+        <div class="form-group">
+            <label for="businessName">Business name</label>
+            <input type="text" class="form-control" id="businessName" placeholder="Enter your business name" formControlName="name">
+            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="errorMessage">
+  
+              <div *ngIf="name.errors.required">
+                  Business name is required.
+              </div>
+  
+            </div>
+            <!-- <small class="form-text text-muted">This is the legal name of your business.</small> -->
+        </div>
+        <div class="form-group">
+            <label for="businessAddress">Business address</label>
+           
+            <input type="text" class="form-control" id="businessAddress" placeholder="Street" formControlName="address">
+            <div *ngIf="address.invalid && (address.dirty || address.touched)" class="errorMessage">
+  
+              <div *ngIf="address.errors.required">
+                Street  is required.
+              </div>
+  
+            </div>
+          </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="City" formControlName="city">
+            <div *ngIf="city.invalid && (city.dirty || city.touched)" class="errorMessage">
+  
+              <div *ngIf="city.errors.required">
+                  City name is required.
+              </div>
+  
+            </div>
+          </div>
+        <div class="form-group">
+            <select class="form-control" formControlName="country">
+                <option>AUSTRALIA</option>
+                <option>CANADA</option>
+                <option>INDIA</option>
+                <option>BNGLADESH</option>
+                <option>USA</option>
+              </select>
+              <div *ngIf="country.invalid && (country.dirty || country.touched)" class="errorMessage">
+  
+                  <div *ngIf="country.errors.required">
+                      Country name is required.
+                  </div>
+      
+                </div>
+              <!-- <small id="emailHelp" class="form-text text-muted">Select a country from the option.</small> -->
+        </div>
+        <div class="form-group">
+            <label for="taxId">TAX registration ID (optional)</label>
+            <input type="text" class="form-control" id="taxId" placeholder="Enter your TAX ID" formControlName="tax">
+            <div *ngIf="tax.invalid && (tax.dirty || tax.touched)" class="errorMessage">
+  
+              <div *ngIf="tax.errors.required">
+                   TAX registration ID is required.
+              </div>
+  
+            </div>
+            <!-- <small class="form-text text-muted">This is your Business TAX registration number.</small> -->
+        </div>
+        <div class="form-group">
+            <label for="phone">Business phone number</label>
+            <input type="text" class="form-control" id="phone" placeholder="(xxx) xxxx xxxx" formControlName="phone">
+            <div *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="errorMessage">
+  
+              <div *ngIf="phone.errors.required">
+                  Business phone number is required.
+              </div>
+  
+            </div>
+            <!-- <small class="form-text text-muted">If you are a business, your primary contact number.</small> -->
+        </div>
+        <div class="form-group">
+            <label for="email">Contact email</label>
+            <input type="text" class="form-control" id="email" placeholder="Enter business email" formControlName="email">
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="errorMessage">
+  
+              <div *ngIf="email.errors.required">
+                  Contact email is required.
+              </div>
+  
+            </div>
+          </div>
+        <div class="form-group">
+            <label for="businessHours">Business hours</label>
+           
+            <input type="text" class="form-control" id="businessHours" placeholder="Enter business hours" formControlName="businessHours">
+            <div *ngIf="businessHours.invalid && (businessHours.dirty || businessHours.touched)" class="errorMessage">
+  
+              <div *ngIf="businessHours.errors.required">
+                  Business hours is required.
+              </div>
+  
+            </div>
+            <!-- <small class="form-text text-muted">for example; 8am to 5pm (Sunday - Thusrday)</small> -->
+  
+        </div>
+        <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+           <!-- &nbsp; -->
+        <!-- new for crud -->
+        <button *ngIf="!editMode" [routerLink]="['/show-business']" type="submit" class="btn btn-primary btn-footer" [disabled]="!updateBusinessForm.valid">UPDATE BUSINESS</button>
+  
+    </form>
+    <!-- new for crud -->
+    <!-- *ngFor="let experience of user.experience" -->
+    
+    <br>
+    <br>
+   
+  </section>

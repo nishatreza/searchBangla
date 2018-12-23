@@ -1,0 +1,38 @@
+<section class="mainsec">
+    <div class="container">
+        <div class="row" *ngIf="businessCategory">
+            <div class="col-md-9">
+                <h3 class="headerTitle">The Best 10 {{businessCategory | titlecase | replaceDash}} </h3>
+                <!-- <h3 class="headerTitle">The Best 10 {{businessDataList.category | titlecase | replaceUnderscore }} <span class="query-location"> in {{businessDataList.country}} </span></h3> <br> -->
+                <!-- <i class="fas fa-angle-right angleIcon"></i> -->
+                <!-- <a href="" class="country"> {{businessCategory.country | titlecase | replaceDash}}</a> -->
+            </div>
+            <div class="col-md-3 text-right">
+                Showing 1-30 of 4812
+            </div>
+            <div class="col-md-12">
+                <ul class="list-unlysted rightButtons">
+                    <li>
+                        <a href="" class="btn btn-secondary rightadd-btn">$</a>
+                        <a href="" class="btn btn-secondary rightadd-btn">$$</a>
+                        <a href="" class="btn btn-secondary rightadd-btn">$$$</a>
+                        <a href="" class="btn btn-secondary rightadd-btn">$$$$</a> &nbsp;&nbsp;
+                        <a href="" class="btn btn-secondary review-btn">
+                            <i class="far fa-clock"></i> Open Now
+                        </a> &nbsp;&nbsp;
+                        <!-- <a href="" class="btn btn-secondary review-btn">
+                            <i class="fas fa-shuttle-van"></i> Order Delivery
+                        </a> &nbsp;&nbsp; -->
+                        <!-- <a [routerLink]="['/business/category/restaurant/menu',businessDataList.firestoreId]" class="btn btn-secondary review-btn">
+                            <i class="fas fa-clipboard-list"></i> Menu list 
+                        </a>&nbsp;&nbsp; -->
+                        <a href="" class="btn btn-secondary review-btn">Good for Groups</a> &nbsp;&nbsp;
+                        <a href="" class="btn btn-secondary review-btn">
+                            <i class="fas fa-th-list"></i> All Filters
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

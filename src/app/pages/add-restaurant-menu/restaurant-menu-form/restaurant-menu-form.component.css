@@ -1,0 +1,183 @@
+.heading-underline {
+    width: 50px;
+    border-bottom: 2px solid lightgreen;
+    margin-bottom: 25px;
+}
+
+label {
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background: lightgreen;
+    color: #333;
+    border: none;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+small {
+    color: #17a2b8 !important;
+    letter-spacing: 0.5px;
+    padding-left: 10px;
+}
+
+.jumbotron {
+    margin: 0;
+}
+
+.jumbotron h4 {
+    padding-left: 15px;
+}
+
+.jumbotron p {
+    padding-left: 15px;
+}
+
+.form-row {
+    margin: 0 15px;
+}
+
+.form-array .form-row {
+    margin: 0;
+}
+
+.ad-btn {
+    background: transparent;
+    color: rgb(43, 213, 255);
+}
+
+.form-array {
+    width: 100%;
+}
+
+hr {
+    border-color: #333;
+}
+
+.btn-info {
+    margin: 0 0 15px;
+    text-transform: capitalize;
+    border: none;
+}
+
+.btn-warning {
+    font-weight: 700;
+    margin-right: 15px;
+    border: none;
+}
+
+.menu-dropdown-div {
+    margin: 25px 0;
+}
+
+
+/* M O D A L */
+
+.modal {
+    padding-right: 0 !important;
+}
+
+.modal-lg {
+    max-width: 100%;
+}
+
+.modal-dialog {
+    margin: 0;
+}
+
+.modal-body {
+    padding: 1rem 2rem;
+}
+
+.modal-title {
+    text-transform: capitalize;
+}
+
+.modal-content {
+    border: none;
+    border-radius: 0;
+}
+
+.menu-list-header {
+    color: rgb(253, 79, 87);
+    display: inline-block;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.submenu-title {
+    color: #000;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+    background: url(../../../../../src/assets/images/924527-200.png) repeat-x;
+    background-size: 60px;
+    background-position: bottom;
+    padding: 0 0 10px 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.submenu-description {
+    color: #666;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.submenu-price {
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #fd4f57;
+}
+
+.submenu-price span {
+    color: #1bb05c;
+    font-size: 20px;
+}
+
+.alert {
+    margin: 0;
+}
+
+.menu-card-holder {
+    margin-bottom: 30px;
+}
+
+.menu-card {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    padding: 15px;
+    border-radius: 4px;
+    height: 100%;
+}
+
+.btn-danger {
+    border-radius: 50%;
+    color: #fff;
+    position: absolute;
+    left: 1px;
+    bottom: -10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: rgba(253, 79, 87, 0.5);
+    border: none;
+}
+
+
+/* new */
+
+.errorMessage {
+    font-size: 12px;
+    color: #f44336;
+    text-align: left;
+    padding-top: 0;
+    padding-left: 10px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    /* background-color: aliceblue; */
+}

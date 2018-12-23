@@ -1,0 +1,185 @@
+<!---------------------------- 
+          News Section Start
+    ---------------------------->
+<div class="news-section section-padding">
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+
+
+            <h2>Add News</h2>
+            <br>
+            <form [formGroup]="addNewsForm" (ngSubmit)="onSubmit(addNewsForm.value)">
+                <div class="form-group row">
+                    <label for="title" class="col-sm-2 col-form-label">Title</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="title" placeholder="Title..." formControlName="newsTitle">
+
+                        <div *ngIf="newsTitle.invalid && (newsTitle.dirty || newsTitle.touched)" class="errorMessage">
+                            <div *ngIf="newsTitle.errors.required">
+                                News title is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="title" class="col-sm-2 col-form-label">Top Videos Title</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="title" placeholder="Title..." formControlName="videosTitle">
+
+                        <div *ngIf="newsTitle.invalid && (newsTitle.dirty || newsTitle.touched)" class="errorMessage">
+                            <div *ngIf="newsTitle.errors.required">
+                                Top Videos is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="imageTitle" class="col-sm-2 col-form-label">Image title</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="imageTitle" placeholder="Image title" formControlName="imageTitle">
+
+                        <div *ngIf="imageTitle.invalid && (imageTitle.dirty || imageTitle.touched)" class="errorMessage">
+                            <div *ngIf="imageTitle.errors.required">
+                                Image title is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="descriptionTitle" class="col-sm-2 col-form-label">Description title</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="descriptionTitle" placeholder="Description title" formControlName="descriptionTitle">
+
+                        <div *ngIf="descriptionTitle.invalid && (descriptionTitle.dirty || descriptionTitle.touched)" class="errorMessage">
+                            <div *ngIf="descriptionTitle.errors.required">
+                                Description title is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="description" class="col-sm-2 col-form-label">Description</label>
+                    <div class="col-sm-10">
+                        <textarea name="description" id="description" placeholder="Description..." formControlName="newsDescription"></textarea>
+                        <!-- validation -->
+                        <div *ngIf="newsDescription.invalid && (newsDescription.dirty || newsDescription.touched)" class="errorMessage">
+                            <div *ngIf="newsDescription.errors.required">
+                                News description is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="description" class="col-sm-2 col-form-label">Top News Description</label>
+                    <div class="col-sm-10">
+                        <textarea name="description" id="description" placeholder="Description..." formControlName="topNewsDescription"></textarea>
+                        <!-- validation -->
+                        <div *ngIf="topNewsDescription.invalid && (topNewsDescription.dirty || topNewsDescription.touched)" class="errorMessage">
+                            <div *ngIf="topNewsDescription.errors.required">
+                                Top News description is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="thumbnail" class="col-sm-2 col-form-label">Image</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="thumbnail" placeholder="Image..." formControlName="thumbnail">
+                        <!-- validation -->
+                        <div *ngIf="thumbnail.invalid && (thumbnail.dirty || thumbnail.touched)" class="errorMessage">
+                            <div *ngIf="thumbnail.errors.required">
+                                News image is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="thumbnail" class="col-sm-2 col-form-label">Top Stories Image</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="thumbnail" placeholder="Image..." formControlName="topNewsThumbnail">
+                        <!-- validation -->
+                        <div *ngIf="topNewsThumbnail.invalid && (topNewsThumbnail.dirty || topNewsThumbnail.touched)" class="errorMessage">
+                            <div *ngIf="topNewsThumbnail.errors.required">
+                                Top News image is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="reporterName" class="col-sm-2 col-form-label">Reporter name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="reporterName" formControlName="reporterName">
+                        <!-- validation -->
+                        <div *ngIf="reporterName.invalid && (reporterName.dirty || reporterName.touched)" class="errorMessage">
+                            <div *ngIf="reporterName.errors.required">
+                                Reporter name is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="category" class="col-sm-2 col-form-label">Category</label>
+                    <div class="col-sm-10">
+                        <select id="category" class="form-control" formControlName="newsCategory">
+                                <option selected>Choose...</option>
+                                <option value="SPORTS">SPORTS</option>
+                                <option value="CITY">CITY</option>
+                                <option value="WORLD">WORLD</option>
+                                <option value="POLITICS">POLITICS</option>
+                                <option value="INTERNATIONAL">INTERNATIONAL</option>
+                                <option value="CRIME">CRIME</option>
+                                <option value="HEALTH">HEALTH</option>
+                                <option value="ENTERTAINMENT">ENTERTAINMENT</option>
+                                <option value="COMEDY">COMEDY</option>
+                                <option value="FOOD & DRINK">FOOD & DRINK</option>
+                                <option value="ENVIRONMENT">ENVIRONMENT</option>
+                                <option value="TOP STORIES">TOP STORIES</option>
+                            </select>
+                        <!-- validation -->
+                        <div *ngIf="newsCategory.invalid && (newsCategory.dirty || newsCategory.touched)" class="errorMessage">
+                            <div *ngIf="newsCategory.errors.required">
+                                News category is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="upload" class="col-sm-2 col-form-label">Upload</label>
+                    <div class="col-sm-10">
+                        <!-- <input formControlName="newsFile" id="filupload" type="file" accept="application/*,image/*" (change)="startUpload($event.target.files)" style="display:none" /> -->
+
+                        <input type="file" id="upload" formControlName="newsFile">
+
+                    </div>
+                    <!-- <div *ngIf="percentage | async as pct">
+                        <progress class="progress is-info" [value]="pct" max="100">
+                        </progress>
+                        <small>{{ pct | number }}%</small>
+      
+      
+                      </div>
+                      <div *ngIf="snapshot | async as snap">
+                            <small>{{ snap.bytesTransferred | fileSize }} of {{ snap.totalBytes | fileSize }}</small>
+                            <div *ngIf="downloadURL | async as url">
+                              <small class="upload-success">Successfully uploaded resume.</small>
+                            </div>
+                     
+                          </div> -->
+                </div>
+                <div class="form-group row">
+
+                    <label for="submit" class="col-sm-2 col-form-label"></label>
+
+                    <div class="col-sm-10">
+                        <button *ngIf="!editMode" [routerLink]="['/add-news']" type="submit" class="btn btn-primary" [disabled]="!addNewsForm.valid">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!---------------------------- 
+               / News Section End
+         ---------------------------->

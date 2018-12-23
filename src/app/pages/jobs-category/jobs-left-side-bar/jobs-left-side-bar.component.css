@@ -1,0 +1,80 @@
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.accordion a h4 {
+    color: #000000;
+    font-weight: 500;
+    margin: 3px 0;
+    font-size: 18px;
+}
+
+#accordion .panel-default {
+    margin-bottom: 20px;
+    background: #f7f7f7;
+}
+
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+}
+
+#accordion .panel-default>.panel-heading {
+    background-color: #ededed;
+    border: none;
+}
+
+.panel-body {
+    padding: 10px 15px;
+}
+
+.panel-body ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.panel-body ul li {
+    padding: 5px 0;
+}
+
+.panel-body ul li a {
+    color: #000;
+}
+
+.panel-body ul li a:hover {
+    color: #11a0ff;
+    transition: 0.3s;
+}
+
+.panel-body ul li a span {
+    color: #555;
+    font-size: 14px;
+}
+
+label {
+    display: block;
+}
+
+
+/* ######################## plus minus toggle start ######################## */
+
+.fa-minus {
+    display: none;
+}
+
+.fa-plus {
+    display: inline-block;
+}
+
+.class3 .fa.fa-minus {
+    display: inline-block;
+}
+
+.class3 .fa.fa-plus {
+    display: none;
+}
+
+
+/* ######################## plus minus toggle end ######################## */

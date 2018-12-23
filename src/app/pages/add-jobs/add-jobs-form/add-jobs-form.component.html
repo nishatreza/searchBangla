@@ -1,0 +1,226 @@
+<section class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="jumbotron jumbotron-fluid">
+                <h4>New Job Information</h4><br>
+                <p>Tell us about you.</p>
+                <form [formGroup]="addJobsForm" (ngSubmit)="onSubmit(addJobsForm.value)">
+                    <div class="form-row">
+                        <div class="form-group col-12 col-md-6 col-lg-4">
+                            <label for="jobTitle"><b>Job title</b></label>
+                            <input type="text" id="jobTitle" class="form-control" formControlName="title">
+                            <!-- validation -->
+                            <div *ngIf="title.invalid && (title.dirty || title.touched)" class="errorMessage">
+                                <div *ngIf="title.errors.required">
+                                    Job title is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-12 col-md-6 col-lg-4">
+                            <label for="companyName"><b>Company name</b></label>
+                            <input type="text" id="companyName" class="form-control" formControlName="comName">
+                            <!-- validation -->
+                            <div *ngIf="comName.invalid && (comName.dirty || comName.touched)" class="errorMessage">
+                                <div *ngIf="comName.errors.required">
+                                    Company name is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-12 col-md-6 col-lg-4">
+                            <label for="CompanyLocation"><b>Job location</b></label>
+                            <input type="text" id="CompanyLocation" class="form-control" formControlName="ComLocation">
+                            <!-- validation -->
+                            <div *ngIf="ComLocation.invalid && (ComLocation.dirty || ComLocation.touched)" class="errorMessage">
+                                <div *ngIf="ComLocation.errors.required">
+                                    Job location is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div id="imgDiv" class="form-group col-12 col-md-12 col-lg-12">
+                            <label for="businessthumbnail"><b>Business image</b></label>
+                            <input type="text" class="form-control" id="businessthumbnail" placeholder="Enter your business image" formControlName="thumbnail">
+                            <div *ngIf="thumbnail.invalid && (thumbnail.dirty || thumbnail.touched)" class="errorMessage">
+                                <div *ngIf="thumbnail.errors.required">
+                                    Business image is required.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-12 col-md-12 col-lg-12">
+                            <button type="button" class="btn btn-info" (click)="addInputField()">+ add more image</button>
+                        </div> -->
+                        <!-- job category -->
+
+                        <div class="form-group col-12 col-md-9 col-lg-9">
+                            <label for="joblistingimage"> <b>Job category</b></label>
+                            <select class="form-control" formControlName="category">
+                                <option value="" disabled selected>Select your jobs category</option>
+                                <option value="software-engineer">Software Engineer</option>
+                                <option value="web-developer">Web Developer</option>
+                                <option value="database-administrator">Database Administrator</option>
+                                <option value="software-quality-analyst">Software Quality Analyst</option>
+                                <option value="graphics-designer">Graphics Designer</option>
+                                <option value="android-and-ios-developer">Android and IOS Developer</option>
+                                <option value="web-designer">Web Designer</option>
+                                <option value="digital-marketing">Digital Marketing</option>
+                                <option value="assistant-manager">Assistant Manager</option>
+                                <option value="integration-engineer">Integration Engineer</option>
+                                <option value="railway-engineer">Railway Engineer</option>
+                                <option value="production-officer">Production Officer</option>
+                                <option value="business-planning-officer">Business Planning Officer</option>
+                                <option value="business-analyst">Business Analyst</option>
+                                <option value="social-media-marketing">Social Media Marketing</option>
+                                <option value="finance-assistant">Finance Assistant</option>
+                                <option value="executive-counsellor">Executive Counsellor</option>
+                                <option value="hr-officer">HR Officer</option>
+                                <option value="receptionist">Receptionist</option>
+                                <option value="business-development-specialist">Business Development Specialist</option>
+                                <option value="production-officer">Production Officer</option>
+                                <option value="reporter">Reporter</option>
+                                <option value="assistant-construction-engineer">Assistant Construction Engineer</option>
+                          </select>
+                            <div *ngIf="category.invalid && (category.dirty || category.touched)" class="errorMessage">
+                                <div *ngIf="category.errors.required">
+                                    Category name is required.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="form-group col-12 col-md-3 col-lg-3">
+                            <label for="salRange"><b>Salary range</b></label>
+                            <input type="text" class="form-control" id="salRange" placeholder="Enter salary range" formControlName="salaryRange">
+                            <div *ngIf="salaryRange.invalid && (salaryRange.dirty || salaryRange.touched)" class="errorMessage">
+                                <div *ngIf="salaryRange.errors.required">
+                                    Salary Range is required.
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- <div class="form-group col-12 col-md-9 col-lg-9">
+                            <label for="JobFunction"><b>Job function</b></label>
+                            <select id="jobFunction" class="form-control" formControlName="jobFun">
+                                <option value="" disabled selected>add job function</option>
+                                <option value="Advertising">Advertising</option>
+                                <option value="Engineering">Engineering</option>
+                                <option value="HRM">HRM</option>
+                                <option value="Design">Design</option>
+                            </select>
+                         
+                            <div *ngIf="jobFun.invalid && (jobFun.dirty || jobFun.touched)" class="errorMessage">
+                                <div *ngIf="jobFun.errors.required">
+                                    job function is required.
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="form-group col-12 col-md-3 col-lg-3">
+                            <label for="employmentType"><b>employment type? </b></label>
+                            <select id="employmentType" class="form-control" formControlName="employType">
+                                <option value="" disabled selected>choose a employment type</option>
+                                <option value="Full-time">Full-time</option>
+                                <option value="Half-time">Part-time</option>
+                                <option value="Intern">Intern</option>
+                                <!-- <option value="Data Analytics">Data Analytics</option> -->
+                            </select>
+                            <!-- validation -->
+                            <div *ngIf="employType.invalid && (employType.dirty || employType.touched)" class="errorMessage">
+                                <div *ngIf="employType.errors.required">
+                                    employment type is required.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="form-group col-12 col-md-9 col-lg-9">
+                            <label for="companyIndustry"><b>Company industry</b></label>
+                            <select id="companyIndustry" class="form-control" formControlName="comIndustry">
+                                <option value="" disabled selected>add company industry</option>
+                                <option value="Software Engineering">Software Engineering</option>
+                                <option value="Engineering Management">Engineering Management</option>
+                                <option value="Design">Design</option>
+                                <option value="Data Analytics">Data Analytics</option>
+                                <option value="Marketing and Advertising">Marketing and Advertising</option>
+                                <option value="Online Media">Online Media</option>
+                            </select>
+                          
+                            <div *ngIf="comIndustry.invalid && (comIndustry.dirty || comIndustry.touched)" class="errorMessage">
+                                <div *ngIf="comIndustry.errors.required">
+                                    Company industry is required.
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- <div class="form-group col-12 col-md-3 col-lg-3">
+                            <label for="seniorityLevel"><b>Seniority level</b></label>
+                            <select id="seniorityLevel" class="form-control" formControlName="seniority">
+                                <option value="" disabled selected>choose a seniority level</option>
+                                <option value="Entry level">Entry level</option>
+                                <option value="Middle level">Middle level</option>
+                             
+                                <option value="Senior level">Senior level</option>
+
+                            </select>
+                          
+                            <div *ngIf="seniority.invalid && (seniority.dirty || seniority.touched)" class="errorMessage">
+                                <div *ngIf="seniority.errors.required">
+                                    Seniority level is required.
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="form-group col-12 col-md-12 col-lg-12">
+                            <label for="jobDescription"><b>Job description</b></label>
+                            <textarea class="form-control" id="jobDescription" formControlName="description"></textarea>
+                            <div *ngIf="description.invalid && (description.dirty || description.touched)" class="errorMessage">
+                                <div *ngIf="description.errors.required">
+                                    Description is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-12 col-md-12 col-lg-12">
+                            <label for="jobRequirements"><b>Job requirements</b></label>
+                            <!-- <textarea class="form-control" id="jobRequirements" formControlName="jobRequirements"></textarea> -->
+                            <textarea class="form-control" id="jobRequirements" formControlName="jobRequirements"></textarea>
+
+                            <div *ngIf="jobRequirements.invalid && (jobRequirements.dirty || jobRequirements.touched)" class="errorMessage">
+                                <div *ngIf="jobRequirements.errors.required">
+                                    Job requirements are required.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-12 col-md-12 col-lg-12">
+<button type="button" class="btn btn-info" (click)="addItem(req)" style="margin-bottom: 15px;">+ add more requirements</button>
+
+</div> -->
+<!-- reset -->
+                        <!-- job listing -->
+                        <!-- <div class="form-group col-12 col-md-6 col-lg-6">
+                            <label for="jobListingTitle"><b>Job listing title</b></label>
+                            <input type="text" id="jobListingTitle" class="form-control" formControlName="jobListingTitle">
+                        
+                            <div *ngIf="jobListingTitle.invalid && (jobListingTitle.dirty || jobListingTitle.touched)" class="errorMessage">
+                                <div *ngIf="jobListingTitle.errors.required">
+                                    job listing title is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-12 col-md-6 col-lg-6">
+                            <label for="joblistingimage"> <b>Job listing image</b></label>
+                            <input type="text" class="form-control" id="joblistingimage" placeholder="Enter your job listing image" formControlName="joblistingimage">
+                            <div *ngIf="joblistingimage.invalid && (joblistingimage.dirty || joblistingimage.touched)" class="errorMessage">
+                                <div *ngIf="joblistingimage.errors.required">
+                                    job listing image is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-12 col-md-12 col-lg-12">
+                            <label for="jobListingDescription"><b>Job listing description</b></label>
+                            <textarea class="form-control" id="jobListingDescription" formControlName="listingDescription"></textarea>
+                            <div *ngIf="listingDescription.invalid && (listingDescription.dirty || listingDescription.touched)" class="errorMessage">
+                                <div *ngIf="listingDescription.errors.required">
+                                    Description is required.
+                                </div>
+                            </div>
+                        </div> -->
+                        <br>
+                        <div class="col-12 col-md-3 col-lg-3">
+                            <button *ngIf="!editMode" type="submit" class="form-control btn bnt btn-primary" [disabled]="!addJobsForm.valid"><b>Post job</b></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

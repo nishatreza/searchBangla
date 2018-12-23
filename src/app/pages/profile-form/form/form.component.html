@@ -1,0 +1,111 @@
+<section class="form-holder">
+    <h2>Let us know about you</h2>
+ 
+
+    <form class="row" [formGroup]="profileForm" (ngSubmit)="onSubmit(profileForm.value)">
+  <div class="form-group col-md-12">
+        <label>Personal info //</label>
+</div>         
+       
+
+        <!-- <div class="form-group col-md-6">
+            <label for="fname">User name</label>
+            <input type="text" class="form-control" id="fname" formControlName="userName">
+            <div *ngIf="userName.invalid && (userName.dirty || userName.touched)" class="errorMessage">
+                <div *ngIf="userName.errors.required">
+                    User name is required.
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="form-group col-md-6">
+            <label for="lname">Last name</label>
+            <input type="text" class="form-control" id="lname" formControlName="lastName">
+            <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="errorMessage">
+                <div *ngIf="lastName.errors.required">
+                    last name is required.
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="form-group col-md-6">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" formControlName="userEmail">
+            <div *ngIf="userEmail.invalid && (userEmail.dirty || userEmail.touched)" class="errorMessage">
+                <div *ngIf="userEmail.errors.required">
+                    user email is required.
+                </div>
+            </div>
+        </div> -->
+        <div class="form-group col-md-6">
+            <label for="phone">Phone</label>
+            <input type="phone" class="form-control" id="phone" formControlName="phone">
+            <div *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="errorMessage">
+                <div *ngIf="phone.errors.required">
+                    phone number is required.
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="Occupation">Freelance Date</label>
+            <input type="date" class="form-control" id="Occupation" formControlName="freelanceDate">
+            <div *ngIf="freelanceDate.invalid && (freelanceDate.dirty || freelanceDate.touched)" class="errorMessage">
+                <div *ngIf="freelanceDate.errors.required">
+                    Freelance Date is required.
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-md-9">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" formControlName="address">
+            <div *ngIf="address.invalid && (address.dirty || address.touched)" class="errorMessage">
+                <div *ngIf="address.errors.required">
+                    address is required.
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-md-3">
+            <label for="age">Age</label>
+            <input type="text" class="form-control" id="age" formControlName="age">
+            <div *ngIf="age.invalid && (age.dirty || age.touched)" class="errorMessage">
+                <div *ngIf="age.errors.required">
+                    age is required.
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-md-3">
+            <select class="form-control" formControlName="status">
+                <option value="" disabled selected>Status</option>
+              <option value="Active">Active</option>
+              <option value="Offline">Offline</option>
+            
+            </select>
+            <div *ngIf="status.invalid && (status.dirty || status.touched)" class="errorMessage">
+
+                <div *ngIf="status.errors.required">
+                    Status is required.
+                </div>
+
+            </div>
+        </div>
+        <div class="form-group col-md-12">
+                <label for="bio"> Bio</label>
+                <textarea class="form-control" id="bio" formControlName="bio"></textarea>
+                <div *ngIf="bio.invalid && (bio.dirty || bio.touched)" class="errorMessage">
+                    <div *ngIf="bio.errors.required">
+                        Bio is required.
+                    </div>
+                </div>
+            </div>
+  
+        
+  
+   
+   
+        <div class="form-group col-md-12">
+            <button *ngIf="!editMode" [disabled]="!profileForm.valid" type="submit" class="btn btn-primary submit">SAVE</button>
+        </div>
+    </form>
+    <hr>
+  
+    <!-- <hr> -->
+
+</section>

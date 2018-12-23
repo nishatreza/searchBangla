@@ -1,0 +1,18 @@
+<div class="category-section section-padding">
+  <div class="container">
+      <h3 class="section-titile">Find the Best Businesses in Town</h3>
+      <div class="row">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3 card-shadow" *ngFor="let  bestBusinessItems of bestBusiness">
+              <a href="{{bestBusinessItems.businessLink}}">
+                  <div class="card" style="width: 300pxm; height: 250px;">
+                      <!-- <img height="180" width="auto" src="../../../assets/images/massage.png"> -->
+                      <img height="180" width="auto" [defaultImage]="defaultImage" [lazyLoad]="bestBusinessItems.businessImage" offset="offset" class="img-responsive">
+                      <div class="card-body">
+                          <h6 class="card-title text-center">{{ bestBusinessItems.businessTitle}}</h6>
+                      </div>
+                  </div>
+              </a>
+            </div>
+      </div>
+  </div>
+</div>

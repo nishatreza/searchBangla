@@ -1,0 +1,48 @@
+<div class="social-feed-box container">
+  <div class="row" *ngIf="addbusinessObservable|async as business">
+  
+  
+        <div class="col-md-8">
+              <div class="title" *ngIf="business.name">
+                      <h5>{{business.name}}</h5>
+                    </div>
+              
+       
+      
+              <div class="media-body">
+                      <a href="#">
+                          businessAddress
+                      </a>
+                      <br>
+                      <small class="text-muted">city</small>  <br>
+                      <small class="text-muted">TAX registration ID</small>  <br>
+
+                      <small class="text-muted">Business phone number</small> <br>
+
+                      <small class="text-muted">Contact email</small> <br>
+
+                      <small class="text-muted">business Hours</small>
+
+                     <br>
+                
+                    </div>
+                   
+                  </div>
+          <div class="col-md-4">
+                  <div class="pull-right">
+                          <a (click)="deleteBusiness(business)" class="btn btn-primary edt-btn">
+                    
+                             Delete
+                          </a>
+                           &nbsp; <a (click)="editBusiness(business)" [routerLink]="['/update-business']"  class="btn btn-primary edt-btn">
+                          
+                               Edit
+                          </a>
+                      </div>
+              </div>
+          </div>
+  
+   
+   
+  
+    </div>

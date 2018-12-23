@@ -1,0 +1,24 @@
+<div class="col-lg-12 full" *ngIf="pickUpData">
+  <div class="card" style="width: 100%; height: 120px;">
+      <div class="card-body">
+          <div class="row">
+              <div class="col-lg-5">
+                  <p class="pick">pickup</p>
+              </div>
+              <div class="col-lg-7 address">
+                  <p>{{pickUpData.pickUpStreetAddress}}</p>
+                  <p>{{pickUpData.pickUpCityAddress}}</p>
+              </div>
+          </div>
+      </div>
+  </div><br>
+  <div class="date">
+      <i class="fas fa-calendar-alt"></i> {{pickUpData.pickUpDate}}
+  </div><br>
+  <div class="card" style="width: 100%; height: 300px;">
+      <div class="card-body">
+          <p class="choose-item">Choose an item from the menu to get started.</p>
+          <img src="https://cf.chownowcdn.com/marketplace-react-prod/static/media/bag-illustration.6a7e5e50.svg?_sw-precache=6a7e5e50980be0e38ecc5b29dcae6f2f" alt="" class="right-side-image">
+      </div>
+  </div>
+</div>

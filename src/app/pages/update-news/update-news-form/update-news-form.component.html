@@ -1,0 +1,61 @@
+<!-- 
+<div class="news-section section-padding">
+    <div class="container">
+        <h2>Add News</h2>
+        <br>
+        <form [formGroup]="updateNewsForm" (ngSubmit)="onSubmit(updateNewsForm.value)">
+            <div class="form-group row">
+                <label for="title" class="col-sm-2 col-form-label">Title</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="title" placeholder="Title..." formControlName="newsTitle">
+                    <div *ngIf="newsTitle.invalid && (newsTitle.dirty || newsTitle.touched)" class="errorMessage">
+                        <div *ngIf="newsTitle.errors.required">
+                            news title is required.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="description" class="col-sm-2 col-form-label">Description</label>
+                <div class="col-sm-10">
+                    <textarea name="description" id="description" placeholder="Description..." formControlName="newsDescription"></textarea>
+                    <div *ngIf="newsDescription.invalid && (newsDescription.dirty || newsDescription.touched)" class="errorMessage">
+                        <div *ngIf="newsDescription.errors.required">
+                            news description is required.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="category" class="col-sm-2 col-form-label">Category</label>
+                <div class="col-sm-10">
+                    <select id="category" class="form-control" formControlName="newsCategory">
+                        <option selected>Choose...</option>
+                        <option value="sports">Sports</option>
+                        <option value="city">City</option>
+                        <option value="world">World</option>
+                    </select>
+                    <div *ngIf="newsCategory.invalid && (newsCategory.dirty || newsCategory.touched)" class="errorMessage">
+                        <div *ngIf="newsCategory.errors.required">
+                            news category is required.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="upload" class="col-sm-2 col-form-label">Upload</label>
+                <div class="col-sm-10">
+                    <input type="file" id="upload" formControlName="newsFile">
+                </div>
+            </div>
+            <div class="form-group row">
+
+                <label for="submit" class="col-sm-2 col-form-label"></label>
+
+                <div class="col-sm-10">
+                    <button *ngIf="!editMode" [routerLink]="['/update-news']" type="submit" class="btn btn-primary" [disabled]="!updateNewsForm.valid">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div> -->

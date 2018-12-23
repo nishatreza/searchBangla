@@ -1,0 +1,79 @@
+<section class="container">
+    <div class="row" *ngFor="let business of businessDataList">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-9">
+            <div class="business-list" >
+                <div class="slider">
+                        <ngb-carousel class="no-indicators">
+                                <ng-template ngbSlide *ngFor="let images of business.thumbnails">
+                                  <img [src]="images" alt="Random first slide">
+                              
+                                </ng-template>
+                        
+                              </ngb-carousel>
+
+                </div>
+                <div class="list-details">
+                    <div class="row">
+                        <div class="col-12 col-sm-7 col-md-7">
+                            <div>
+                                <!-- <span class="list-logo"></span> -->
+                                <a class="list-header" [routerLink]="['/business-details',business.firestoreId]">{{business.name}}</a>
+                            </div>
+                            <div class="">
+                                    <tr *ngFor="let item of items">
+                     
+                                            <td>
+                                              <app-rating [rating]='item.rating' [itemId]='item.id' (ratingClick)='ratingComponentClick($event)'></app-rating>
+                                            </td>
+                                            <td>
+                                              {{item.rating}} Stars
+                                            </td>
+                                          </tr>
+
+                                <!-- <i class="fas fa-star box"></i>
+                                <i class="fas fa-star box"></i>
+                                <i class="fas fa-star box"></i>
+                                <i class="fas fa-star-half-alt box"></i>
+                                <i class="fas fa-star box box-gray"></i>
+                                <span>164 reviews</span> -->
+                            </div>
+                            <p class="price-range">
+                                $$$$
+                                <span>
+                                    {{business.businessType}}
+                                </span>
+                            </p>
+                        </div>
+                        <div class="list-address text-right col-12 col-sm-5 col-md-5">
+                            <!-- <span class="info"><i class="fas fa-info-circle" data-toggle="tooltip" data-placement="top" title="A business owner paid for this ad."></i></span> -->
+                            <p>
+                                <span>{{business.phone}}</span><br>
+                                <span>{{business.address}}</span><br>
+                                <span>{{business.city}}</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="review-para">
+                        <span>“{{business.description}}”</span>
+                        <a href="">read more</a>
+                    </div>
+                    <!-- <div class="reservation clearfix">
+                        <p class="float-left">
+                            <a href=""><i class="far fa-calendar-alt"></i></a>Offers reservations
+                        </p>
+                        <button class="btn float-right">Find a Table</button>
+                    </div> -->
+                    <div class="takeout clearfix">
+                        <p class="float-left">
+                            <a href=""><i class="fas fa-truck-moving"></i></a>Offers reservations
+                        </p>
+                        <button class="btn float-right">Start Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+            <app-business-list-map></app-business-list-map>
+        </div>
+    </div>
+</section>

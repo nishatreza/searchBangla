@@ -1,0 +1,307 @@
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+.review-holder {
+    padding-top: 5%;
+    padding-bottom: 4%;
+    border-bottom: 1px solid #e6e6e6;
+    /* ######## eliminate the    W I D T H    for later use ######## */
+    /* width: 600px; */
+}
+
+.review-holder:hover .action-list {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.pro-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    overflow: hidden;
+    float: left;
+}
+
+.user-story {
+    list-style: none;
+    float: left;
+    padding-left: 10px;
+    color: #666;
+}
+
+.user-story li a {
+    font-size: 14px;
+    line-height: 1.28571em;
+    font-weight: bold;
+    color: #0073bb;
+}
+
+.user-story li a:hover {
+    text-decoration: underline;
+}
+
+.user-story li b {
+    font-size: 12px;
+    color: #333;
+}
+
+.user-story li span {
+    margin: 0 0 0 20px;
+    font-size: 12px;
+}
+
+.user-story li span b {
+    color: #666;
+}
+
+.user-story .svg {
+    width: 15px;
+}
+
+#friends::before {
+    position: absolute;
+    width: 15px;
+    content: "fff";
+    text-indent: 9999px;
+    background: url("../../../assets/images/relationship.svg") no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    overflow: hidden;
+}
+
+#user-reviews::before {
+    position: absolute;
+    width: 15px;
+    content: "fff";
+    text-indent: 9999px;
+    background: url("../../../assets/images/star.svg") no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    overflow: hidden;
+}
+
+#user-photos::before {
+    position: absolute;
+    width: 15px;
+    content: "fff";
+    text-indent: 9999px;
+    background: url("../../../assets/images/photo-camera.svg") no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    overflow: hidden;
+}
+
+.action-list {
+    clear: both;
+    list-style: none;
+    position: relative;
+    padding-left: 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.action-list li p {
+    margin: 0 0 0 30px;
+    padding: 3px 0px 3px 0;
+    border-bottom: 1px solid #e6e6e6 !important;
+}
+
+.action-list li p a {
+    color: #0073bb;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.action-list li p a:hover {
+    text-decoration: underline;
+}
+
+#share::before {
+    position: absolute;
+    width: 18px;
+    content: "fff";
+    text-indent: 9999px;
+    background: url("../../../assets/images/share.svg") no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    overflow: hidden;
+    padding: 3px 0px 3px 0;
+}
+
+#embed::before {
+    position: absolute;
+    width: 18px;
+    content: "fff";
+    text-indent: 9999px;
+    background: url("../../../assets/images/embed.svg") no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    overflow: hidden;
+    padding: 3px 0px 3px 0;
+}
+
+#compliment::before {
+    position: absolute;
+    width: 18px;
+    content: "fff";
+    text-indent: 9999px;
+    background: url("../../../assets/images/medal.svg") no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    overflow: hidden;
+    padding: 3px 0px 3px 0;
+}
+
+#message::before {
+    position: absolute;
+    width: 18px;
+    content: "fff";
+    text-indent: 9999px;
+    background: url("../../../assets/images/message.svg") no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    overflow: hidden;
+    padding: 3px 0px 3px 0;
+}
+
+#follow::before {
+    position: absolute;
+    width: 18px;
+    content: "fff";
+    text-indent: 9999px;
+    background: url("../../../assets/images/follower.svg") no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    overflow: hidden;
+    padding: 3px 0px 3px 0;
+}
+
+.rating span {
+    font-size: 14px;
+    color: #666;
+}
+
+.check-in {
+    position: relative;
+}
+
+.check-in p {
+    margin: 0 0 15px 25px;
+    font-size: 13px;
+    color: #666;
+    padding-top: 2px;
+}
+
+.check-in::before {
+    position: absolute;
+    width: 18px;
+    content: "fff";
+    text-indent: 9999px;
+    background: url("../../../assets/images/crown.svg") no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    overflow: hidden;
+}
+
+.review p {
+    color: #333;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+
+.review .col-6,
+.review .col-md-6 {
+    margin: 15px 0 0 0;
+}
+
+.review .col-6:nth-child(even),
+.review .col-md-6:nth-child(even) {
+    padding-left: 0;
+    padding-right: 30px;
+}
+
+.review img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.review a {
+    font-size: 14px;
+}
+
+.review a:hover {
+    text-decoration: underline;
+}
+
+.voting {
+    margin-top: 20px;
+}
+
+.voting button {
+    margin-right: 10px;
+    border: 1px solid #666;
+    box-shadow: 0px 0px 5px 0px #aaa;
+    background: #eee;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.voting button:hover {
+    background: #fff;
+    transition: 0.3s;
+}
+
+.voting button img {
+    width: 15px;
+}
+
+.voting button span {
+    color: #666;
+    font-weight: normal;
+}
+
+@media screen and (min-width:300px) and (max-width:1200px) {
+    .review .col-6,
+    .review .col-md-6 {
+        margin: 15px 0 0 0;
+    }
+    .review .col-6:nth-child(even),
+    .review .col-md-6:nth-child(even) {
+        padding-left: 0;
+        padding-right: 30px;
+    }
+    .action-list {
+        opacity: 1;
+    }
+    .voting p {
+        margin-bottom: 0px;
+    }
+    .voting button {
+        margin-top: 10px;
+    }
+}
+
+.box {
+    padding: 4px;
+    margin-right: 4px;
+    border-radius: 15%;
+    font-size: 13px;
+    color: white;
+    background: rgb(24, 10, 182);
+}
+
+.box-gray {
+    background: #CCCCCC;
+    color: white;
+}
+
+@media (max-width: 760px) {
+    .box {
+        font-size: 10px;
+        padding: 2px;
+        margin: 2px;
+    }
+}

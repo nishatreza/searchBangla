@@ -1,0 +1,43 @@
+/* .review-image{
+    display: inline-block;
+    width: 60px;
+    vertical-align: top;
+}
+.review-image img{
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+}
+.review-details-padding{
+    margin-top: 3%;
+}
+.review-padding{
+    margin-top: 3%; 
+} */
+
+.single-review {
+    margin: 0 0 15px;
+}
+
+.review-details-padding {
+    margin-top: 15px;
+}
+
+.business-img {
+    display: inline-block;
+    width: 60px;
+    vertical-align: top;
+}
+
+.business-img img {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+}
+
+.ad-details {
+    display: inline-block;
+    margin-top: -5px;
+    width: calc(100% - 60px);
+    padding: 0 10px;
+}

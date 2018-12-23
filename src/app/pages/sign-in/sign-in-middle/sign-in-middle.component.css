@@ -1,0 +1,79 @@
+.mainC{
+    padding-top: 4%;
+    padding-bottom: 4%;
+background-color: #343A40;
+}
+
+.title{
+    color: #3D9970;
+font-size: 3rem;
+}
+/* new css */
+
+.signLink {
+    cursor: pointer;
+}
+
+.omb_btn-google {
+    background: #ce3d24;
+
+}
+
+#google-button:hover {
+    background: #c32f10;
+    color: white;
+}
+.colc{
+    border:  1px solid red;
+}
+
+#google-button {
+    border: none;
+    color: white;
+    width: 400px;
+}
+
+#fb-button {
+    color: white;
+    width: 400px;
+
+}
+
+.omb_socialButtons{
+    margin-bottom: 4px;
+}
+@media (max-width: 767px) {
+    #google-button {
+        margin-bottom: 10px;
+    }
+    #fb-button {
+        margin-bottom: 10px;
+    }
+}
+
+.navbar-brand img {
+    width: 250px;
+    height: auto;
+}
+
+
+@media screen and (min-width:300px) and (max-width:575px) {
+    .navbar-brand {
+        /* margin-right: 0;
+        width: 79%; */
+    }
+}
+@media (max-width: 583px) {
+    .navbar-brand{
+   /* width: 50%;
+
+   
+    position: relative;
+    right: 100px;
+    z-index: 0; */
+
+    }
+}
+                                                        
+
+

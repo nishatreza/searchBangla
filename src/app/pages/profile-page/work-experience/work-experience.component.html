@@ -1,0 +1,16 @@
+<section class="container">
+    <h2 class="text-center">Work Experience</h2>
+    <div class="experience-holder" *ngIf="userData">
+        <div class="middle-line"></div>
+        <div class="experience-card-div" *ngFor="let experience of userData.experience">
+            <div class="experience-card">
+                <span class="dot"></span>
+                <span class="arrow"></span>
+                <p class="experience-year text-center">{{experience.startDate | date}} - {{experience.endDate | date}}</p>
+                <p class="experience-company text-center">{{experience.company | uppercase}}</p>
+                <p class="experience-title text-center">{{experience.jobTitle | uppercase}}</p>
+                <p class="experience-detail">{{experience.description}}</p>
+            </div>
+        </div>
+    </div>
+</section>

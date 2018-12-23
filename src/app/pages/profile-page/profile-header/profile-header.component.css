@@ -1,0 +1,161 @@
+.main-body {
+    background: #fff;
+    display: block;
+}
+
+
+/* .back-img{
+    background-image: url(https://i.ytimg.com/vi/W27AwWw7Juw/maxresdefault.jpg);
+    -webkit-background-composite: inherit;
+    max-height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat; 
+} */
+
+.main {
+    min-height: 500px;
+    background: #fff;
+    margin-bottom: 25px;
+}
+.about{
+    font-size: 23px;
+
+}
+.card {
+    border: 0;
+    background: #fff;
+}
+
+.card-body {
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-top: 25px !important;
+    border-radius: 4px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background: #fff;
+}
+
+.wave {
+    position: relative;
+    height: 30px;
+    width: 80px;
+    background: #07CB79;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bolder;
+    padding: auto;
+}
+
+.wave::after {
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    background: #07CB79;
+    top: 100%;
+    left: 50%;
+    margin-left: -6px;
+    content: '';
+    transform: rotate(45deg);
+    margin-top: -6px;
+}
+
+.intro-thin {
+    font-weight: 100;
+}
+
+.speciality {
+    font-size: 20px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.upload-btn-wrapper .btn {
+    border: 1px solid #07CB79;
+    color: #07CB79;
+    background-color: white;
+    padding: 6px 12px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.social-link {
+    height: 80px;
+    margin: 0px;
+    background: #07CB79;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 22px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.social-link a {
+    margin-left: 40px;
+    padding: 10px;
+    color: white;
+    transition: 0.3s;
+}
+
+.social-link a:first-child {
+    margin-left: 0;
+}
+
+.social-link a:hover {
+    border-radius: 100%;
+    color: #555;
+    transition: 0.3s;
+}
+
+.bio {
+    font-size: 20px;
+}
+
+.skil-percentage {
+    min-height: 300px;
+    padding: 20px;
+}
+
+.portfolio-small {
+    width: 350px;
+    height: 300px;
+}
+
+@media(max-width:575px) {
+    .card-img-top {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+    .social-link {
+        height: 65px;
+        margin: 0px;
+        font-size: 18px;
+    }
+    .social-link a {
+        margin-left: 0;
+        padding: 8px;
+        color: white;
+    }
+}

@@ -1,0 +1,99 @@
+<div class="main-body">
+    <div class="container main" *ngIf="userData">
+        <div class="row">
+            <div class="card col-sm-12 col-md-12">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-5 col-lg-4 text-center">
+
+                            <div class="profileImageDiv" *ngIf="userData.photoURL || user">
+
+
+                                <img width="100%" height="auto" class="card-img-top m-auto" [defaultImage]="defaultImage"
+                                    [lazyLoad]="userData.photoURL || 'https://ssl.gstatic.com/images/branding/product/1x/avatar_circle_blue_512dp.png'"
+                                    offset="offset">
+
+                                <div class="upload-btn-wrapper">
+                                    <button class="btn m-auto">Upload picture</button>
+                                    <!-- <input id="file-btn" type="file" class="form-control-file" (change)="fileToUpload($event)" accept=".png,.jpg" /> -->
+
+                                    <input id="file-btn" type="file" class="form-control-file" (change)="uploadPic($event)"
+                                        accept=".png,.jpg" />
+                                </div>
+                                <!-- <label class="myFile" for="profilePic">
+                    <i class="fas fa-camera fa-3x"></i>
+        
+                    <input type="file" id="profilePic"  (change)="uploadPic($event)" accept=".png,.jpg"/>
+                  </label> -->
+                            </div>
+                       
+                        </div>
+                        <div class="col-sm-6 col-md-7 col-lg-8">
+                            <div class="wave">
+                                HELLO
+                            </div>
+                            <div class="info">
+                                <br>
+                                <h2><span class="intro-thin">I'm </span> {{userData.displayName || userData.userName}}
+                                    <!-- {{userData.lastName | titlecase}} -->
+                                </h2>
+                                <!-- <span class="speciality">{{userData.lastName}}</span> -->
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 col-lg-3"><strong>E-MAIL</strong></div>
+                                <div class="col-sm-12 col-md-12 col-lg-9">{{userData.email || userData.userEmail}}</div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 col-lg-3"><strong>PHONE</strong></div>
+                                <div class="col-sm-12 col-md-12 col-lg-9">{{userData.phone}}</div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 col-lg-3"><strong>ADDRESS</strong></div>
+                                <div class="col-sm-12 col-md-12 col-lg-9">{{userData.address}}</div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 col-lg-3"><strong>AGE</strong></div>
+                                <div class="col-sm-12 col-md-12 col-lg-9">{{userData.age}}</div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 col-lg-3"><strong>FREELANCE</strong></div>
+                                <div class="col-sm-12 col-md-12 col-lg-9">{{userData.freelanceDate | date}}</div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 col-lg-3"><strong>STATUS</strong></div>
+                                <div class="col-sm-12 col-md-12 col-lg-9"><span class="badge badge-success">{{userData.status}}</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- social -->
+        <app-socialmedia-info [userData]="userData"></app-socialmedia-info>
+        <br><br>
+        <div class="row">
+            <div class="col-sm-4 col-md-3 m-auto text-center">
+                <button type="button" class="btn btn-outline-secondary">DOWNLOAD RESUME</button>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-12 col-md-10 m-auto">
+                <h3 class="text-center about">About me</h3>
+                <p class="bio text-center">
+                    {{userData.bio}}
+
+                </p>
+            </div>
+        </div>
+        <br><br>
+    </div>
+</div>

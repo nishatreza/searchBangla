@@ -1,0 +1,51 @@
+<section class="top-stories">
+    <div class="container-fluid" *ngIf="newsData">
+        <div class="row">
+            <div class="col-12 col-sm-5 col-md-4 col-lg-3">
+                <div class="top-stories-head">
+                    <h2>TOP NEWS</h2>
+                </div>
+                <div class="single-top-stories" *ngFor="let topStories of topStoriesData">
+                    <div class="single-top-stories-img col-lg-6">
+                        <a [routerLink]="['/hot-news',topStories.firestoreId]">
+                            <img style="width: 100%" class="card-img img-responsive img-fluid" [src]="topStories.thumbnail || 'http://www.pbs.org/black-culture/lunchbox_plugins/s/photogallery/img/no-image-available.jpg'">
+                        </a>
+                    </div>
+                    <div class="single-top-stories-headlines col-lg-6">
+                        <a [routerLink]="['/hot-news',topStories.firestoreId]">{{topStories.newsTitle}}</a>
+                    </div>
+                </div>
+            </div>
+            <!-- what's what -->
+            <div class="col-12 col-sm-7 col-md-8 col-lg-9">
+                <div class="whats-hot-head">
+                    <h2>What's HOt</h2>
+                </div>
+                <div class="row">
+                    <div class="single-news-col col-12 col-sm-12 col-md-6 col-lg-4" *ngFor="let news of hotNewsData">
+                        <div class="single-news-card">
+                            <a [routerLink]="['/hot-news',news.firestoreId]">
+                                <div class="img-holder">
+                                    <img style="width: 100%" class="card-img img-responsive img-fluid" [src]="news.thumbnail || 'http://www.pbs.org/black-culture/lunchbox_plugins/s/photogallery/img/no-image-available.jpg'">
+                                    <div class="short-headline">
+                                        {{news.newsCategory}}
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="single-top-stories-headlines">
+                                <a [routerLink]="['/hot-news',news.firestoreId]">{{news.newsTitle}}</a>
+                                <br>
+                                <a [routerLink]="['/hot-news',news.firestoreId]">
+                                    {{news.newsDescription | slice:0:100}}
+                                    {{news.newsDescription.length > 100 ? "...": ""}}
+                                </a>
+                            </div> <br>
+                            <span class="written-by">By {{news.reporterName}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- top storeis end -->

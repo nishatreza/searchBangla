@@ -1,0 +1,59 @@
+/* .nav-link {
+    color: darkgray;
+}
+
+.nav-link:hover {
+    color: white;
+    text-decoration: none;
+} */
+.nav-link {
+
+    background-color: orange;
+    color: black;
+}
+
+.nav-link:hover {
+
+    background-color: rgb(49, 204, 132);
+
+}
+
+.navbar-brand img {
+    width: 132px;
+    height: auto;
+}
+
+.nav {
+    height: 200px;
+}
+
+.top-right li a {
+    font-size: 14px;
+}
+
+.middle-nav li {
+    padding-right: 20px;
+}
+
+.light-menu,
+.dropdown-item {
+    font-size: 14px;
+}
+
+.light-menu:hover>a {
+    /* background: gray;
+    color: aliceblue;
+    border-radius: 10%; */
+}
+
+.light-menu ul li a:hover {
+    background: #E6E6E6;
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+.signLink {
+    cursor: pointer;
+}

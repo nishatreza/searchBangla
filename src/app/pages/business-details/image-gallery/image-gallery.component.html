@@ -1,0 +1,25 @@
+<div class="business-images-div">
+    <div class="row">
+        <div class="col-6 col-md-4 nomarginfour" *ngFor="let businessImage of businessImages let i=index">
+            <img class="imgHover img-fluid d-block mx-auto" *ngIf="i <= 2" (click)="imgGallery(businessImage, i);" [lazyLoad]="businessImage || 'https://ssl.gstatic.com/images/branding/product/1x/avatar_circle_blue_512dp.png'" offset="offset">
+            <!-- see all msg -->
+            <a href="#">
+                <div class="centerDiv" *ngIf="i == 2">
+                    <i class="fas fa-th-large fa-lg"></i><br> See all {{businessImages.length}}
+                </div>
+            </a>
+        </div>
+        <!-- no img msg -->
+        <div class="no-img-msg" *ngIf="businessImages.length == 0"></div>
+    </div>
+</div>
+
+<!-- modal -->
+<div class="gallery" *ngIf="galleryModal">
+    <div class="img-div">
+        <i class="fas fa-chevron-circle-left" (click)="prev(currentImgIndex)" *ngIf="currentImgIndex != 0"></i>
+        <img [lazyLoad]="businessImages[currentImgIndex]" alt="">
+        <i class="fas fa-chevron-circle-right" (click)="next(currentImgIndex, businessImages.length)" *ngIf="currentImgIndex != businessImages.length-1"></i>
+    </div>
+    <i class="far fa-times-circle" (click)="close();"></i>
+</div>

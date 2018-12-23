@@ -1,0 +1,51 @@
+<section>
+    <h2 class="progress-title">Current Progress</h2>
+
+
+    
+    <!-- <div class="card" *ngFor="let progress of progression"> -->
+    <div class="card" *ngFor="let progress of userData.project">
+
+
+        <div class="card-body">
+            <div class="container">
+                <div class="row">
+                        <div class="col-lg-3 col-md-6 progress-card">
+                                <a href="" class="title">{{progress.projectTitle}}</a>
+                                <p class="product-lines">{{progress.projectBrief}}</p>
+                            </div>
+                            <div class="col-lg-3 col-md-6 progress-card">
+                                <p class="progressing">{{progress.projectStatus}}</p>
+                                <p class="product-lines">{{progress.projectStageTopic}}</p>
+                            </div>
+                            <div class="col-lg-3 col-md-6 progress-card">
+                                <p class="progressing-date">{{progress.projectDate | date}}</p>
+                                <p class="product-lines">{{progress.projectTime}}</p>
+                            </div>
+                            <div class="col-lg-3 col-md-6 progress-card">
+                                <p class="progress-bar-style">
+                                    <ngb-progressbar showValue="true" type="success" [value]="progress.projectPercentage"></ngb-progressbar>
+                                </p>
+                            </div>
+                    <!-- <div class="col-lg-3 col-md-6 progress-card">
+                        <a href="{{progress.projectLink}}" class="title">{{progress.projectTitle}}</a>
+                        <p class="product-lines">{{progress.projectTopic}}</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 progress-card">
+                        <p class="progressing">{{progress.projectStatus}}</p>
+                        <p class="product-lines">{{progress.projectStageTopic}}</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 progress-card">
+                        <p class="progressing-date">{{progress.progressDate}}</p>
+                        <p class="product-lines">{{progress.progressTime}}</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 progress-card">
+                        <p class="progress-bar-style">
+                            <ngb-progressbar showValue="true" type="success" [value]="progress.progressPercent"></ngb-progressbar>
+                        </p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

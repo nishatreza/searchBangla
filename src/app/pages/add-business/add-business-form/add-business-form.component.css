@@ -1,0 +1,85 @@
+.add-business {
+    /* padding: 25px 0; */
+}
+
+.heading-underline {
+    width: 50px;
+    border-bottom: 2px solid lightgreen;
+    margin-bottom: 25px;
+}
+
+label {
+    text-transform: uppercase;
+}
+.title{
+    padding-bottom: 2%;
+}
+/* .btn-info {
+    margin-bottom: 15px;
+}
+#businessthumbnail{
+    margin-top: 10px;
+} */
+
+.btn-primary {
+    background: lightgreen;
+    color: #333;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+small {
+    color: lightsalmon !important;
+}
+
+/* new */
+.errorMessage{
+    font-size: 12px;
+    color: #f44336;
+    text-align: left;
+    padding-top:0;
+    padding-left: 10px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    /* background-color: aliceblue; */
+
+
+}
+
+.jumbotron {
+  padding: 5%;
+}
+/* new */
+ul li{
+    list-style-type: none;
+}
+.form-icon .fa-edit{
+   background-color: #138496;
+padding: 20%;
+   color: white;
+   text-align: center;
+   font-size: 20px;
+   border-radius: 30%;
+}
+.form-icon .fa-trash-alt{
+    background-color: rgb(201, 27, 27);
+ padding: 20%;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 30%;
+ 
+ 
+ }
+ .remove-button button{
+
+    width: 300px;
+    padding: 3%;
+ 
+ }
+ @media screen and (max-width: 768px) {
+  .remove-button button{
+  margin-top: 5%;
+  }
+ }

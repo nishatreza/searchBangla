@@ -1,0 +1,47 @@
+
+    <!---------------------------- 
+          Career Section Start
+    ---------------------------->
+
+    <section *ngIf="jobData">
+        <div class="section-padding">
+            <div class="section-absolute-bg top-sec"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="career-content">
+                            <h3>{{jobData.title}}</h3>
+                            <p>{{jobData.description}}</p>
+                            <a href="#" class="bordered-btn">Career Paths</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="absolute-bg-left">
+          
+            <div class="container-fluid">
+                <div class="row">
+    <div class="col-lg-6">
+        <div class="section-absolute-bg absolute-bg-2"></div>
+    </div>
+    
+                    <div class="col-lg-6 ">
+                        <div class="career-content gray-bg">
+                            <h3>{{jobData.employType}}</h3>
+                            <p>{{jobData.ComLocation}}</p>
+                            <a href="#" class="bordered-btn">View map</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!---------------------------- 
+             / Career Section End
+       ---------------------------->
+       
+       
+    </section>
+   

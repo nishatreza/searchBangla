@@ -1,0 +1,85 @@
+<div class="review-holder">
+    <div class="row" *ngIf="reviewData">
+        <div class="col-sm-5 col-md-5">
+            <div *ngIf="reviewData.reviewerProfile as reviewerProfile">
+                <div class="pro-pic">
+                    <a href="{{reviewerProfile.reviewerPhotoLink}}">
+                        <img [defaultImage]="defaultImage" [lazyLoad]="reviewerProfile.reviewerPhoto" offset="offset" class="img-responsive">
+                    </a>
+                </div>
+                <ul class="user-story">
+                    <li>
+                        <a href="#">{{reviewerProfile.reviewerName}}</a>
+                    </li>
+                    <li><b>{{reviewerProfile.reviewerLocation}}</b></li>
+                    <li id="friends">
+                        <span><b>{{reviewerProfile.friendsNo}}</b> friends </span>
+                    </li>
+                    <li id="user-reviews">
+                        <span><b>{{reviewerProfile.reviewsNo}}</b> reviews </span>
+                    </li>
+                    <li id="user-photos">
+                        <span><b>{{reviewerProfile.photosNo}}</b> photos </span>
+                    </li>
+                </ul>
+                <ul class="action-list">
+                    <li id="share">
+                        <p><a href="{{reviewerProfile.shareLink}}">{{reviewerProfile.share}}</a></p>
+                    </li>
+                    <li id="embed">
+                        <p><a href="{{reviewerProfile.embedLink}}">{{reviewerProfile.embed}}</a></p>
+                    </li>
+                    <li id="compliment">
+                        <p><a href="{{reviewerProfile.complimentLink}}">{{reviewerProfile.compliment}}</a></p>
+                    </li>
+                    <li id="message">
+                        <p><a href="{{reviewerProfile.messageLink}}">{{reviewerProfile.message}}</a></p>
+                    </li>
+                    <li id="follow">
+                        <p><a href="{{reviewerProfile.followOptionLink}}">{{reviewerProfile.followOption}}</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-7 col-md-7" *ngIf="reviewData.reviewerComment as reviewerComment">
+            <div class="rating">
+                <i class="fas fa-star box"></i>
+                <i class="fas fa-star box"></i>
+                <i class="fas fa-star box"></i>
+                <i class="fas fa-star-half-alt box"></i>
+                <i class="fas fa-star box box-gray"></i>
+                <span>{{reviewerComment.time}}</span>
+            </div>
+            <div class="check-in">
+                <p>{{reviewerComment.checkinNo}}</p>
+            </div>
+            <div class="review">
+                <p>{{reviewerComment.visitedTime}}</p>
+                <p>{{reviewerComment.commentOne}}</p>
+                <p> {{reviewerComment.commentTwo}}
+                </p>
+                <div class="row">
+                    <div class="col-md-6 col-6" *ngFor="let reviewedPhoto of reviewerComment.reviewedPhoto">
+                        <a href="{{reviewedPhoto.link}}" >
+                            <img [defaultImage]="defaultImage" [lazyLoad]="reviewedPhoto.photo" offset="offset" class="img-responsive">
+                        </a>
+                        
+                    </div>
+  
+                </div>
+                <a href="{{reviewerComment.seeotherPhotoLink}}">{{reviewerComment.seeotherPhotoCaption}}</a>
+            </div>
+            <div class="voting">
+                <p><a href="#">{{reviewerComment.voteNo}}</a> {{reviewerComment.vote}}</p>
+             
+                      <div *ngFor="let voteReaction of reviewerComment.voteReaction">
+  
+                              <button class="btn btn-default btnreact"><img [defaultImage]="defaultImage" [lazyLoad]="voteReaction.voteReactionImage" offset="offset"> {{voteReaction.voteReactionType}} <span>{{voteReaction.voteReactionNo}}</span></button>
+                        
+                        </div>
+               
+           
+    </div>
+        </div>
+    </div>
+  </div>

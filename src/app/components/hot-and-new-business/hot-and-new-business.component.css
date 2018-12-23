@@ -1,0 +1,68 @@
+
+.hot-new-business{
+    padding-top: 5%;
+    padding-bottom: 4%;  
+}
+*{
+    font-size: 14px;
+}
+
+.heading{
+    color: rgb(24, 10, 182);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21px;
+ 
+    
+}
+
+.card-title{
+    color: blue;
+}
+
+.box{
+    padding: 4px;
+    margin-right: 4px;
+    border-radius: 15%;
+    font-size: 13px;
+    color: white;
+    background: rgb(24, 10, 182)
+}
+
+.box-gray{
+    background: #CCCCCC;
+    color: white;
+}
+
+.review{
+    color: #666666;
+}
+
+.oppened{
+    /* font-size: 16px; */
+    color: #F15C00;
+}
+
+.fire{
+    font-size: 20px;
+}
+
+@media (max-width: 760px) {
+    
+    .card{
+        
+        margin-bottom: 20px;
+        width: auto;
+        height: 300px;
+    }
+    .card p{
+        font-size: 10px;
+    }
+    .box{
+        font-size: 10px;
+        padding: 2px;
+        margin: 2px;
+    }
+    
+}

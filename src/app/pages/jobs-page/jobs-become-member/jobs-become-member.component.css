@@ -1,0 +1,30 @@
+h3 {
+    text-align: center;
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: 300;
+    margin: 35px 0;
+    padding: 0 30px;
+}
+
+p {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 200;
+    padding: 0 30px;
+}
+
+.btn {
+    background: #1bb05c;
+    border-radius: 0;
+    padding: 16px 20px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #fff;
+    margin: 25px 0 50px;
+}
+
+.btn:hover {
+    background: #26d371;
+}

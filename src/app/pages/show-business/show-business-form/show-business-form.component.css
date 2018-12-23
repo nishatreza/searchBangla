@@ -1,0 +1,44 @@
+.social-feed-box{
+    padding-top: 3%;
+    padding-bottom: 3%;
+    
+}
+.add-business {
+    padding: 25px 0;
+}
+
+.heading-underline {
+    width: 50px;
+    border-bottom: 2px solid lightgreen;
+    margin-bottom: 25px;
+}
+
+label {
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background: lightgreen;
+    color: #333;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+small {
+    color: lightsalmon !important;
+}
+
+/* new */
+.errorMessage{
+    font-size: 12px;
+    color: #f44336;
+    text-align: left;
+    padding-top:0;
+    padding-left: 10px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    /* background-color: aliceblue; */
+
+
+}

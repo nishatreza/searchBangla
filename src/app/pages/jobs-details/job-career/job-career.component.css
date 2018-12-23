@@ -1,0 +1,101 @@
+
+   
+ 
+   
+   .section-padding {
+    padding: 85px 0;
+    background: #069;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+.section-padding.absolute-bg-left {
+    background: #F5F5F5;
+    color: #000;
+}
+.section-padding.absolute-bg-left h3 {
+    background: #F5F5F5;
+    color: #000;
+}
+.career-content p{
+    width: 90%;
+}
+.section-padding h3 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+.bordered-btn {
+    display: inline-block;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    padding: 10px 40px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+.absolute-bg-left .bordered-btn {
+    color: #069;
+    border-color: #222;
+}
+.absolute-bg-left .bordered-btn:hover {
+    color: #069;
+}
+.bordered-btn:hover {
+    color: #fff;
+    border-color: #6CF;
+}
+
+.career-content {
+    /* position: relative;
+    padding-left: 30px;
+    padding-right: 60px; */
+}
+
+.absolute-bg-left .career-content {
+    /* padding-right: 0;
+    margin-left: 60px; */
+}
+
+.section-absolute-bg {
+    background: url(https://assets.dice.com/techpro/img/homepage/v2_img/img_feature_3.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.absolute-bg-left .absolute-bg-2  {
+    background: url(https://assets.dice.com/techpro/img/homepage/v2_img/img_feature_4_small@2x.jpg);
+        /* background-position: center; */
+    background-size: cover;
+    padding-top: 50px !important;
+    padding-bottom: 5% !important;
+    width: 100%;
+    /* right: auto;
+    left: 0; */
+
+}
+
+/* .section-absolute-bg:after {
+    content: "";
+    position: absolute;
+    background-color: #069;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+} */
+.col-lg-6{
+    margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

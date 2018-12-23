@@ -1,0 +1,228 @@
+.mainDivmap{
+    background-color: #F5F5F5;
+    padding-top: 5%;
+    padding-bottom: 4%;
+  z-index: 1000 !important;
+  position: relative;
+}
+.nameText{
+    font-size: 36px;
+    line-height: 1.16667em;word-wrap: break-word !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    font-weight: bold;
+    color: #333;
+   
+}
+
+/* new */
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+ .fa-check-circle{
+    color: #0073BB !important;
+   
+}
+.list ul li{
+    list-style-type: none;
+}
+.buttondiv ul li{
+    list-style-type: none;
+}
+ .firstList .fa-star{
+    color: white;
+    background-color: rgb(24, 10, 182);
+    margin: 2.5px;
+    width: 24px;
+    height: 24px;
+    padding: 2.5px;
+    border-radius: 2px;
+    align-content: center;
+}
+.firstList .lastStar{
+    color: white;
+    background-color: #CCCCCC;
+    margin: 2.5px;
+    width: 24px;
+    height: 24px;
+    padding: 2.5px;
+    border-radius: 2px;
+    border-radius: 2px;
+}
+.reviewtotal{
+
+
+    color: #666;
+    font-weight: normal;
+    font-size: 16px;
+    position: relative;
+/* bottom: 5px; */
+}
+.chiclet-link{
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 11px;
+    line-height: 1.5em;
+    color: #999;
+    background: transparent;
+    box-shadow: none;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 2px;
+    position: relative;
+    /* bottom: 5px; */
+    left: 2%;
+}
+.firstList{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+}
+
+.langItem:hover{
+    text-decoration: underline;
+}
+
+.review-btn{
+    border-radius: 2px;
+    padding: 10px;
+    background-color: rgb(24, 10, 182);
+    cursor: pointer;
+    user-select: none;
+    font-size: 14px;
+    line-height: 1.28571em;
+    font-weight: bold;
+    text-align: center;
+text-transform: none;
+margin-top: 4%;
+
+}
+.review-btn:hover{
+    background-color: rgba(240, 70, 58, 0.959);
+
+}
+.rightadd-btn{
+    color: #666682;
+    border: 0.1px solid #CCCCCC;
+    border-radius: 0px;
+    padding: 7px;
+    background-color: #FDFDFD;
+    cursor: pointer;
+    user-select: none;
+    font-size: 14px;
+    line-height: 1.28571em;
+    font-weight: bold;
+    text-align: center;
+text-transform: none;
+vertical-align: middle;
+margin-top: 4%;
+
+}
+.textbold{
+    font-weight: bold;
+    color: #333333;
+}
+.card-text{
+    padding-top: 10px;
+   padding: 2%;
+}
+.rightedit{
+    float: right;
+    cursor: pointer;
+    color: #0073bb;
+    font-weight: normal;
+}
+.card-text .fa-arrow-circle-right,.fa-map-marker-alt,.fa-phone,.fa-mobile-alt{
+    color: #666666;
+
+}
+.getdirtext{
+    color: #0073bb;
+    text-decoration: none;
+}
+.getdirtext:hover{
+  
+    text-decoration: underline;
+}
+.mapimg{
+    cursor: pointer !important;
+
+
+}
+
+.card{
+    border: 0.1px solid #CCCCCC;
+    
+}
+
+
+
+.imgHover{
+  
+    transition: transform .2s; 
+  
+    margin: 0 auto;
+    cursor: pointer;
+  
+    width: 100%;
+    margin-top: 4%;
+}
+.imgHover:hover {
+    transform: scale(1.1); 
+    z-index: 2;
+    position: relative;
+}
+
+#imgli {
+    position: relative;
+  
+}
+#centerImg {
+    display: block;
+    position: relative;
+    width: 100%;
+    transition: transform .2s; 
+    margin-top: 4%;
+ 
+    /* margin: 0 auto; */
+    cursor: pointer;
+}
+#centerImg:hover{
+    transform: scale(1.1); 
+
+}
+#imgli .centerDiv {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    margin-right: -50%;
+    top: 50%;
+    left: 50%;
+   
+}
+#imgli .fa-th-large{
+    color: white;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    margin-right: -50%;
+    top: 50%;
+    left: 50%;
+}
+.seeAll{
+    position: relative;
+    top: 10px;
+
+color: white;
+}
+.secondRow{
+    padding-top: 4%;
+
+}
+.nomarginfour{
+    padding: 0;
+    margin: 0;
+}
+

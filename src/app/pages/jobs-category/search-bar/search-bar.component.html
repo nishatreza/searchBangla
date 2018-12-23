@@ -1,0 +1,42 @@
+<section class="container" *ngIf="jobsDataList">
+    <h2 class="title">{{jobsDataList.category | titlecase}} </h2>
+    <div class="banner-form banner-form-full job-list-form">
+        <form action="#">
+            <!-- category-change -->
+            <div class="dropdown category-dropdown">
+                <a data-toggle="dropdown" href="#" aria-expanded="false"><span class="change-text">Job Category</span> <i class="fa fa-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Software Engineer</a></li>
+                    <li><a href="#">Web Developer</a></li>
+                    <li><a href="#">Database Administrator</a></li>
+                    <li><a href="#">Software Quality Analyst</a></li>
+                    <li><a href="#">Graphics Designer</a></li>
+                    <li><a href="#"></a></li>
+
+                </ul>
+            </div>
+            <!-- category-change -->
+
+            <!-- language-dropdown -->
+            <div class="dropdown category-dropdown language-dropdown">
+                <a data-toggle="dropdown" href="#" aria-expanded="false"><span class="change-text">Job Location</span> <i class="fa fa-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Dhaka Division</a></li>
+                    <li><a href="#">Chittagong Division</a></li>
+                    <li><a href="#">Rajshahi Division</a></li>
+                    <li><a href="#">Khulna Division</a></li>
+                    <li><a href="#">Sylhet Division</a></li>
+                    <li><a href="#">Rangpur Division</a></li>
+                    <li><a href="#">Barishal Division</a></li>
+                    <li><a href="#">Mymensingh Division</a></li>
+                    <li><a href="#">Anywhere</a></li>
+
+                </ul>
+            </div>
+            <!-- language-dropdown -->
+
+            <input type="text" class="form-control" placeholder="Type your key word">
+            <button type="submit" class="btn btn-primary" value="Search">Search</button>
+        </form>
+    </div>
+</section>

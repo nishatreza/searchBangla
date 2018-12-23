@@ -1,0 +1,90 @@
+<form class="form-inner-another" [formGroup]="socialAccountForm" (ngSubmit)="addSocialInfo(socialAccountForm.value)">
+  <div class="form-group col-md-12">
+    <label>Your social links //</label>
+  </div>
+<br>
+  <div class="row">
+    <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <span class="input-group-addon">
+        <i class="fab fa-google-plus-g"></i>
+      </span>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="https://plus.google.com/"
+        formControlName="googlePlusLink">
+    </div>
+    <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12 socially">
+      <span class="input-group-addon">
+        <i class="fab fa-facebook-f"></i>
+      </span>
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="https://www.facebook.com/"
+        formControlName="facebookLink">
+    </div>
+    <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <span class="input-group-addon">
+        <i class="fab fa-twitter"></i>
+      </span>
+
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="https://twitter.com/" formControlName="twitterLink">
+    </div>
+    <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12 socially">
+      <span class="input-group-addon">
+        <i class="fab fa-linkedin-in"></i>
+      </span>
+
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="https://www.linkedin.com/"
+        formControlName="linkedinLink">
+    </div>
+    <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12 socially">
+      <span class="input-group-addon">
+        <i class="fab fa-instagram"></i>
+      </span>
+
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="https://www.instagram.com/"
+        formControlName="instagramLink">
+    </div>
+
+    <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12 socially">
+      <span class="input-group-addon">
+        <i class="fab fa-pinterest-p"></i>
+      </span>
+
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="https://www.pinterest.com/"
+        formControlName="pinterestLink">
+    </div>
+    <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <span class="input-group-addon">
+        <i class="fab fa-youtube"></i>
+      </span>
+
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="https://www.youtube.com/"
+        formControlName="youtubeLink">
+    </div>
+    <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12 socially">
+      <span class="input-group-addon">
+        <i class="fab fa-dribbble"></i>
+      </span>
+
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="https://dribbble.com/" formControlName="dribbleLink">
+    </div>
+
+    <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12 socially">
+      <span class="input-group-addon">
+        <i class="fab fa-behance"></i>
+      </span>
+
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="https://www.behance.net/"
+        formControlName="behanceLink">
+    </div>
+    <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12 socially">
+      <span class="input-group-addon">
+        <i class="fab fa-vimeo-v"></i>
+      </span>
+
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="https://vimeo.com/" formControlName="vimeoLink">
+    </div>
+  </div>
+
+
+  <div class="form-group col-md-12">
+    <button type="submit" [disabled]="!socialAccountForm.valid" class="btn-primary submit">Save changes</button>
+  </div>
+</form>

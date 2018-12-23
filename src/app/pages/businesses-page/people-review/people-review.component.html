@@ -1,0 +1,25 @@
+<div class="people-review-holder">
+    <h2 class="review-title">People also viewed</h2>
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    
+      <div class="row people-review-padding" *ngFor="let  PeopleReview of PeopleReviewData">
+          <div class="review-img col-3 col-sm-6 col-md-4 col-lg-4"> 
+              <a href="{{PeopleReview.reviewLink}}">
+                    <img [defaultImage]="defaultImage" [lazyLoad]="PeopleReview.reviewImage" offset="offset" class="img-responsive">
+              </a>
+              
+            </div>
+          <div class="col-9 col-sm-12 col-md-12 col-lg-8"> <a href="#">{{PeopleReview.reviewName}}</a>
+              <div class="rating">
+                  <i class="fas fa-star box"></i><i class="fas fa-star box"></i><i class="fas fa-star box"></i><i class="fas fa-star box"></i><i class="fas fa-star box"></i>
+                  <a href="">{{PeopleReview.reviewNumber}}</a>
+                  <p> {{ PeopleReview.reviewLocation}} </p>
+              </div>
+          </div>
+      </div>
+
+
+  </div>
+</div>
+</div>

@@ -1,0 +1,12 @@
+/* new */
+
+.errorMessage {
+    font-size: 12px;
+    color: #f44336;
+    text-align: left;
+    padding-top: 0;
+    padding-left: 10px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    /* background-color: aliceblue; */
+}

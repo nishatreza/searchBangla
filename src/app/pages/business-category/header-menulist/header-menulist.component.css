@@ -1,0 +1,81 @@
+.country {
+    color: #0073bb;
+    text-decoration: none;
+    line-height: 1.7;
+    position: relative;
+    bottom: 20px;
+}
+
+.angleIcon {
+    color: #818181;
+    position: relative;
+    bottom: 19px;
+}
+
+.query-location {
+    font-weight: normal;
+    font-size: 100%;
+    vertical-align: baseline;
+    color: #333;
+}
+
+.headerTitle {
+    font-size: 21px;
+    word-wrap: break-word !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    font-weight: bold;
+    color: #333;
+}
+
+.mainsec {
+    padding-top: 4%;
+}
+
+
+/* menu */
+
+.review-btn {
+    color: black;
+    border: 0.1px solid #CCCCCC;
+    border-radius: 0px;
+    padding: 10px;
+    background-color: #FDFDFD;
+    cursor: pointer;
+    user-select: none;
+    font-size: 14px;
+    line-height: 1.28571em;
+    text-align: center;
+    text-transform: none;
+    vertical-align: middle;
+}
+
+.rightadd-btn {
+    color: black;
+    border: 0.1px solid #CCCCCC;
+    border-radius: 0px;
+    padding: 10px;
+    background-color: #FDFDFD;
+    cursor: pointer;
+    user-select: none;
+    font-size: 14px;
+    line-height: 1.28571em;
+    text-align: center;
+    text-transform: none;
+    vertical-align: middle;
+}
+
+.rightButtons {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 2% 0;
+}
+
+.fa-shuttle-van,
+.fa-shopping-bag {
+    color: #CA6D00;
+}
+
+.fa-clock {
+    color: #B9B9B9;
+}

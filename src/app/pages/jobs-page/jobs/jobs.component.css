@@ -1,0 +1,79 @@
+p {
+    letter-spacing: 0.5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.jobs h3 {
+    margin: 20px 0;
+}
+
+.jobs .single-job {
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 2px;
+    transition: 0.3s;
+    height: 250px;
+    margin-bottom: 15px;
+}
+
+.jobs .single-job:hover {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .1);
+    transition: 0.3s;
+}
+
+.company-img {
+    position: relative;
+}
+
+.company-img img {
+    height: 80px;
+    width: 100px;
+}
+
+.company-img p img {
+    position: absolute;
+    top: -15px;
+    right: 0;
+    width: 30px;
+}
+
+.job-details .job-title {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, .9);
+    margin-bottom: 0;
+}
+
+.job-details .company-name {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, .9);
+    margin: 0 0 5px 0;
+}
+
+.job-details .company-address {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, .6);
+    margin: 0 0 5px 0;
+}
+
+.publish-date hr {
+    margin: 15px 0 0 0;
+    width: 50px;
+}
+
+.publish-date {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, .6);
+    position: absolute;
+    bottom: 30px;
+}

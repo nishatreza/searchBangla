@@ -1,0 +1,172 @@
+*:focus {
+    box-shadow: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title {
+    line-height: 34px;
+    color: #333;
+    font-weight: 700;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.banner-form {
+    background-color: rgba(0, 0, 0, 0.14);
+    padding: 8px;
+    /* max-width: 750px; */
+    margin: 12px auto;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.banner-form form {
+    border-radius: 4px;
+    background-color: #fff;
+    position: relative;
+}
+
+.dropdown,
+.dropup {
+    position: relative;
+}
+
+.category-dropdown {
+    background-color: #fff;
+    border-right: 1px solid #e6e6e6;
+    border-radius: 5px 0px 0px 5px;
+    min-width: 200px;
+    line-height: 45px;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.category-dropdown a {
+    font-size: 16px;
+    margin: 0;
+    color: #000;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    text-transform: capitalize;
+}
+
+.category-dropdown a i {
+    margin-left: 5px;
+}
+
+.banner-form .form-control,
+.banner-form .category-dropdown {
+    display: inline-block;
+    width: 30%;
+    height: 46px;
+    font-size: 16px;
+    color: #000;
+}
+
+.banner-form-full.banner-form input {
+    min-width: 405px;
+}
+
+.banner-form input {
+    min-width: 375px;
+    padding: 0 18px 0;
+    margin: 0;
+    border: none;
+    margin-left: -4px;
+}
+
+.banner-form button.btn.btn-primary {
+    position: absolute;
+    right: -2px;
+    bottom: 0;
+    font-size: 16px;
+    max-width: 114px;
+    background-color: #11a0ff;
+    border-radius: 0 5px 5px 0;
+    color: #fff;
+    text-transform: uppercase;
+    border-color: #11a0ff;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    height: 100%;
+    padding: 10px 20px;
+}
+
+.banner-form-full.banner-form .form-control,
+.banner-form-full.banner-form .category-dropdown {
+    width: 20%;
+}
+
+.banner-form-full {
+    max-width: 100%;
+    background-color: #fff;
+    padding: 15px 20px 15px;
+    margin-bottom: 30px;
+    margin-top: -40px;
+}
+
+.banner-form-full.job-list-form {
+    margin-top: 0;
+    background-color: rgba(0, 0, 0, 0.14);
+    padding: 10px 15px;
+}
+
+.dropdown-menu {
+    border-radius: 0;
+}
+
+.banner-form .dropdown-menu {
+    min-width: 100%;
+    padding: 0 15px;
+    transform: translate3d(0px, 45px, 0px) !important;
+}
+
+.category-dropdown a {
+    font-size: 16px;
+    margin: 0;
+    color: #000;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+
+.category-dropdown a:hover {
+    color: #11a0ff;
+    transition: 0.3s;
+}
+
+.dropdown-menu>li>a,
+.dropdown-menu>li>a:hover {
+    background-color: transparent;
+}
+
+@media screen and (min-width:300px) and (max-width:991px) {
+    .banner-form-full.banner-form .form-control,
+    .banner-form-full.banner-form .category-dropdown {
+        width: 100%;
+        min-width: 100%;
+        border-bottom: 1px solid #ccc;
+    }
+    .banner-form input {
+        margin-left: 0;
+    }
+    .category-dropdown {
+        background-color: #fff;
+        border-right: 0;
+        border-radius: 5px;
+    }
+    .banner-form button.btn.btn-primary {
+        position: unset;
+        right: 0;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 4px;
+    }
+}

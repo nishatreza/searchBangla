@@ -1,0 +1,40 @@
+<section class="container">
+    <div class="job-description-div" *ngIf="jobData">
+        <div class="employer-logo">
+            <a href="#">
+                    <img [defaultImage]="defaultImage" [lazyLoad]="jobData.thumbnail" offset="offset" class="img-responsive"  >
+
+                <!-- <img src="https://media.licdn.com/dms/image/C510BAQEeK1BH5vKw8Q/company-logo_100_100/0?e=1543449600&v=beta&t=HMu9SCpbv_gjM8mnS_0YU92WhhE0myvT19n0SghUCBA" alt=""> -->
+            </a>
+        </div>
+        <div class="employer-details clearfix">
+            <button class="btn follow-button float-right">+ Follow</button>
+            <p class="company-location">
+                <a href="#">{{jobData.comName}}</a>
+            </p>
+            <p class="type-and-followers">
+                    {{jobData.comIndustry}}<span>11,288 followers</span>
+            </p>
+        </div>
+        <div>
+            <h4 class="about">About Us</h4>
+            <p>
+                Toaster crafts beautiful design with emerging technology to create connections between brands and people. Our multi-disciplinary teams act as a creative partner, exploring ideas, design and innovation. We're based in London, San Francisco, Singapore and
+                New Delhi.
+            </p>
+            <p>Together with our clients we’ve brought to life some of the internet’s most ground-breaking integrated digital campaigns, often used as benchmarks in the ever-evolving advertising industry.</p>
+            <h6>Creativity</h6>
+            <p>We strive to produce work which engages, informs, or inspires. Toaster’s people-first philosophy puts the user at the centre to create sticky campaigns for useful services and products which _enable people_, using the internet as a platform
+                for engagement rather than as a soapbox. We're continually inspired by tackling things which have never been tried before.</p>
+            <h6>Design</h6>
+            <p>It’s a noisy world. Toaster produces communication and product design which is clean, crafted and stands out from the crowd, with solid art direction and attention to the details of every creative asset. Our designers understand what works
+                (and what doesn't) for a wide range of media. We believe this is key to tackling the challenges of a fragmented marketing landscape.</p>
+            <h6>Technology</h6>
+            <p>Toaster’s experience at the forefront of technologies and the way people use them means we can create communications, products and services with impact. Fully conversant with the pros and cons of emerging technologies, we provide consultancy,
+                technical strategy and architecture, cross-stack development and quality assurance, all in-house. Our solutions are secure, robust and highly scalable. Powered by our deep knowledge of the Google Cloud Platform, we focus on database and
+                CMS driven web applications, mobile apps and upcoming tech.</p>
+        </div>
+
+        <!-- </div> -->
+    </div>
+</section>

@@ -1,0 +1,57 @@
+section {
+    margin-bottom: 70px;
+}
+
+.progress-title {
+    margin-top: 25px;
+    color: #414141;
+    text-align: center;
+}
+
+.progressing-date {
+    color: rgb(163, 164, 166);
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-feature-settings: "liga";
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.progress-card {
+    margin-bottom: 15px;
+}
+
+.card {
+    margin: 25px 15px;
+}
+
+.title {
+    text-decoration: none;
+    color: rgb(78, 81, 85);
+    font-size: 17px;
+    font-weight: 600;
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+.title:hover {
+    color: rgb(0, 153, 255);
+}
+
+.progress-bar-style .ngb-progressbar {
+    color: rgb(0, 153, 255);
+    height: 2px;
+}
+
+.product-lines {
+    color: rgb(163, 164, 166);
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-feature-settings: "liga";
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.progressing {
+    color: rgb(163, 164, 166);
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+}

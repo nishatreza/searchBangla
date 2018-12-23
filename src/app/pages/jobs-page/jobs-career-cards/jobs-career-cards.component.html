@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 card-distance" *ngFor="let  CareerCards of CareerCardsData">
+            <div class="form-example">
+                <div class="back-div" [ngStyle]="{background: 'url(' + CareerCards.bgImg + ')'}"></div>
+                <h2>{{CareerCards.cardsTitle}}</h2>
+                <p>
+                    {{CareerCards.cardsParagraph}}
+                </p>
+                <button type="button" class="btn btn-success">{{CareerCards.careerButtons}}</button>
+            </div>
+        </div>
+    </div>
+</div>

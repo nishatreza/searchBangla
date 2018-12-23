@@ -1,0 +1,47 @@
+<form class="row" [formGroup]="interestForm" (ngSubmit)="onSubmit(interestForm.value)">
+  <div class="form-group col-md-12">
+    <label>Your interest //</label>
+  </div>
+
+
+
+  <div class="form-group col-md-12">
+    <label>Interest description</label>
+
+    <textarea class="form-control" placeholder="Write your likes and dislikes..." formControlName="interestDescription"></textarea>
+    <div *ngIf="interestDescription.invalid && (interestDescription.dirty || interestDescription.touched)" class="errorMessage">
+      <div *ngIf="interestDescription.errors.required">
+        Interest description is required.
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- <button class="more-project-btn btn"><i class="fas fa-plus-circle"></i> add more interest</button> -->
+
+
+
+  <div class="form-group col-md-12">
+    <label> Interest image</label>
+
+    <input type="text" class="form-control" id="interestImage" placeholder="Enter your interest image"
+      formControlName="interestImage">
+    <div *ngIf="interestImage.invalid && (interestImage.dirty || interestImage.touched)" class="errorMessage">
+      <div *ngIf="interestImage.errors.required">
+        Interest image is required.
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  
+  <div class="form-group col-md-12">
+    <button *ngIf="!editMode" [disabled]="!interestForm.valid" type="submit" class="btn btn-primary submit">SAVE</button>
+  </div>
+</form>

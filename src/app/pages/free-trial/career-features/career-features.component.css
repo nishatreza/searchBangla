@@ -1,0 +1,55 @@
+.main-body{
+    background: #F3F6F8;
+}
+.arrow-down{
+    margin-left: 48%;
+    height: 50px;
+    width: 50px;
+    border-top: 0px solid wheat;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    border-left: 0px solid white;
+    transform: rotate(45deg);
+}
+#features-arrow-container {
+    width: 100%;
+    text-align: center;
+}
+#features-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+#features-header h2{
+    color: green;
+    font-size: 25px;
+}
+
+#features-header h3{
+    font-size: 17px;
+    font-weight: 400;
+
+    color: rgba(0, 0, 0, 0.55);
+}
+
+.features{
+    display: inline-flex;
+}
+.icon{
+    color: green;
+    font-size: 50px;
+}
+.discreaption{
+    margin-top: 20px;
+    margin-left: 40px;
+}
+.discreaption h4{
+    font-size: 17px;
+    padding: 0;
+}
+
+.discreaption p{
+    color: rgba(0,0,0,0.55);
+    font-size: 14px;
+    padding: 0;
+}

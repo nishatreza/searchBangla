@@ -1,0 +1,33 @@
+<section class="hot-new-business">
+  <div class="container" *ngIf="businessObservable|async as businesses">
+      <div class="row">
+          <div class="col-sm-12">
+              <h6 class="heading text-center">Hot & New Businesses</h6>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-4 col-md-12 col-sm-12" *ngFor="let  business of businesses">
+              <div class="card" style="width: 100%; height: 400px;">
+                  <a [routerLink]="['/business-details',business.firestoreId]">
+                      <img class="card-img img-responsive img-fluid" [src]="business.thumbnail || 'http://www.pbs.org/black-culture/lunchbox_plugins/s/photogallery/img/no-image-available.jpg'">
+                  </a>
+                  <div class="card-body">
+                      <h6 class="card-title">
+                          <a [routerLink]="['/business-details',business.firestoreId]">{{business.name}}</a>
+                      </h6>
+                      <p class="card-text">
+                          <i class="fas fa-star box"></i>
+                          <i class="fas fa-star box"></i>
+                          <i class="fas fa-star box"></i>
+                          <i class="fas fa-star box"></i>
+                          <i class="fas fa-star-half-alt box"></i>
+                          <span class="review">23 reviews</span>
+                      </p>
+                      <p>{{business.cost}} - {{business.address}}, {{business.city}}, {{business.country}}</p>
+                      <p class="oppened"><i class="fab fa-gripfire fire"></i>Opened 4 weeks ago </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>

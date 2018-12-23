@@ -1,0 +1,343 @@
+*:focus {
+    box-shadow: none;
+}
+
+.sub-menu {
+    margin-bottom: 25px;
+}
+
+.sub-menu-item .submenu-title a {
+    color: #0b2135;
+    cursor: pointer;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.sub-menu-item .submenu-title a:hover {
+    color: rgb(253, 79, 87);
+}
+
+.sub-menu-item p a:hover {
+    color: rgb(253, 79, 87);
+}
+
+.sub-menu-item p a {
+    color: #bcafaf;
+    cursor: pointer;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.sub-menu:last-child {
+    margin-bottom: 0;
+}
+
+.sub-menu-item .menu-list {
+    color: rgb(253, 79, 87);
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.choose-item {
+    color: rgb(192, 192, 192);
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 25px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.menu-portion li a {
+    background-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    color: #bcafaf;
+    cursor: pointer;
+    display: block;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+.menu-portion li a:hover {
+    color: #0b2135;
+}
+
+.sub-menu-item .btn {
+    position: relative;
+    background: transparent;
+    width: 100%;
+    color: #333;
+    text-align: left;
+    padding: 0;
+    margin: 5px 0 15px;
+    transition: 0.3s;
+}
+
+.sub-menu-item .btn i {
+    margin-right: 10px;
+    color: rgb(253, 79, 87);
+}
+
+.restaurant-title {
+    color: rgb(11, 33, 53);
+    font-family: "LeituraDisplay-Roman", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    padding-top: 2%;
+}
+
+.date {
+    align-items: center;
+    background-color: rgb(249, 249, 249);
+    color: rgb(11, 33, 53);
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    padding: 5%;
+}
+
+.date i {
+    color: rgb(253, 79, 87);
+}
+
+.pick {
+    color: rgb(253, 79, 87);
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.address {
+    color: rgb(11, 33, 53);
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.address p:last-child {
+    margin: 0;
+}
+
+.right-side-image {
+    border-bottom-color: rgb(140, 140, 143);
+    border-image-width: 1;
+    border-left-color: rgb(140, 140, 143);
+    border-left-style: none;
+    border-left-width: 0px;
+    border-right-color: rgb(140, 140, 143);
+    border-right-style: none;
+    border-right-width: 0px;
+    border-top-color: rgb(140, 140, 143);
+    color: rgb(140, 140, 143);
+    display: block;
+    height: 124px;
+    margin-left: 70.5667px;
+    margin-right: 70.5833px;
+}
+
+.fa-angle-up {
+    position: absolute;
+    margin-right: 0 !important;
+    top: 50%;
+    margin-top: -8px;
+    color: #333;
+    transition: 0.3s;
+}
+
+button.collapsed .fa-angle-up {
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
+
+.list-group {
+    margin: -15px 0 18px;
+}
+
+.list-group-item {
+    border: none;
+    /* padding: .75rem 0; */
+    background: #f6f6f6;
+}
+
+.list-group-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.list-group-item i {
+    margin: 0 10px 0 5px;
+}
+
+.fa-ellipsis-h {
+    margin-right: 10px;
+}
+
+.full {
+    padding-top: 5%;
+}
+
+.mb-3 {
+    margin: 0 !important;
+}
+
+.cart {
+    font-weight: 600;
+}
+
+.cart.card-body span {
+    color: #5EB3B7;
+}
+
+.cart .table {
+    margin-bottom: 0;
+}
+
+.cart .table td,
+.cart .table th {
+    border: 0;
+    padding: 0 0 .75rem 0;
+}
+
+.cart .table td:last-child {
+    text-align: right;
+}
+
+.cart .number p {
+    margin-bottom: 5px;
+}
+
+.cart .number span {
+    color: #FA4F57;
+}
+
+.cart td.number {
+    color: #8D8D90;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.total-price {
+    font-size: 26px;
+}
+
+.currency {
+    font-size: 16px;
+    font-family: initial;
+    color: inherit !important;
+}
+
+.total-price .currency {
+    font-size: inherit !important;
+}
+
+.cart-item .form-control {
+    display: unset;
+    flex: unset;
+    width: 80px;
+    height: 27px;
+    padding: 5px;
+}
+
+.cart-item .input-group-text {
+    padding: 5px;
+    font-size: 10px;
+}
+
+.quantity-div {
+    position: relative;
+}
+
+.quantity-div .remove-btn {
+    position: absolute;
+    top: 0;
+    left: 75px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.quantity-div .remove-btn .fa-trash-alt {
+    margin-left: 15px;
+}
+
+.custom-radion-btn {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    margin-right: 15px;
+    cursor: pointer;
+    font-size: 17px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* Hide the browser's default radio button */
+
+.custom-radion-btn input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+/* Create a custom radio button */
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+
+/* On mouse-over, add a grey background color */
+
+.custom-radion-btn:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+
+/* When the radio button is checked, add a blue background */
+
+.custom-radion-btn input:checked~.checkmark {
+    background-color: #FA4F57;
+}
+
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the indicator (dot/circle) when checked */
+
+.custom-radion-btn input:checked~.checkmark:after {
+    display: block;
+}
+
+
+/* Style the indicator (dot/circle) */
+
+.custom-radion-btn .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}

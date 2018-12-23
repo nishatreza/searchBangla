@@ -1,0 +1,26 @@
+<section class="jobs container">
+    <h3>Job listing</h3>
+    <div class="row" *ngIf="jobsObservable|async as jobslistings">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let jobslisting of jobslistings;let i=index">
+            <a href="#">
+                <div class="single-job-holder" *ngIf="i<4" >
+                    <div class="single-job">
+                        <div class="company-img">
+                            <img class="card-img img-responsive img-fluid" [src]="jobslisting.joblistingimage || 'http://www.pbs.org/black-culture/lunchbox_plugins/s/photogallery/img/no-image-available.jpg'">
+                        </div>
+                        <div class="job-details">
+                            <h4 class="job-title">{{jobslisting.jobListingTitle}}</h4>
+                            <!-- <p class="company-address">{{jobslisting.listingDescription}}</p> -->
+                            <p class="company-address">
+                                 {{jobslisting.listingDescription | slice:0:100}}
+                                {{jobslisting.listingDescription.length > 100 ? "...": ""}}
+                            </p>
+
+                           
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>

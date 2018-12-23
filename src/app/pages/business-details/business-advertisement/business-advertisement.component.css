@@ -1,0 +1,243 @@
+.advertisement {
+    border-top: 1px solid #ebc074;
+    margin: 5px 0 0;
+    padding: 10px 0 0;
+}
+
+.business-img {
+    display: inline-block;
+    width: 60px;
+    vertical-align: top;
+}
+
+.business-img img {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+}
+
+.ad-details {
+    display: inline-block;
+    margin-top: -5px;
+    width: calc(100% - 60px);
+    padding: 0 10px;
+}
+
+a.ad-header {
+    font-size: 17px;
+    padding-left: 30PX;
+    font-weight: normal;
+    color: #0073bb;
+}
+
+.info {
+    float: right;
+    color: #ebc074;
+}
+
+.ad-logo {
+    content: "ad";
+    background-image: url("../../../../assets/images//ad-logo.svg");
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    text-indent: 9999px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.rating span {
+    font-size: 14px;
+    color: #666;
+}
+
+.rating a {
+    color: rgb(102, 102, 102);
+    font-size: 12px;
+}
+
+.box {
+    padding: 4px;
+    margin-right: 4px;
+    border-radius: 15%;
+    font-size: 13px;
+    color: white;
+    background: rgb(24, 10, 182);
+}
+
+.box-gray {
+    background: #CCCCCC;
+    color: white;
+}
+
+@media (max-width: 760px) {
+    .box {
+        font-size: 10px;
+        padding: 2px;
+        margin: 2px;
+    }
+}
+
+.near-business {
+    float: right;
+    font-size: 13px !important;
+}
+
+.review-para {
+    margin-top: 5px;
+}
+
+.reviewer {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.review-para a {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0073bb;
+}
+
+.food-culture {
+    color: #999 !important;
+    font-size: 15px;
+}
+
+
+/*********************** S I D E B A R ***********************/
+
+.business-at-glance {
+    list-style: none;
+    padding: 10px;
+    color: #666;
+    border: 1px solid #e6e6e6e6;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+.business-at-glance li {
+    margin: 0 0 20px;
+}
+
+.business-at-glance li:last-child {
+    margin: 0;
+}
+
+.business-at-glance li span {
+    margin: 0 0 0 45px;
+    font-size: 14px;
+    border-bottom: 1px solid #e6e6e6e6;
+    padding: 10px 0;
+}
+
+.business-at-glance li:last-child span {
+    border: none
+}
+
+.business-at-glance li span b {
+    color: #666;
+}
+
+#time-today::before {
+    position: absolute;
+    width: 20px;
+    content: "fff";
+    text-indent: 9999px;
+    background: url("../../../../assets/images/clock.svg") no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    overflow: hidden;
+}
+
+#menu::before {
+    position: absolute;
+    width: 20px;
+    content: "fff";
+    text-indent: 9999px;
+    background: url("../../../../assets/images/cutlery.svg") no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    overflow: hidden;
+}
+
+#menu a {
+    color: #0073bb;
+    font-weight: bold;
+}
+
+#price span {
+    margin: 0;
+}
+
+.dollar {
+    width: 45px;
+    float: left;
+    font-weight: bold;
+}
+
+.business-hours {
+    padding-left: 25px;
+    border-left: 1px solid #e6e6e6e6;
+}
+
+.business-hours h3,
+.more-info h3 {
+    font-size: 19px;
+    color: rgb(24, 10, 182);
+}
+
+.business-hours table tr td {
+    padding-right: 25px;
+}
+
+.business-hours table tr td:first-child {
+    font-weight: bold
+}
+
+.business-hours a {
+    font-size: 14px;
+    color: #0073bb;
+}
+
+.more-info {
+    padding-left: 25px;
+    padding-top: 25px;
+    border-left: 1px solid #e6e6e6e6;
+}
+
+.more-info ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+@media screen and (min-width:300px) and (max-width:575px) {
+    .business-at-glance li span {
+        margin: 0;
+    }
+    #time-today::before,
+    #menu::before {
+        background: none;
+    }
+    .business-hours table tr td {
+        padding-right: 5px;
+    }
+    .business-hours,
+    .more-info {
+        padding-left: 0;
+        border-left: 0;
+    }
+}
+
+@media screen and (min-width:575px) and (max-width:991px) {
+    .business-hours table tr td {
+        padding-right: 5px;
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1200px) {
+    .business-hours table tr td {
+        padding-right: 5px;
+    }
+}

@@ -1,0 +1,288 @@
+<section class="sidebar-holder">
+    <!-- <div class="media" *ngIf = "userData">
+     
+         
+
+        <div class="media-body">
+            <div class="dropdown">
+                <a id="dropdownMenuButton" data-toggle="dropdown">
+                    <span>
+                        {{userData.displayName || userData.userName}} 
+                      
+                        </span><br> {{userData.email || userData.userEmail}}
+                </a>
+             
+            </div>
+        </div>
+    </div>  -->
+    <br>
+    <!-- <button class="btn create-btn"><i class="fas fa-plus-square"></i> Create</button> -->
+    <div class="sidebar-menu accordion">
+        <div class="sub-menu">
+            <!-- <p><i class="fas fa-ellipsis-h"></i>Personal</p> -->
+            <div class="sub-menu-item">
+                <!-- <button class="btn" type="button">
+                    <i class="fas fa-tachometer-alt"></i>Personal
+                  
+                </button> -->
+                
+                <div class="" id="">
+                    <ul class="list-group">
+                        <!-- <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Classic</a></li> -->
+
+                       
+                        <li class="list-group-item" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">
+                            <a [routerLink]="['/profile']" class="list-link">
+                            <i class="fas fa-user-tie"></i>
+                            <!-- <i class="far fa-dot-circle"></i> -->
+                            Profile</a></li>
+                        <li class="list-group-item" [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['active']">
+                            <a [routerLink]="['/edit-profile']" class="list-link">
+                            <!-- <i class="far fa-dot-circle"></i> -->
+                            <i class="fas fa-user-edit"></i>
+                            Edit profile</a></li>
+                        <!-- <li class="list-group-item"><a [routerLink]="['/profile-blog']"><i class="far fa-dot-circle"></i>Profile blog</a></li>
+                        <li class="list-group-item"><a [routerLink]="['/profile-subscription']"><i class="far fa-dot-circle"></i>Profile subscription</a></li> -->
+                    </ul>
+                </div>
+            </div>
+            <!-- <div class="sub-menu-item">
+                <button class="btn collapsed clearfix" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                    <i class="fas fa-sliders-h"></i>Sidebar Type<i class="fas fa-angle-up"></i>
+                </button>
+                <div class="collapse" id="collapseExample2">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Mini Sidebar</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Icon Sidebar</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Overlay Sidebar</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sub-menu-item">
+                <button class="btn collapsed clearfix" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+                    <i class="far fa-clone"></i>Page Layout<i class="fas fa-angle-up"></i>
+                </button>
+                <div class="collapse" id="collapseExample3">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Inner Fixed Left Sidebar</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Inner Fixed Right Sidebar</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Inner Left Sidebar</a></li>
+                    </ul>
+                </div>
+            </div> -->
+        </div>
+        <!-- <div class="sub-menu">
+            <p><i class="fas fa-ellipsis-h"></i>Apps</p>
+            <div class="sub-menu-item">
+                <button class="btn collapsed clearfix" type="button" data-toggle="collapse" data-target="#apps1" aria-expanded="false" aria-controls="apps1">
+                    <i class="fas fa-inbox"></i>Inbox<i class="fas fa-angle-up"></i>
+                </button>
+                <div class="collapse" id="apps1">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Classic</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Analytical</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Cryptocurrency</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sub-menu-item">
+                <button class="btn collapsed clearfix" type="button" data-toggle="collapse" data-target="#apps2" aria-expanded="false" aria-controls="apps2">
+                    <i class="fas fa-ticket-alt"></i>Ticket<i class="fas fa-angle-up"></i>
+                </button>
+                <div class="collapse" id="apps2">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Mini Sidebar</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Icon Sidebar</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Overlay Sidebar</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sub-menu-item">
+                <button class="btn collapsed clearfix" type="button" data-toggle="collapse" data-target="#apps3" aria-expanded="false" aria-controls="apps3">
+                    <i class="far fa-calendar-plus"></i>More<i class="fas fa-angle-up"></i>
+                </button>
+                <div class="collapse" id="apps3">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Inner Fixed Left Sidebar</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Inner Fixed Right Sidebar</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Inner Left Sidebar</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sub-menu">
+            <p><i class="fas fa-ellipsis-h"></i>UI</p>
+            <div class="sub-menu-item">
+                <button class="btn collapsed clearfix" type="button" data-toggle="collapse" data-target="#ui1" aria-expanded="false" aria-controls="ui1">
+                    <i class="fas fa-th-large"></i>Ui Elements<i class="fas fa-angle-up"></i>
+                </button>
+                <div class="collapse" id="ui1">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Buttons</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Modals</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Tab</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sub-menu-item">
+                <button class="btn collapsed clearfix" type="button" data-toggle="collapse" data-target="#ui2" aria-expanded="false" aria-controls="ui2">
+                    <i class="far fa-address-card"></i>Cards<i class="fas fa-angle-up"></i>
+                </button>
+                <div class="collapse" id="ui2">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Basic Cards</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Custom Cards</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Weather Cards</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sub-menu-item">
+                <button class="btn collapsed clearfix" type="button" data-toggle="collapse" data-target="#ui3" aria-expanded="false" aria-controls="ui3">
+                    <i class="far fa-list-alt"></i>Components<i class="fas fa-angle-up"></i>
+                </button>
+                <div class="collapse" id="ui3">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Alert</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Routing</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Nestable</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sub-menu">
+            <p><i class="fas fa-ellipsis-h"></i>Forms</p>
+            <div class="sub-menu-item">
+                <button class="btn collapsed clearfix" type="button" data-toggle="collapse" data-target="#form1" aria-expanded="false" aria-controls="form1">
+                    <i class="fas fa-th-large"></i>form Elements<i class="fas fa-angle-up"></i>
+                </button>
+                <div class="collapse" id="form1">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Form Inputs</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Form Groups</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Form Grid</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sub-menu-item">
+                <button class="btn collapsed clearfix" type="button" data-toggle="collapse" data-target="#form2" aria-expanded="false" aria-controls="form2">
+                    <i class="fab fa-wpforms"></i>Form Layout<i class="fas fa-angle-up"></i>
+                </button>
+                <div class="collapse" id="form2">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Basic Forms</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Form Horizontal</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Form Actions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sub-menu-item">
+                <button class="btn collapsed clearfix" type="button" data-toggle="collapse" data-target="#form3" aria-expanded="false" aria-controls="form3">
+                    <i class="fas fa-exclamation-triangle"></i>Form Validation<i class="fas fa-angle-up"></i>
+                </button>
+                <div class="collapse" id="form3">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Bootstrap Validation</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Custom Validation</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sub-menu">
+            <p><i class="fas fa-ellipsis-h"></i>Tables</p>
+            <div class="sub-menu-item">
+                <button class="btn collapsed clearfix" type="button" data-toggle="collapse" data-target="#table1" aria-expanded="false" aria-controls="table1">
+                    <i class="fas fa-table"></i>Bootstrap Tables<i class="fas fa-angle-up"></i>
+                </button>
+                <div class="collapse" id="table1">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Basic Table</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Dark Basic Table</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Sizing Table</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sub-menu-item">
+                <button class="btn collapsed clearfix" type="button" data-toggle="collapse" data-target="#table2" aria-expanded="false" aria-controls="table2">
+                    <i class="fas fa-grip-horizontal"></i>Data Tables<i class="fas fa-angle-up"></i>
+                </button>
+                <div class="collapse" id="table2">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Basic Initialisation</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>API</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Advanced Initialisation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sub-menu-item">
+                <button class="btn collapsed clearfix" type="button" data-toggle="collapse" data-target="#table3" aria-expanded="false" aria-controls="table3">
+                    <i class="fas fa-th"></i>Table Jsgrid
+                </button>
+            </div>
+        </div>
+        <div class="sub-menu">
+            <p><i class="fas fa-ellipsis-h"></i>Charts</p>
+            <div class="sub-menu-item">
+                <button class="btn collapsed clearfix" type="button">
+                    <i class="fas fa-chart-pie"></i>Morris Charts
+                </button>
+            </div>
+            <div class="sub-menu-item">
+                <button class="btn collapsed clearfix" type="button">
+                    <i class="fas fa-chart-bar"></i>Chartjs
+                </button>
+            </div>
+            <div class="sub-menu-item">
+                <button class="btn collapsed clearfix" type="button">
+                    <i class="fas fa-chart-area"></i>Sparkline Chart
+                </button>
+            </div>
+        </div>
+        <div class="sub-menu">
+            <p><i class="fas fa-ellipsis-h"></i>SAMPLE PAGES</p>
+            <div class="sub-menu-item">
+                <button class="btn collapsed clearfix" type="button" data-toggle="collapse" data-target="#user1" aria-expanded="false" aria-controls="user1">
+                    <i class="fas fa-shopping-cart"></i>Ecommerce Pages<i class="fas fa-angle-up"></i>
+                </button>
+                <div class="collapse" id="user1">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Products</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Products Cart</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Products Details</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sub-menu-item">
+                <button class="btn collapsed clearfix" type="button" data-toggle="collapse" data-target="#user2" aria-expanded="false" aria-controls="user2">
+                    <i class="fas fa-file-alt"></i>Sample Pages<i class="fas fa-angle-up"></i>
+                </button>
+                <div class="collapse" id="user2">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Starter Kit</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Animation</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>Search Result</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sub-menu-item">
+                <button class="btn collapsed clearfix" type="button" data-toggle="collapse" data-target="#user3" aria-expanded="false" aria-controls="user3">
+                    <i class="fas fa-users"></i>Users<i class="fas fa-angle-up"></i>
+                </button>
+                <div class="collapse" id="user3">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>User Card</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>User Profile</a></li>
+                        <li class="list-group-item"><a href=""><i class="far fa-dot-circle"></i>User Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sub-menu">
+            <p><i class="fas fa-ellipsis-h"></i>EXTRAS</p>
+            <div class="sub-menu-item">
+                <button class="btn collapsed clearfix" type="button">
+                    <i class="fas fa-clipboard"></i>Documentation
+                </button>
+            </div>
+        </div> -->
+    </div>
+</section>

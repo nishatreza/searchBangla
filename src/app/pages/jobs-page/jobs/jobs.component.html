@@ -1,0 +1,26 @@
+<section class="jobs container">
+    <h3>New Jobs</h3>
+    <div class="row" *ngIf="jobsObservable|async as jobs">
+        <div class="col-12 col-sm-6 col-md-3 col-lg-3" *ngFor="let  job of jobs;let i=index">
+            <a [routerLink]="['/job-details',job.firestoreId]" *ngIf="i<5">
+                <div class="single-job">
+                    <div class="company-img">
+                        <img class="card-img img-responsive img-fluid" [src]="job.thumbnail || 'http://www.pbs.org/black-culture/lunchbox_plugins/s/photogallery/img/no-image-available.jpg'">
+                        <!-- <img [defaultImage]="defaultImage" [lazyLoad]="SingleJob.comLogo" alt="company logo" offset="offset" class="img-responsive"> -->
+                        <p>
+                            <!-- <img class="card-img img-responsive img-fluid" [src]="job.bedge || 'http://www.pbs.org/black-culture/lunchbox_plugins/s/photogallery/img/no-image-available.jpg'"> -->
+                        </p>
+                    </div>
+                    <div class="job-details">
+                        <h4 class="job-title">{{job.title}}</h4>
+                        <p class="company-name">{{job.seniority}}</p>
+                        <p class="company-address">{{job.ComLocation}}</p>
+                    </div>
+                    <div class="publish-date">
+                        <hr> 2 Weeks ago
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>

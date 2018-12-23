@@ -1,0 +1,90 @@
+<div class="col-lg-12 full">
+    <!-- empty cart -->
+    <div id="emptyCart" class="card" *ngIf="_cart.length == 0" style="width: 100%; height: 300px;">
+        <div class="card-body">
+            <p class="choose-item">Choose an item from the menu to get started.</p>
+            <img src="https://cf.chownowcdn.com/marketplace-react-prod/static/media/bag-illustration.6a7e5e50.svg?_sw-precache=6a7e5e50980be0e38ecc5b29dcae6f2f" alt="" class="right-side-image">
+        </div>
+    </div>
+    <!-- cart -->
+    <div class="card" *ngIf="_cart.length > 0">
+        <div class="card-body cart">
+            <p> <span>{{_cart.length}} Item </span>in your order</p>
+            <hr>
+            <div class="cart-item row" *ngFor="let item of _cart let i = index">
+                <div class="col-sm-12 col-lg-8 number">
+                    <p>
+                        {{item.name}}
+                    </p>
+                    <div class="quantity-div">
+                        <div class="input-group mb-3">
+                            <!-- <div class="input-group-prepend">
+                                <span class="input-group-text btn" (click)="quantityMinus(i);"><i class="fas fa-minus"></i></span>
+                            </div> -->
+                            <!-- <input type="number" [attr.id]="'id' + i" class="form-control" value="1" min="1" (change)="typedValue($event, i);"> -->
+                            <input (change)="updateQuantityPrice($event, item)" type="number" min="0" class="form-control" [value]="item.quantity">
+                            <!-- <div class="input-group-append">
+                                <span class="input-group-text btn" (click)="quantityPlus(i);"><i class="fas fa-plus"></i></span>
+                            </div> -->
+                        </div>
+                        <span class="remove-btn" (click)="removeFromCart(item);"><i class="far fa-trash-alt"></i></span>
+                    </div><br>
+                </div>
+                <div class="col-sm-12 col-lg-4 text-right">
+                    <span class="currency">৳</span> {{item?.total}} /-
+                </div>
+            </div>
+            <hr>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td class="number">SUBTOTAL</td>
+                        <td scope="text-right"><span class="currency">৳</span> {{subTotal}}</td>
+                    </tr>
+                    <tr>
+                        <td class="number">TAXES</td>
+                        <td class="text-right"><span class="currency">৳</span> {{tax}}</td>
+                    </tr>
+                    <tr>
+                        <td class="total-price">TOTAL</td>
+                        <td class="total-price"><span class="currency">৳</span> {{grandTotal}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div><br>
+    <!-- pickup date -->
+    <label class="custom-radion-btn">Order now
+        <input type="radio" name="radio">
+        <span class="checkmark"></span>
+    </label>
+    <label class="custom-radion-btn">Order later
+        <input type="radio" name="radio">
+        <span class="checkmark"></span>
+    </label>
+    <div class="date">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">
+                        <i class="fas fa-calendar-alt"></i>
+                    </span>
+            </div>
+            <input class="form-control" type="datetime-local" id="party-time" name="party-time" value="2018-06-12T19:30" min="2018-06-07T00:00" max="2018-06-14T00:00" />
+        </div>
+    </div><br>
+    <!-- pickup address -->
+    <div class="card" style="width: 100%;" *ngIf="pickUpData">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-lg-5">
+                    <p class="pick">pickup</p>
+                </div>
+                <div class="col-lg-7 address">
+                    <p>{{pickUpData[0].address}}</p>
+                    <p>{{pickUpData[0].city}}</p>
+                </div>
+            </div>
+        </div>
+    </div><br>
+    <button class="btn btn-info" (click)="checkout();" style="width: 100%;"><b>CHECKOUT</b></button>
+</div>
